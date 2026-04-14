@@ -1,5 +1,5 @@
 app_name = "omnexa_trading"
-app_title = "Omnexa Trading"
+app_title = "ErpGenEx — Trading"
 app_publisher = "Omnexa"
 app_description = "Trading and POS vertical"
 app_email = "dev@omnexa.com"
