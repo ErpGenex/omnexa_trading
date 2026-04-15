@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ZONE-{#####}",
+ "creation": "2026-04-17 11:20:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "zone_name",
+  "company",
+  "branch",
+  "country",
+  "city",
+  "area",
+  "sales_representative",
+  "vehicle",
+  "status"
+ ],
+ "fields": [
+  {"fieldname": "zone_name", "fieldtype": "Data", "in_list_view": 1, "label": "Zone Name", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "in_list_view": 1, "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "branch", "fieldtype": "Link", "in_list_view": 1, "label": "Branch", "options": "Branch", "reqd": 1},
+  {"fieldname": "country", "fieldtype": "Data", "label": "Country"},
+  {"fieldname": "city", "fieldtype": "Data", "label": "City"},
+  {"fieldname": "area", "fieldtype": "Data", "label": "Area"},
+  {"fieldname": "sales_representative", "fieldtype": "Link", "label": "Sales Representative", "options": "Trading Sales Representative"},
+  {"fieldname": "vehicle", "fieldtype": "Link", "label": "Vehicle", "options": "Trading Vehicle"},
+  {"default": "Active", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Active\nInactive", "reqd": 1}
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-17 11:20:00",
+ "modified_by": "Administrator",
+ "module": "Omnexa Trading",
+ "name": "Distribution Zone",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "delete": 0, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 0, "write": 1},
+  {"create": 0, "delete": 0, "email": 0, "export": 0, "print": 1, "read": 1, "report": 1, "role": "Sales User", "share": 0, "write": 0}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

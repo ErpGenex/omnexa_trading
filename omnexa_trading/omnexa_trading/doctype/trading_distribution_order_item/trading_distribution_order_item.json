@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2026-04-17 12:40:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "qty",
+  "delivered_qty",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {"fieldname": "item", "fieldtype": "Link", "in_list_view": 1, "label": "Item", "options": "Item", "reqd": 1},
+  {"default": "1", "fieldname": "qty", "fieldtype": "Float", "in_list_view": 1, "label": "Qty", "reqd": 1},
+  {"default": "0", "fieldname": "delivered_qty", "fieldtype": "Float", "label": "Delivered Qty"},
+  {"default": "0", "fieldname": "rate", "fieldtype": "Currency", "in_list_view": 1, "label": "Rate"},
+  {"default": "0", "fieldname": "amount", "fieldtype": "Currency", "in_list_view": 1, "label": "Amount", "read_only": 1}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-17 12:40:00",
+ "modified_by": "Administrator",
+ "module": "Omnexa Trading",
+ "name": "Trading Distribution Order Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
+

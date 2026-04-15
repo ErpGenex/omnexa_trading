@@ -8,18 +8,17 @@ app_license = "mit"
 # Apps
 # ------------------
 
-required_apps = ["omnexa_core"]
+required_apps = ["omnexa_core", "omnexa_accounting", "omnexa_customer_core"]
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "omnexa_trading",
-# 		"logo": "/assets/omnexa_trading/logo.png",
-# 		"title": "Omnexa Trading",
-# 		"route": "/omnexa_trading",
-# 		"has_permission": "omnexa_trading.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "omnexa_trading",
+		"logo": "/assets/omnexa_trading/trading.svg",
+		"title": "Trading",
+		"route": "/app/trading",
+	}
+]
 
 # Includes in <head>
 # ------------------
@@ -117,13 +116,19 @@ required_apps = ["omnexa_core"]
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
+permission_query_conditions = {
+	"Trading Sales Representative": "omnexa_trading.permissions.trading_sales_representative_query_conditions",
+	"Trading Vehicle": "omnexa_trading.permissions.trading_vehicle_query_conditions",
+	"Distribution Zone": "omnexa_trading.permissions.distribution_zone_query_conditions",
+	"Trading Route Plan": "omnexa_trading.permissions.trading_route_plan_query_conditions",
+	"Trading Commission Rule": "omnexa_trading.permissions.trading_commission_rule_query_conditions",
+	"Trading Distribution Order": "omnexa_trading.permissions.trading_distribution_order_query_conditions",
+	"Trading Vehicle Stock Transfer": "omnexa_trading.permissions.trading_vehicle_stock_transfer_query_conditions",
+	"Trading Van Sales Invoice": "omnexa_trading.permissions.trading_van_sales_invoice_query_conditions",
+	"Trading Commission Settlement": "omnexa_trading.permissions.trading_commission_settlement_query_conditions",
+	"Trading Tender": "omnexa_trading.permissions.trading_tender_query_conditions",
+	"Trading Installment Contract": "omnexa_trading.permissions.trading_installment_contract_query_conditions",
+}
 
 # DocType Class
 # ---------------
@@ -137,13 +142,52 @@ required_apps = ["omnexa_core"]
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Trading Sales Representative": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Vehicle": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Distribution Zone": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Route Plan": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Commission Rule": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Distribution Order": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Vehicle Stock Transfer": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Van Sales Invoice": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Commission Settlement": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Tender": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+	"Trading Installment Contract": {
+		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
+		"validate": "omnexa_trading.permissions.enforce_branch_access_for_doc",
+	},
+}
 
 # Scheduled Tasks
 # ---------------
@@ -165,6 +209,11 @@ required_apps = ["omnexa_core"]
 # 		"omnexa_trading.tasks.monthly"
 # 	],
 # }
+scheduler_events = {
+	"daily": [
+		"omnexa_trading.tasks.process_installment_overdue_penalties",
+	]
+}
 
 # Testing
 # -------
