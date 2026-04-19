@@ -1,0 +1,664 @@
+{
+ "charts": [
+  {
+   "chart_name": "Trading · Status Bar",
+   "label": "Status Bar"
+  },
+  {
+   "chart_name": "Trading · Trading Sales Representa Mix",
+   "label": "Trading Sales Representa Mix"
+  },
+  {
+   "chart_name": "Trading · Trading Tender Mix",
+   "label": "Trading Tender Mix"
+  }
+ ],
+ "content": "[{\"id\": \"trading-h\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Trading</b></span>\", \"col\": 12}}, {\"id\": \"trading-ops\", \"type\": \"header\", \"data\": {\"text\": \"<b>📌 Operations</b>\", \"col\": 12}}, {\"id\": \"trading-op2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer Profile\", \"col\": 4}}, {\"id\": \"trading-op3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer\", \"col\": 4}}, {\"id\": \"trading-op4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Distribution Zone\", \"col\": 4}}, {\"id\": \"trading-op5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Vehicle\", \"col\": 4}}, {\"id\": \"trading-op6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Sales Representative\", \"col\": 4}}, {\"id\": \"trading-op7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Route Plan\", \"col\": 4}}, {\"id\": \"trading-op8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Distribution Order\", \"col\": 4}}, {\"id\": \"trading-op9\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Van Sales Invoice\", \"col\": 4}}, {\"id\": \"trading-op10\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Vehicle Stock Transfer\", \"col\": 4}}, {\"id\": \"trading-op11\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Commission Rule\", \"col\": 4}}, {\"id\": \"trading-op12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Commission Settlement\", \"col\": 4}}, {\"id\": \"trading-op13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Tender\", \"col\": 4}}, {\"id\": \"trading-op14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Installment Contract\", \"col\": 4}}, {\"id\": \"trading-op15\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Invoice\", \"col\": 4}}, {\"id\": \"trading-op16\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 4}}, {\"id\": \"trading-op17\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Journal Entry\", \"col\": 4}}, {\"id\": \"trading-op18\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"GL Account\", \"col\": 4}}, {\"id\": \"trading-op19\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Cost Center\", \"col\": 4}}, {\"id\": \"trading-rpt\", \"type\": \"header\", \"data\": {\"text\": \"<b>📊 Reports</b>\", \"col\": 12}}, {\"id\": \"trading-rp0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales summary\", \"col\": 4}}, {\"id\": \"trading-rp1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Distribution fulfillment\", \"col\": 4}}, {\"id\": \"trading-rp2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vehicle transfer summary\", \"col\": 4}}, {\"id\": \"trading-rp3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Route efficiency\", \"col\": 4}}, {\"id\": \"trading-rp4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rep target tracking\", \"col\": 4}}, {\"id\": \"trading-rp5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Commission summary\", \"col\": 4}}, {\"id\": \"trading-rp6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Tender pipeline\", \"col\": 4}}, {\"id\": \"trading-rp7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Installment portfolio\", \"col\": 4}}, {\"id\": \"trading-rp8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales register\", \"col\": 4}}, {\"id\": \"trading-rp9\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer ledger\", \"col\": 4}}, {\"id\": \"trading-rp10\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"General ledger\", \"col\": 4}}, {\"id\": \"trading-kpi\", \"type\": \"header\", \"data\": {\"text\": \"<b>📊 KPIs</b>\", \"col\": 12}}, {\"id\": \"trading-nc0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sales Representative\", \"col\": 4}}, {\"id\": \"trading-nc1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Tender\", \"col\": 4}}, {\"id\": \"trading-nc2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Vehicle\", \"col\": 4}}, {\"id\": \"trading-nc3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Distribution Zone\", \"col\": 4}}, {\"id\": \"trading-nc4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Route Plan\", \"col\": 4}}, {\"id\": \"trading-nc5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Distribution Order\", \"col\": 4}}, {\"id\": \"trading-nc6\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Vehicle Stock Transfer\", \"col\": 4}}, {\"id\": \"trading-nc7\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Van Sales Invoice\", \"col\": 4}}, {\"id\": \"trading-chr\", \"type\": \"header\", \"data\": {\"text\": \"<b>📈 Charts</b>\", \"col\": 12}}, {\"id\": \"trading-ch0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Status Bar\", \"col\": 4}}, {\"id\": \"trading-ch1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Trading Sales Representa Mix\", \"col\": 4}}, {\"id\": \"trading-ch2\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Trading Tender Mix\", \"col\": 4}}]",
+ "creation": "2026-04-15 17:13:00.021845",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "retail",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Trading",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Organization & network",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Profile",
+   "link_count": 0,
+   "link_to": "Customer Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Distribution Zone",
+   "link_count": 0,
+   "link_to": "Distribution Zone",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Vehicle",
+   "link_count": 0,
+   "link_to": "Trading Vehicle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Sales Representative",
+   "link_count": 0,
+   "link_to": "Trading Sales Representative",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Field sales & distribution",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Route Plan",
+   "link_count": 0,
+   "link_to": "Trading Route Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Distribution Order",
+   "link_count": 0,
+   "link_to": "Trading Distribution Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Van Sales Invoice",
+   "link_count": 0,
+   "link_to": "Trading Van Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Vehicle Stock Transfer",
+   "link_count": 0,
+   "link_to": "Trading Vehicle Stock Transfer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commissions & incentives",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Commission Rule",
+   "link_count": 0,
+   "link_to": "Trading Commission Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Commission Settlement",
+   "link_count": 0,
+   "link_to": "Trading Commission Settlement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commercial strategy & credit",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Tender",
+   "link_count": 0,
+   "link_to": "Trading Tender",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Installment Contract",
+   "link_count": 0,
+   "link_to": "Trading Installment Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Finance",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GL Account",
+   "link_count": 0,
+   "link_to": "GL Account",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cost Center",
+   "link_count": 0,
+   "link_to": "Cost Center",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports · Sales & routes",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales summary",
+   "link_count": 0,
+   "link_to": "Trading Sales Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Van Sales Invoice",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Distribution fulfillment",
+   "link_count": 0,
+   "link_to": "Trading Distribution Fulfillment",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Distribution Order",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Vehicle transfer summary",
+   "link_count": 0,
+   "link_to": "Trading Vehicle Transfer Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Vehicle Stock Transfer",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Route efficiency",
+   "link_count": 0,
+   "link_to": "Trading Route Efficiency",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Route Plan",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rep target tracking",
+   "link_count": 0,
+   "link_to": "Trading Rep Target Tracking",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Sales Representative",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports · Commissions & pipeline",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Commission summary",
+   "link_count": 0,
+   "link_to": "Trading Commission Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Commission Settlement",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Tender pipeline",
+   "link_count": 0,
+   "link_to": "Trading Tender Pipeline",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Tender",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Installment portfolio",
+   "link_count": 0,
+   "link_to": "Trading Installment Portfolio",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Trading Installment Contract",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports · Finance",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales register",
+   "link_count": 0,
+   "link_to": "Sales Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Customer ledger",
+   "link_count": 0,
+   "link_to": "Customer Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Journal Entry",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "General ledger",
+   "link_count": 0,
+   "link_to": "General Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Journal Entry",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-18 22:02:02.521510",
+ "modified_by": "Administrator",
+ "module": "Omnexa Trading",
+ "name": "Trading",
+ "number_cards": [
+  {
+   "label": "Sales Representative",
+   "number_card_name": "Sales Representative"
+  },
+  {
+   "label": "Tender",
+   "number_card_name": "Tender"
+  },
+  {
+   "label": "Vehicle",
+   "number_card_name": "Vehicle-1"
+  },
+  {
+   "label": "Distribution Zone",
+   "number_card_name": "Distribution Zone"
+  },
+  {
+   "label": "Route Plan",
+   "number_card_name": "Route Plan"
+  },
+  {
+   "label": "Distribution Order",
+   "number_card_name": "Distribution Order"
+  },
+  {
+   "label": "Vehicle Stock Transfer",
+   "number_card_name": "Vehicle Stock Transfer"
+  },
+  {
+   "label": "Van Sales Invoice",
+   "number_card_name": "Van Sales Invoice"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 8.22,
+ "shortcuts": [
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Customer Profile",
+   "link_to": "Customer Profile",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Distribution Zone",
+   "link_to": "Distribution Zone",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Trading Vehicle",
+   "link_to": "Trading Vehicle",
+   "type": "DocType"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "List",
+   "label": "Trading Sales Representative",
+   "link_to": "Trading Sales Representative",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Trading Route Plan",
+   "link_to": "Trading Route Plan",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Trading Distribution Order",
+   "link_to": "Trading Distribution Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Trading Van Sales Invoice",
+   "link_to": "Trading Van Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Trading Vehicle Stock Transfer",
+   "link_to": "Trading Vehicle Stock Transfer",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Trading Commission Rule",
+   "link_to": "Trading Commission Rule",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Trading Commission Settlement",
+   "link_to": "Trading Commission Settlement",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Trading Tender",
+   "link_to": "Trading Tender",
+   "type": "DocType"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "List",
+   "label": "Trading Installment Contract",
+   "link_to": "Trading Installment Contract",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Journal Entry",
+   "link_to": "Journal Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "GL Account",
+   "link_to": "GL Account",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Cost Center",
+   "link_to": "Cost Center",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Sales summary",
+   "link_to": "Trading Sales Summary",
+   "report_ref_doctype": "Trading Van Sales Invoice",
+   "type": "Report"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "Distribution fulfillment",
+   "link_to": "Trading Distribution Fulfillment",
+   "report_ref_doctype": "Trading Distribution Order",
+   "type": "Report"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "",
+   "label": "Vehicle transfer summary",
+   "link_to": "Trading Vehicle Transfer Summary",
+   "report_ref_doctype": "Trading Vehicle Stock Transfer",
+   "type": "Report"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "",
+   "label": "Route efficiency",
+   "link_to": "Trading Route Efficiency",
+   "report_ref_doctype": "Trading Route Plan",
+   "type": "Report"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Rep target tracking",
+   "link_to": "Trading Rep Target Tracking",
+   "report_ref_doctype": "Trading Sales Representative",
+   "type": "Report"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Commission summary",
+   "link_to": "Trading Commission Summary",
+   "report_ref_doctype": "Trading Commission Settlement",
+   "type": "Report"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Tender pipeline",
+   "link_to": "Trading Tender Pipeline",
+   "report_ref_doctype": "Trading Tender",
+   "type": "Report"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Installment portfolio",
+   "link_to": "Trading Installment Portfolio",
+   "report_ref_doctype": "Trading Installment Contract",
+   "type": "Report"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Sales register",
+   "link_to": "Sales Register",
+   "report_ref_doctype": "Sales Invoice",
+   "type": "Report"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "Customer ledger",
+   "link_to": "Customer Ledger",
+   "report_ref_doctype": "Journal Entry",
+   "type": "Report"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "",
+   "label": "General ledger",
+   "link_to": "General Ledger",
+   "report_ref_doctype": "Journal Entry",
+   "type": "Report"
+  }
+ ],
+ "title": "Trading"
+}

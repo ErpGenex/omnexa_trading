@@ -32,8 +32,8 @@
   {"default": "0", "fieldname": "returns_amount", "fieldtype": "Currency", "label": "Returns Amount", "read_only": 1},
   {"default": "0", "fieldname": "net_sales", "fieldtype": "Currency", "label": "Net Sales", "read_only": 1},
   {"default": "0", "fieldname": "commission_amount", "fieldtype": "Currency", "label": "Commission Amount", "read_only": 1},
-  {"fieldname": "commission_expense_account", "fieldtype": "Link", "label": "Commission Expense Account", "options": "Account"},
-  {"fieldname": "commission_payable_account", "fieldtype": "Link", "label": "Commission Payable Account", "options": "Account"},
+  {"fieldname": "commission_expense_account", "fieldtype": "Link", "label": "Commission Expense Account", "options": "GL Account"},
+  {"fieldname": "commission_payable_account", "fieldtype": "Link", "label": "Commission Payable Account", "options": "GL Account"},
   {"fieldname": "journal_entry", "fieldtype": "Link", "label": "Journal Entry", "options": "Journal Entry", "read_only": 1},
   {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Draft\nSettled\nCancelled", "reqd": 1}
  ],
