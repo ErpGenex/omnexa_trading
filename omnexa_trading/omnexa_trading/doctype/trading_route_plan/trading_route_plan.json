@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "route_name",
   "company",
   "branch",
@@ -16,20 +17,102 @@
   "planned_distance_km",
   "actual_distance_km",
   "stops_section",
-  "stops"
+  "stops",
+  "control_section",
+  "plan_owner"
  ],
  "fields": [
-  {"fieldname": "route_name", "fieldtype": "Data", "in_list_view": 1, "label": "Route Name", "reqd": 1},
-  {"fieldname": "company", "fieldtype": "Link", "in_list_view": 1, "label": "Company", "options": "Company", "reqd": 1},
-  {"fieldname": "branch", "fieldtype": "Link", "in_list_view": 1, "label": "Branch", "options": "Branch", "reqd": 1},
-  {"fieldname": "route_date", "fieldtype": "Date", "in_list_view": 1, "label": "Route Date", "reqd": 1},
-  {"fieldname": "sales_representative", "fieldtype": "Link", "label": "Sales Representative", "options": "Trading Sales Representative", "reqd": 1},
-  {"fieldname": "vehicle", "fieldtype": "Link", "label": "Vehicle", "options": "Trading Vehicle"},
-  {"default": "Planned", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Planned\nIn Transit\nCompleted\nCancelled", "reqd": 1},
-  {"default": "0", "fieldname": "planned_distance_km", "fieldtype": "Float", "label": "Planned Distance (KM)"},
-  {"default": "0", "fieldname": "actual_distance_km", "fieldtype": "Float", "label": "Actual Distance (KM)"},
-  {"fieldname": "stops_section", "fieldtype": "Section Break", "label": "Stops"},
-  {"fieldname": "stops", "fieldtype": "Table", "label": "Stops", "options": "Trading Route Plan Stop"}
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Route Plan Identity"
+  },
+  {
+   "fieldname": "route_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Route Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_representative",
+   "fieldtype": "Link",
+   "label": "Sales Representative",
+   "options": "Trading Sales Representative",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Trading Vehicle"
+  },
+  {
+   "default": "Planned",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nIn Transit\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "planned_distance_km",
+   "fieldtype": "Float",
+   "label": "Planned Distance (KM)"
+  },
+  {
+   "default": "0",
+   "fieldname": "actual_distance_km",
+   "fieldtype": "Float",
+   "label": "Actual Distance (KM)"
+  },
+  {
+   "fieldname": "stops_section",
+   "fieldtype": "Section Break",
+   "label": "Stops"
+  },
+  {
+   "fieldname": "stops",
+   "fieldtype": "Table",
+   "label": "Stops",
+   "options": "Trading Route Plan Stop"
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Control"
+  },
+  {
+   "fieldname": "plan_owner",
+   "fieldtype": "Link",
+   "label": "Plan Owner",
+   "options": "User"
+  }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
@@ -41,14 +124,65 @@
  "name": "Trading Route Plan",
  "owner": "Administrator",
  "permissions": [
-  {"submit": 1, "cancel": 1, "create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"submit": 1, "cancel": 0, "create": 1, "delete": 0, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 0, "write": 1},
-  {"submit": 0, "cancel": 0, "create": 1, "delete": 0, "email": 0, "export": 0, "print": 1, "read": 1, "report": 1, "role": "Sales User", "share": 0, "write": 1},
-  {"submit": 0, "cancel": 0, "create": 0, "delete": 0, "email": 0, "export": 0, "print": 1, "read": 1, "report": 1, "role": "Driver", "share": 0, "write": 0}
+  {
+   "submit": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "submit": 1,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "submit": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "submit": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Driver",
+   "share": 0,
+   "write": 0
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
  "track_changes": 1
 }
-

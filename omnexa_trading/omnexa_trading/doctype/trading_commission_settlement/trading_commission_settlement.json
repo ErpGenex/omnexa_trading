@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "identity_section",
   "company",
   "branch",
   "sales_representative",
@@ -19,23 +20,126 @@
   "commission_expense_account",
   "commission_payable_account",
   "journal_entry",
-  "status"
+  "status",
+  "control_section",
+  "settlement_reference"
  ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "in_list_view": 1, "label": "Company", "options": "Company", "reqd": 1},
-  {"fieldname": "branch", "fieldtype": "Link", "in_list_view": 1, "label": "Branch", "options": "Branch", "reqd": 1},
-  {"fieldname": "sales_representative", "fieldtype": "Link", "in_list_view": 1, "label": "Sales Representative", "options": "Trading Sales Representative", "reqd": 1},
-  {"fieldname": "commission_rule", "fieldtype": "Link", "in_list_view": 1, "label": "Commission Rule", "options": "Trading Commission Rule", "reqd": 1},
-  {"fieldname": "period_from", "fieldtype": "Date", "label": "Period From", "reqd": 1},
-  {"fieldname": "period_to", "fieldtype": "Date", "label": "Period To", "reqd": 1},
-  {"default": "0", "fieldname": "gross_sales", "fieldtype": "Currency", "label": "Gross Sales", "read_only": 1},
-  {"default": "0", "fieldname": "returns_amount", "fieldtype": "Currency", "label": "Returns Amount", "read_only": 1},
-  {"default": "0", "fieldname": "net_sales", "fieldtype": "Currency", "label": "Net Sales", "read_only": 1},
-  {"default": "0", "fieldname": "commission_amount", "fieldtype": "Currency", "label": "Commission Amount", "read_only": 1},
-  {"fieldname": "commission_expense_account", "fieldtype": "Link", "label": "Commission Expense Account", "options": "GL Account"},
-  {"fieldname": "commission_payable_account", "fieldtype": "Link", "label": "Commission Payable Account", "options": "GL Account"},
-  {"fieldname": "journal_entry", "fieldtype": "Link", "label": "Journal Entry", "options": "Journal Entry", "read_only": 1},
-  {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Draft\nSettled\nCancelled", "reqd": 1}
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Settlement Identity"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_representative",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Representative",
+   "options": "Trading Sales Representative",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_rule",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commission Rule",
+   "options": "Trading Commission Rule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_from",
+   "fieldtype": "Date",
+   "label": "Period From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_to",
+   "fieldtype": "Date",
+   "label": "Period To",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "gross_sales",
+   "fieldtype": "Currency",
+   "label": "Gross Sales",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "returns_amount",
+   "fieldtype": "Currency",
+   "label": "Returns Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "net_sales",
+   "fieldtype": "Currency",
+   "label": "Net Sales",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission_expense_account",
+   "fieldtype": "Link",
+   "label": "Commission Expense Account",
+   "options": "GL Account"
+  },
+  {
+   "fieldname": "commission_payable_account",
+   "fieldtype": "Link",
+   "label": "Commission Payable Account",
+   "options": "GL Account"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSettled\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Control"
+  },
+  {
+   "fieldname": "settlement_reference",
+   "fieldtype": "Data",
+   "label": "Settlement Reference"
+  }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
@@ -47,13 +151,51 @@
  "name": "Trading Commission Settlement",
  "owner": "Administrator",
  "permissions": [
-  {"submit": 1, "cancel": 1, "create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"submit": 1, "cancel": 0, "create": 1, "delete": 0, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Finance", "share": 0, "write": 1},
-  {"submit": 0, "cancel": 0, "create": 1, "delete": 0, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 0, "write": 1}
+  {
+   "submit": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "submit": 1,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "submit": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 0,
+   "write": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
  "track_changes": 1
 }
-
