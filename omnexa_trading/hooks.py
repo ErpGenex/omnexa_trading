@@ -81,7 +81,8 @@ add_to_apps_screen = [
 # Installation
 # ------------
 
-# before_install = "omnexa_trading.install.before_install"
+before_install = "omnexa_trading.install.enforce_supported_frappe_version"
+before_migrate = "omnexa_trading.install.enforce_supported_frappe_version"
 # after_install = "omnexa_trading.install.after_install"
 
 # Uninstallation
