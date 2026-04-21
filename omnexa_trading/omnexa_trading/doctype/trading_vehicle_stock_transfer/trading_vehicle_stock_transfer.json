@@ -1,167 +1,160 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "format:VST-{YYYY}-{#####}",
- "creation": "2026-04-17 13:00:00",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "company",
-  "branch",
-  "posting_date",
-  "transfer_type",
-  "from_warehouse",
-  "vehicle",
-  "to_warehouse",
-  "sales_representative",
-  "items_section",
-  "items",
-  "control_section",
-  "transfer_reference"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Stock Transfer Identity"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Company",
-   "options": "Company",
-   "reqd": 1
-  },
-  {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Branch",
-   "options": "Branch",
-   "reqd": 1
-  },
-  {
-   "fieldname": "posting_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Posting Date",
-   "reqd": 1
-  },
-  {
-   "default": "Load Vehicle",
-   "fieldname": "transfer_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Transfer Type",
-   "options": "Load Vehicle\nUnload Vehicle",
-   "reqd": 1
-  },
-  {
-   "fieldname": "from_warehouse",
-   "fieldtype": "Link",
-   "label": "From Warehouse",
-   "options": "Warehouse"
-  },
-  {
-   "fieldname": "vehicle",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Vehicle",
-   "options": "Trading Vehicle",
-   "reqd": 1
-  },
-  {
-   "fieldname": "to_warehouse",
-   "fieldtype": "Link",
-   "label": "To Warehouse",
-   "options": "Warehouse"
-  },
-  {
-   "fieldname": "sales_representative",
-   "fieldtype": "Link",
-   "label": "Sales Representative",
-   "options": "Trading Sales Representative"
-  },
-  {
-   "fieldname": "items_section",
-   "fieldtype": "Section Break",
-   "label": "Items"
-  },
-  {
-   "fieldname": "items",
-   "fieldtype": "Table",
-   "label": "Items",
-   "options": "Trading Vehicle Stock Transfer Item",
-   "reqd": 1
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "transfer_reference",
-   "fieldtype": "Data",
-   "label": "Transfer Reference"
-  }
- ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
- "is_submittable": 1,
- "links": [],
- "modified": "2026-04-17 13:00:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Vehicle Stock Transfer",
- "owner": "Administrator",
- "permissions": [
-  {
-   "submit": 1,
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "submit": 1,
-   "cancel": 0,
-   "create": 1,
-   "delete": 0,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager",
-   "share": 0,
-   "write": 1
-  },
-  {
-   "submit": 0,
-   "cancel": 0,
-   "create": 1,
-   "delete": 0,
-   "email": 0,
-   "export": 0,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales User",
-   "share": 0,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "format:VST-{YYYY}-{#####}",
+	"creation": "2026-04-17 13:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"company",
+		"branch",
+		"posting_date",
+		"transfer_type",
+		"column_break_omnexa_1",
+		"from_warehouse",
+		"vehicle",
+		"to_warehouse",
+		"sales_representative",
+		"items_section",
+		"items",
+		"transfer_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Branch",
+			"options": "Branch",
+			"reqd": 1
+		},
+		{
+			"fieldname": "posting_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Posting Date",
+			"reqd": 1
+		},
+		{
+			"default": "Load Vehicle",
+			"fieldname": "transfer_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Transfer Type",
+			"options": "Load Vehicle\nUnload Vehicle",
+			"reqd": 1
+		},
+		{
+			"fieldname": "from_warehouse",
+			"fieldtype": "Link",
+			"label": "From Warehouse",
+			"options": "Warehouse"
+		},
+		{
+			"fieldname": "vehicle",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Vehicle",
+			"options": "Trading Vehicle",
+			"reqd": 1
+		},
+		{
+			"fieldname": "to_warehouse",
+			"fieldtype": "Link",
+			"label": "To Warehouse",
+			"options": "Warehouse"
+		},
+		{
+			"fieldname": "sales_representative",
+			"fieldtype": "Link",
+			"label": "Sales Representative",
+			"options": "Trading Sales Representative"
+		},
+		{
+			"fieldname": "items_section",
+			"fieldtype": "Section Break",
+			"label": "Items"
+		},
+		{
+			"fieldname": "items",
+			"fieldtype": "Table",
+			"label": "Items",
+			"options": "Trading Vehicle Stock Transfer Item",
+			"reqd": 1
+		},
+		{
+			"fieldname": "transfer_reference",
+			"fieldtype": "Data",
+			"label": "Transfer Reference"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-04-17 13:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Vehicle Stock Transfer",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"submit": 1,
+			"cancel": 1,
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"submit": 1,
+			"cancel": 0,
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Sales Manager",
+			"share": 0,
+			"write": 1
+		},
+		{
+			"submit": 0,
+			"cancel": 0,
+			"create": 1,
+			"delete": 0,
+			"email": 0,
+			"export": 0,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Sales User",
+			"share": 0,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
 }

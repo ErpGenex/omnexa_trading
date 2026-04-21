@@ -1,61 +1,49 @@
 {
- "actions": [],
- "creation": "2026-04-17 14:20:00",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "competitor_name",
-  "quoted_value",
-  "notes",
-  "control_section",
-  "competitor_reference"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Competitor Identity"
-  },
-  {
-   "fieldname": "competitor_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Competitor Name",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "quoted_value",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Quoted Value"
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Notes"
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "competitor_reference",
-   "fieldtype": "Data",
-   "label": "Competitor Reference"
-  }
- ],
- "istable": 1,
- "links": [],
- "modified": "2026-04-17 14:20:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Tender Competitor",
- "owner": "Administrator",
- "permissions": [],
- "sort_field": "modified",
- "sort_order": "DESC"
+	"actions": [],
+	"creation": "2026-04-17 14:20:00",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"competitor_name",
+		"quoted_value",
+		"notes",
+		"competitor_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "competitor_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Competitor Name",
+			"reqd": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "quoted_value",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Quoted Value"
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Small Text",
+			"label": "Notes"
+		},
+		{
+			"fieldname": "competitor_reference",
+			"fieldtype": "Data",
+			"label": "Competitor Reference"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2026-04-17 14:20:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Tender Competitor",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC"
 }

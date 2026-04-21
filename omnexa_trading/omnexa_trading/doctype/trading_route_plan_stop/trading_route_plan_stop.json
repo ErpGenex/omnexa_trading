@@ -1,83 +1,76 @@
 {
- "actions": [],
- "creation": "2026-04-17 11:30:00",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "zone",
-  "stop_sequence",
-  "planned_arrival_time",
-  "actual_arrival_time",
-  "delivery_status",
-  "proof_photo",
-  "control_section",
-  "stop_reference"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Route Stop Identity"
-  },
-  {
-   "fieldname": "zone",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Zone",
-   "options": "Distribution Zone",
-   "reqd": 1
-  },
-  {
-   "default": "1",
-   "fieldname": "stop_sequence",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Sequence",
-   "reqd": 1
-  },
-  {
-   "fieldname": "planned_arrival_time",
-   "fieldtype": "Datetime",
-   "label": "Planned Arrival"
-  },
-  {
-   "fieldname": "actual_arrival_time",
-   "fieldtype": "Datetime",
-   "label": "Actual Arrival"
-  },
-  {
-   "default": "Pending",
-   "fieldname": "delivery_status",
-   "fieldtype": "Select",
-   "label": "Delivery Status",
-   "options": "Pending\nDelivered\nFailed"
-  },
-  {
-   "fieldname": "proof_photo",
-   "fieldtype": "Attach Image",
-   "label": "Photo Proof"
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "stop_reference",
-   "fieldtype": "Data",
-   "label": "Stop Reference"
-  }
- ],
- "istable": 1,
- "links": [],
- "modified": "2026-04-17 11:30:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Route Plan Stop",
- "owner": "Administrator",
- "permissions": [],
- "sort_field": "modified",
- "sort_order": "DESC"
+	"actions": [],
+	"creation": "2026-04-17 11:30:00",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"zone",
+		"stop_sequence",
+		"planned_arrival_time",
+		"column_break_omnexa_1",
+		"actual_arrival_time",
+		"delivery_status",
+		"proof_photo",
+		"stop_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "zone",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Zone",
+			"options": "Distribution Zone",
+			"reqd": 1
+		},
+		{
+			"default": "1",
+			"fieldname": "stop_sequence",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "Sequence",
+			"reqd": 1
+		},
+		{
+			"fieldname": "planned_arrival_time",
+			"fieldtype": "Datetime",
+			"label": "Planned Arrival"
+		},
+		{
+			"fieldname": "actual_arrival_time",
+			"fieldtype": "Datetime",
+			"label": "Actual Arrival"
+		},
+		{
+			"default": "Pending",
+			"fieldname": "delivery_status",
+			"fieldtype": "Select",
+			"label": "Delivery Status",
+			"options": "Pending\nDelivered\nFailed"
+		},
+		{
+			"fieldname": "proof_photo",
+			"fieldtype": "Attach Image",
+			"label": "Photo Proof"
+		},
+		{
+			"fieldname": "stop_reference",
+			"fieldtype": "Data",
+			"label": "Stop Reference"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2026-04-17 11:30:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Route Plan Stop",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC"
 }

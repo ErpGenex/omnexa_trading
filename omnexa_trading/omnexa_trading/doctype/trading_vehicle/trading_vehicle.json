@@ -1,154 +1,152 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "format:VEH-{#####}",
- "creation": "2026-04-17 11:10:00",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "vehicle_code",
-  "vehicle_name",
-  "company",
-  "branch",
-  "vehicle_type",
-  "capacity",
-  "driver",
-  "fuel_type",
-  "is_active",
-  "control_section",
-  "asset_owner"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Vehicle Identity"
-  },
-  {
-   "fieldname": "vehicle_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Vehicle Code",
-   "reqd": 1
-  },
-  {
-   "fieldname": "vehicle_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Vehicle Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Company",
-   "options": "Company",
-   "reqd": 1
-  },
-  {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Branch",
-   "options": "Branch",
-   "reqd": 1
-  },
-  {
-   "default": "Van",
-   "fieldname": "vehicle_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Vehicle Type",
-   "options": "Van\nTruck",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "capacity",
-   "fieldtype": "Float",
-   "label": "Capacity"
-  },
-  {
-   "fieldname": "driver",
-   "fieldtype": "Link",
-   "label": "Driver",
-   "options": "Employee"
-  },
-  {
-   "default": "Diesel",
-   "fieldname": "fuel_type",
-   "fieldtype": "Select",
-   "label": "Fuel Type",
-   "options": "Diesel\nPetrol\nElectric\nHybrid"
-  },
-  {
-   "default": "1",
-   "fieldname": "is_active",
-   "fieldtype": "Check",
-   "label": "Is Active"
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "asset_owner",
-   "fieldtype": "Link",
-   "label": "Asset Owner",
-   "options": "User"
-  }
- ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-04-17 11:10:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Vehicle",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 0,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager",
-   "share": 0,
-   "write": 1
-  },
-  {
-   "create": 0,
-   "delete": 0,
-   "email": 0,
-   "export": 0,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Driver",
-   "share": 0,
-   "write": 0
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "format:VEH-{#####}",
+	"creation": "2026-04-17 11:10:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"vehicle_code",
+		"vehicle_name",
+		"company",
+		"column_break_omnexa_1",
+		"branch",
+		"vehicle_type",
+		"capacity",
+		"column_break_omnexa_2",
+		"driver",
+		"fuel_type",
+		"is_active",
+		"asset_owner"
+	],
+	"fields": [
+		{
+			"fieldname": "vehicle_code",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Vehicle Code",
+			"reqd": 1
+		},
+		{
+			"fieldname": "vehicle_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Vehicle Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Branch",
+			"options": "Branch",
+			"reqd": 1
+		},
+		{
+			"default": "Van",
+			"fieldname": "vehicle_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Vehicle Type",
+			"options": "Van\nTruck",
+			"reqd": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "capacity",
+			"fieldtype": "Float",
+			"label": "Capacity"
+		},
+		{
+			"fieldname": "driver",
+			"fieldtype": "Link",
+			"label": "Driver",
+			"options": "Employee"
+		},
+		{
+			"default": "Diesel",
+			"fieldname": "fuel_type",
+			"fieldtype": "Select",
+			"label": "Fuel Type",
+			"options": "Diesel\nPetrol\nElectric\nHybrid"
+		},
+		{
+			"default": "1",
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"label": "Is Active"
+		},
+		{
+			"fieldname": "asset_owner",
+			"fieldtype": "Link",
+			"label": "Asset Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "column_break_omnexa_2",
+			"fieldtype": "Column Break"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-04-17 11:10:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Vehicle",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Sales Manager",
+			"share": 0,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 0,
+			"export": 0,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Driver",
+			"share": 0,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
 }

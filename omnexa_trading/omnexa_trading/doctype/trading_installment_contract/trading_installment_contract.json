@@ -1,206 +1,204 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "format:INST-{YYYY}-{#####}",
- "creation": "2026-04-17 14:45:00",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "company",
-  "branch",
-  "customer_profile",
-  "van_sales_invoice",
-  "contract_date",
-  "principal_amount",
-  "down_payment",
-  "finance_amount",
-  "installment_count",
-  "installment_frequency",
-  "interest_rate",
-  "late_penalty_rate",
-  "status",
-  "schedule_section",
-  "schedule",
-  "control_section",
-  "contract_owner"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Installment Contract Identity"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Company",
-   "options": "Company",
-   "reqd": 1
-  },
-  {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Branch",
-   "options": "Branch",
-   "reqd": 1
-  },
-  {
-   "fieldname": "customer_profile",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Customer Profile",
-   "options": "Customer Profile",
-   "reqd": 1
-  },
-  {
-   "fieldname": "van_sales_invoice",
-   "fieldtype": "Link",
-   "label": "Van Sales Invoice",
-   "options": "Trading Van Sales Invoice"
-  },
-  {
-   "fieldname": "contract_date",
-   "fieldtype": "Date",
-   "label": "Contract Date",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "principal_amount",
-   "fieldtype": "Currency",
-   "label": "Principal Amount",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "down_payment",
-   "fieldtype": "Currency",
-   "label": "Down Payment"
-  },
-  {
-   "default": "0",
-   "fieldname": "finance_amount",
-   "fieldtype": "Currency",
-   "label": "Finance Amount",
-   "read_only": 1
-  },
-  {
-   "default": "12",
-   "fieldname": "installment_count",
-   "fieldtype": "Int",
-   "label": "Installment Count",
-   "reqd": 1
-  },
-  {
-   "default": "Monthly",
-   "fieldname": "installment_frequency",
-   "fieldtype": "Select",
-   "label": "Installment Frequency",
-   "options": "Monthly\nWeekly",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "interest_rate",
-   "fieldtype": "Percent",
-   "label": "Interest Rate %"
-  },
-  {
-   "default": "0",
-   "fieldname": "late_penalty_rate",
-   "fieldtype": "Percent",
-   "label": "Late Penalty %"
-  },
-  {
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "Draft\nActive\nClosed\nCancelled",
-   "reqd": 1
-  },
-  {
-   "fieldname": "schedule_section",
-   "fieldtype": "Section Break",
-   "label": "Installment Schedule"
-  },
-  {
-   "fieldname": "schedule",
-   "fieldtype": "Table",
-   "label": "Schedule",
-   "options": "Trading Installment Schedule"
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Governance"
-  },
-  {
-   "fieldname": "contract_owner",
-   "fieldtype": "Link",
-   "label": "Contract Owner",
-   "options": "User"
-  }
- ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
- "is_submittable": 1,
- "links": [],
- "modified": "2026-04-17 14:45:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Installment Contract",
- "owner": "Administrator",
- "permissions": [
-  {
-   "submit": 1,
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "submit": 1,
-   "cancel": 0,
-   "create": 1,
-   "delete": 0,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Finance",
-   "share": 0,
-   "write": 1
-  },
-  {
-   "submit": 0,
-   "cancel": 0,
-   "create": 1,
-   "delete": 0,
-   "email": 0,
-   "export": 0,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager",
-   "share": 0,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "format:INST-{YYYY}-{#####}",
+	"creation": "2026-04-17 14:45:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"company",
+		"branch",
+		"customer_profile",
+		"van_sales_invoice",
+		"column_break_omnexa_1",
+		"contract_date",
+		"principal_amount",
+		"down_payment",
+		"finance_amount",
+		"column_break_omnexa_2",
+		"installment_count",
+		"installment_frequency",
+		"interest_rate",
+		"late_penalty_rate",
+		"status",
+		"schedule_section",
+		"schedule",
+		"contract_owner"
+	],
+	"fields": [
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Branch",
+			"options": "Branch",
+			"reqd": 1
+		},
+		{
+			"fieldname": "customer_profile",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Customer Profile",
+			"options": "Customer Profile",
+			"reqd": 1
+		},
+		{
+			"fieldname": "van_sales_invoice",
+			"fieldtype": "Link",
+			"label": "Van Sales Invoice",
+			"options": "Trading Van Sales Invoice"
+		},
+		{
+			"fieldname": "contract_date",
+			"fieldtype": "Date",
+			"label": "Contract Date",
+			"reqd": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "principal_amount",
+			"fieldtype": "Currency",
+			"label": "Principal Amount",
+			"reqd": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "down_payment",
+			"fieldtype": "Currency",
+			"label": "Down Payment"
+		},
+		{
+			"default": "0",
+			"fieldname": "finance_amount",
+			"fieldtype": "Currency",
+			"label": "Finance Amount",
+			"read_only": 1
+		},
+		{
+			"default": "12",
+			"fieldname": "installment_count",
+			"fieldtype": "Int",
+			"label": "Installment Count",
+			"reqd": 1
+		},
+		{
+			"default": "Monthly",
+			"fieldname": "installment_frequency",
+			"fieldtype": "Select",
+			"label": "Installment Frequency",
+			"options": "Monthly\nWeekly",
+			"reqd": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "interest_rate",
+			"fieldtype": "Percent",
+			"label": "Interest Rate %"
+		},
+		{
+			"default": "0",
+			"fieldname": "late_penalty_rate",
+			"fieldtype": "Percent",
+			"label": "Late Penalty %"
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nActive\nClosed\nCancelled",
+			"reqd": 1
+		},
+		{
+			"fieldname": "schedule_section",
+			"fieldtype": "Section Break",
+			"label": "Installment Schedule"
+		},
+		{
+			"fieldname": "schedule",
+			"fieldtype": "Table",
+			"label": "Schedule",
+			"options": "Trading Installment Schedule"
+		},
+		{
+			"fieldname": "contract_owner",
+			"fieldtype": "Link",
+			"label": "Contract Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "column_break_omnexa_2",
+			"fieldtype": "Column Break"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-04-17 14:45:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Installment Contract",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"submit": 1,
+			"cancel": 1,
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"submit": 1,
+			"cancel": 0,
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Finance",
+			"share": 0,
+			"write": 1
+		},
+		{
+			"submit": 0,
+			"cancel": 0,
+			"create": 1,
+			"delete": 0,
+			"email": 0,
+			"export": 0,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Sales Manager",
+			"share": 0,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
 }

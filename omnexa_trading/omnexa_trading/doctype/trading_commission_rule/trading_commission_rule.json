@@ -1,158 +1,151 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "format:COMM-{#####}",
- "creation": "2026-04-17 11:50:00",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "rule_name",
-  "company",
-  "branch",
-  "commission_type",
-  "apply_on",
-  "target_region",
-  "target_product_category",
-  "is_active",
-  "tiers_section",
-  "tiers",
-  "control_section",
-  "rule_owner"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Commission Rule Identity"
-  },
-  {
-   "fieldname": "rule_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Rule Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Company",
-   "options": "Company",
-   "reqd": 1
-  },
-  {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Branch",
-   "options": "Branch",
-   "reqd": 1
-  },
-  {
-   "default": "Per Sale",
-   "fieldname": "commission_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Commission Type",
-   "options": "Per Sale\nPer Product\nPer Margin\nPer Target Achievement",
-   "reqd": 1
-  },
-  {
-   "default": "Sales Volume",
-   "fieldname": "apply_on",
-   "fieldtype": "Select",
-   "label": "Apply On",
-   "options": "Sales Volume\nProduct Category\nRegion"
-  },
-  {
-   "fieldname": "target_region",
-   "fieldtype": "Data",
-   "label": "Target Region"
-  },
-  {
-   "fieldname": "target_product_category",
-   "fieldtype": "Data",
-   "label": "Target Product Category"
-  },
-  {
-   "default": "1",
-   "fieldname": "is_active",
-   "fieldtype": "Check",
-   "label": "Is Active"
-  },
-  {
-   "fieldname": "tiers_section",
-   "fieldtype": "Section Break",
-   "label": "Tiered Commission"
-  },
-  {
-   "fieldname": "tiers",
-   "fieldtype": "Table",
-   "label": "Tiers",
-   "options": "Trading Commission Tier",
-   "reqd": 1
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Governance"
-  },
-  {
-   "fieldname": "rule_owner",
-   "fieldtype": "Link",
-   "label": "Rule Owner",
-   "options": "User"
-  }
- ],
- "grid_page_length": 50,
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-04-17 11:50:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Commission Rule",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 0,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager",
-   "share": 0,
-   "write": 1
-  },
-  {
-   "create": 0,
-   "delete": 0,
-   "email": 0,
-   "export": 0,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Finance",
-   "share": 0,
-   "write": 0
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "format:COMM-{#####}",
+	"creation": "2026-04-17 11:50:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"rule_name",
+		"company",
+		"branch",
+		"commission_type",
+		"column_break_omnexa_1",
+		"apply_on",
+		"target_region",
+		"target_product_category",
+		"is_active",
+		"tiers_section",
+		"tiers",
+		"rule_owner"
+	],
+	"fields": [
+		{
+			"fieldname": "rule_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Rule Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Branch",
+			"options": "Branch",
+			"reqd": 1
+		},
+		{
+			"default": "Per Sale",
+			"fieldname": "commission_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Commission Type",
+			"options": "Per Sale\nPer Product\nPer Margin\nPer Target Achievement",
+			"reqd": 1
+		},
+		{
+			"default": "Sales Volume",
+			"fieldname": "apply_on",
+			"fieldtype": "Select",
+			"label": "Apply On",
+			"options": "Sales Volume\nProduct Category\nRegion"
+		},
+		{
+			"fieldname": "target_region",
+			"fieldtype": "Data",
+			"label": "Target Region"
+		},
+		{
+			"fieldname": "target_product_category",
+			"fieldtype": "Data",
+			"label": "Target Product Category"
+		},
+		{
+			"default": "1",
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"label": "Is Active"
+		},
+		{
+			"fieldname": "tiers_section",
+			"fieldtype": "Section Break",
+			"label": "Tiered Commission"
+		},
+		{
+			"fieldname": "tiers",
+			"fieldtype": "Table",
+			"label": "Tiers",
+			"options": "Trading Commission Tier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "rule_owner",
+			"fieldtype": "Link",
+			"label": "Rule Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_omnexa_1",
+			"fieldtype": "Column Break"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-04-17 11:50:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Commission Rule",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Sales Manager",
+			"share": 0,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 0,
+			"export": 0,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Finance",
+			"share": 0,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
 }

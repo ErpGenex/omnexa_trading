@@ -1,64 +1,52 @@
 {
- "actions": [],
- "creation": "2026-04-17 12:55:00",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "identity_section",
-  "item",
-  "qty",
-  "uom",
-  "control_section",
-  "line_reference"
- ],
- "fields": [
-  {
-   "fieldname": "identity_section",
-   "fieldtype": "Section Break",
-   "label": "Transfer Item Identity"
-  },
-  {
-   "fieldname": "item",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Item",
-   "options": "Item",
-   "reqd": 1
-  },
-  {
-   "default": "1",
-   "fieldname": "qty",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Qty",
-   "reqd": 1
-  },
-  {
-   "fieldname": "uom",
-   "fieldtype": "Link",
-   "label": "UOM",
-   "options": "UOM"
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
-  },
-  {
-   "fieldname": "line_reference",
-   "fieldtype": "Data",
-   "label": "Line Reference"
-  }
- ],
- "istable": 1,
- "links": [],
- "modified": "2026-04-17 12:55:00",
- "modified_by": "Administrator",
- "module": "Omnexa Trading",
- "name": "Trading Vehicle Stock Transfer Item",
- "owner": "Administrator",
- "permissions": [],
- "sort_field": "modified",
- "sort_order": "DESC"
+	"actions": [],
+	"creation": "2026-04-17 12:55:00",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"item",
+		"qty",
+		"uom",
+		"line_reference"
+	],
+	"fields": [
+		{
+			"fieldname": "item",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Item",
+			"options": "Item",
+			"reqd": 1
+		},
+		{
+			"default": "1",
+			"fieldname": "qty",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Qty",
+			"reqd": 1
+		},
+		{
+			"fieldname": "uom",
+			"fieldtype": "Link",
+			"label": "UOM",
+			"options": "UOM"
+		},
+		{
+			"fieldname": "line_reference",
+			"fieldtype": "Data",
+			"label": "Line Reference"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2026-04-17 12:55:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Trading Vehicle Stock Transfer Item",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC"
 }
