@@ -1,7 +1,7 @@
 [project]
 name = "omnexa_trading"
 authors = [
-    { name = "Omnexa", email = "dev@omnexa.com"}
+    { name = "ErpGenEx", email = "dev@erpgenex.com"}
 ]
 description = "Trading and POS vertical"
 requires-python = ">=3.10"
