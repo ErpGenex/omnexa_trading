@@ -6,12 +6,14 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"zone_name",
 		"company",
 		"branch",
 		"column_break_omnexa_1",
 		"country",
 		"city",
+		"tab_break_details",
 		"area",
 		"column_break_omnexa_2",
 		"sales_representative",
@@ -20,6 +22,16 @@
 		"zone_code"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "zone_name",
 			"fieldtype": "Data",
@@ -96,7 +108,7 @@
 	"grid_page_length": 50,
 	"index_web_pages_for_search": 1,
 	"links": [],
-	"modified": "2026-04-17 11:20:00",
+	"modified": "2026-05-07 12:00:00",
 	"modified_by": "Administrator",
 	"module": "Omnexa Trading",
 	"name": "Distribution Zone",
