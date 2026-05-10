@@ -6,6 +6,7 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"rule_name",
 		"company",
 		"branch",
@@ -15,11 +16,22 @@
 		"target_region",
 		"target_product_category",
 		"is_active",
+		"tab_break_1",
 		"tiers_section",
 		"tiers",
 		"rule_owner"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "rule_name",
 			"fieldtype": "Data",
@@ -101,7 +113,7 @@
 	"grid_page_length": 50,
 	"index_web_pages_for_search": 1,
 	"links": [],
-	"modified": "2026-04-17 11:50:00",
+	"modified": "2026-05-07 12:00:00",
 	"modified_by": "Administrator",
 	"module": "Omnexa Trading",
 	"name": "Trading Commission Rule",

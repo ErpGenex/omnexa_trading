@@ -6,12 +6,14 @@
 	"doctype": "DocType",
 	"engine": "InnoDB",
 	"field_order": [
+		"tab_break_overview",
 		"vehicle_code",
 		"vehicle_name",
 		"company",
 		"column_break_omnexa_1",
 		"branch",
 		"vehicle_type",
+		"tab_break_details",
 		"capacity",
 		"column_break_omnexa_2",
 		"driver",
@@ -20,6 +22,16 @@
 		"asset_owner"
 	],
 	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Tab Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Tab Break",
+			"label": "Details"
+		},
 		{
 			"fieldname": "vehicle_code",
 			"fieldtype": "Data",
@@ -102,7 +114,7 @@
 	"grid_page_length": 50,
 	"index_web_pages_for_search": 1,
 	"links": [],
-	"modified": "2026-04-17 11:10:00",
+	"modified": "2026-05-07 12:00:00",
 	"modified_by": "Administrator",
 	"module": "Omnexa Trading",
 	"name": "Trading Vehicle",
