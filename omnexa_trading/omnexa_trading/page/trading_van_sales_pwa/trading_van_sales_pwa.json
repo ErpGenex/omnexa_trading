@@ -1,0 +1,13 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-van-sales-pwa",
+	"page_name": "trading-van-sales-pwa",
+	"standard": "Yes",
+	"title": "Van Sales PWA",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Sales User"},
+		{"role": "Sales Manager"}
+	]
+}
