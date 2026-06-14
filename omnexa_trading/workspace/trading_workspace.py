@@ -9,7 +9,10 @@ import json
 
 import frappe
 
-from omnexa_core.omnexa_core.vertical_workspace_sync import build_link_rows_for_app
+from omnexa_core.omnexa_core.vertical_workspace_sync import (
+	build_link_rows_for_app,
+	drop_missing_workspace_dashboard_links,
+)
 
 WorkspaceLink = tuple[str, str, str]
 
@@ -240,6 +243,7 @@ def sync_trading_workspace_menu(*, save: bool = True, rebuild: bool = True) -> d
 	for sc in new_shortcuts:
 		ws.append("shortcuts", sc)
 	stats["shortcuts"] = len(new_shortcuts)
+	drop_missing_workspace_dashboard_links(ws)
 	ws.content = _build_content(rows, ws)
 	stats["content_blocks"] = len(json.loads(ws.content))
 	if save:
