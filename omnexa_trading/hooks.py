@@ -14,7 +14,7 @@ required_apps = ["omnexa_core", "omnexa_accounting", "omnexa_customer_core"]
 add_to_apps_screen = [
 	{
 		"name": "omnexa_trading",
-		"logo": "/assets/omnexa_trading/trading.svg",
+		"logo": "/assets/omnexa_trading/logo.png",
 		"title": "Trading",
 		"route": "/app/trading",
 	}
