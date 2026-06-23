@@ -16,7 +16,7 @@ add_to_apps_screen = [
 		"name": "omnexa_trading",
 		"logo": "/assets/omnexa_trading/logo.png",
 		"title": "Trading",
-		"route": "/app/trading",
+		"route": "/app/trading-workcenter",
 	}
 ]
 
