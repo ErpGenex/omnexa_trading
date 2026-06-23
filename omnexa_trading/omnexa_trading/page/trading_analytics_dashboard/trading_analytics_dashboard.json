@@ -1,10 +1,10 @@
 {
 	"doctype": "Page",
 	"module": "Omnexa Trading",
-	"name": "trading-executive-dashboard",
-	"page_name": "trading-executive-dashboard",
+	"name": "trading-analytics-dashboard",
+	"page_name": "trading-analytics-dashboard",
 	"standard": "Yes",
-	"title": "Executive Dashboard",
+	"title": "Analytics Dashboard",
 	"roles": [
 		{
 			"role": "System Manager"

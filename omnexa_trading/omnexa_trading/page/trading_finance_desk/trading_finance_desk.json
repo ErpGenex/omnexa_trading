@@ -1,10 +1,10 @@
 {
 	"doctype": "Page",
 	"module": "Omnexa Trading",
-	"name": "trading-executive-dashboard",
-	"page_name": "trading-executive-dashboard",
+	"name": "trading-finance-desk",
+	"page_name": "trading-finance-desk",
 	"standard": "Yes",
-	"title": "Executive Dashboard",
+	"title": "Finance Desk",
 	"roles": [
 		{
 			"role": "System Manager"

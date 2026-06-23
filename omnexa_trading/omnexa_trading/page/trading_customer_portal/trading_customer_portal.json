@@ -1,10 +1,10 @@
 {
 	"doctype": "Page",
 	"module": "Omnexa Trading",
-	"name": "trading-executive-dashboard",
-	"page_name": "trading-executive-dashboard",
+	"name": "trading-customer-portal",
+	"page_name": "trading-customer-portal",
 	"standard": "Yes",
-	"title": "Executive Dashboard",
+	"title": "Customer Portal",
 	"roles": [
 		{
 			"role": "System Manager"
