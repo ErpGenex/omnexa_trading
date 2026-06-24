@@ -3,6 +3,8 @@
 
 import frappe
 from frappe import _
+
+from omnexa_core.omnexa_core.utils.report_charts import auto_chart_for_columns
 from frappe.utils import flt
 from omnexa_core.omnexa_core.branch_access import get_allowed_branches
 
@@ -51,8 +53,9 @@ def execute(filters=None):
 		row["estimated_cost"] = flt(row.estimated_cost)
 		row["expected_selling_value"] = flt(row.expected_selling_value)
 		row["expected_profit"] = flt(row.expected_profit)
-
-	return _columns(), data
+	columns = _columns()
+	chart = auto_chart_for_columns(data, columns)
+	return columns, data, None, chart
 
 
 def _columns():
