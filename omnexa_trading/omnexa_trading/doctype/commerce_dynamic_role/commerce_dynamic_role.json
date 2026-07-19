@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series",
+ "creation": "2026-07-05 13:35:00.000000",
+ "default_sort": "modified",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "role_id",
+  "role_name",
+  "portal_name",
+  "portal_url",
+  "icon",
+  "description",
+  "color",
+  "is_active",
+  "permissions_section",
+  "allowed_doctypes",
+  "restricted_doctypes",
+  "allowed_actions",
+  "section_break_1",
+  "dashboard_config",
+  "sidebar_config",
+  "created_by",
+  "creation_date",
+  "modified_by",
+  "modification_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CM-ROLE-.####"
+  },
+  {
+   "fieldname": "role_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "role_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "portal_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Portal Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "portal_url",
+   "fieldtype": "Data",
+   "label": "Portal URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "permissions_section",
+   "fieldtype": "Section Break",
+   "label": "Permissions"
+  },
+  {
+   "fieldname": "allowed_doctypes",
+   "fieldtype": "Table",
+   "label": "Allowed DocTypes",
+   "options": "Commerce Allowed DocType"
+  },
+  {
+   "fieldname": "restricted_doctypes",
+   "fieldtype": "Table",
+   "label": "Restricted DocTypes",
+   "options": "Commerce Restricted DocType"
+  },
+  {
+   "fieldname": "allowed_actions",
+   "fieldtype": "Table",
+   "label": "Allowed Actions",
+   "options": "Commerce Allowed Action"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Configuration"
+  },
+  {
+   "fieldname": "dashboard_config",
+   "fieldtype": "Code",
+   "label": "Dashboard Config",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "sidebar_config",
+   "fieldtype": "Code",
+   "label": "Sidebar Config",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Link",
+   "label": "Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modification_date",
+   "fieldtype": "Datetime",
+   "label": "Modification Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-05 13:35:00.000000",
+ "modified_by": "Administrator",
+ "module": "Omnexa Trading",
+ "name": "Commerce Dynamic Role",
+ "naming_rule": "By Series",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Commerce System Administrator",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "role_name",
+ "track_changes": 1
+}

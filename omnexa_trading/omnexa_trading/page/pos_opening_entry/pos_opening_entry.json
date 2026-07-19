@@ -1,0 +1,14 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "pos-opening-entry",
+	"page_name": "pos-opening-entry",
+	"standard": "Yes",
+	"title": "POS Opening Entry",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Accounts Manager"},
+		{"role": "Accounts User"},
+		{"role": "Sales User"}
+	]
+}

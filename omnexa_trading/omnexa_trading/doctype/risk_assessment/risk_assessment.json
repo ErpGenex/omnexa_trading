@@ -1,0 +1,598 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:risk_number",
+	"creation": "2026-07-05 12:05:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"risk_section",
+		"risk_number",
+		"risk_title",
+		"risk_category",
+		"risk_type",
+		"severity",
+		"column_break_1",
+		"risk_status",
+		"identification_date",
+		"review_date",
+		"target_completion_date",
+		"tab_break_1",
+		"description_section",
+		"risk_description",
+		"risk_statement",
+		"affected_processes",
+		"column_break_2",
+		"affected_products",
+		"affected_departments",
+		"stakeholders",
+		"tab_break_2",
+		"analysis_section",
+		"analysis_method",
+		"probability",
+		"impact",
+		"risk_score",
+		"column_break_3",
+		"risk_level",
+		"risk_matrix_position",
+		"tolerability",
+		"tab_break_3",
+		"causes_section",
+		"risk_causes",
+		"contributing_factors",
+		"column_break_4",
+		"trigger_events",
+		"tab_break_4",
+		"consequences_section",
+		"potential_consequences",
+		"health_impact",
+		"safety_impact",
+		"column_break_5",
+		"quality_impact",
+		"financial_impact",
+		"reputation_impact",
+		"regulatory_impact",
+		"tab_break_5",
+		"mitigation_section",
+		"mitigation_strategy",
+		"mitigation_actions",
+		"mitigation_owner",
+		"mitigation_due_date",
+		"column_break_6",
+		"mitigation_status",
+		"residual_risk",
+		"residual_risk_score",
+		"tab_break_6",
+		"monitoring_section",
+		"monitoring_method",
+		"monitoring_frequency",
+		"monitoring_responsible",
+		"column_break_7",
+		"early_warning_indicators",
+		"monitoring_results",
+		"tab_break_7",
+		"approval_section",
+		"initiated_by",
+		"initiated_date",
+		"reviewed_by",
+		"reviewed_date",
+		"column_break_8",
+		"approved_by",
+		"approved_date",
+		"qa_approval",
+		"qa_approval_date",
+		"tab_break_8",
+		"signature_section",
+		"electronic_signature",
+		"signature_status",
+		"column_break_9",
+		"signature_date",
+		"signature_notes"
+	],
+	"fields": [
+		{
+			"fieldname": "risk_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Information"
+		},
+		{
+			"fieldname": "risk_number",
+			"fieldtype": "Data",
+			"label": "Risk Number",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "risk_title",
+			"fieldtype": "Data",
+			"label": "Risk Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "risk_category",
+			"fieldtype": "Select",
+			"label": "Risk Category",
+			"options": "Quality\nSafety\nCompliance\nOperational\nFinancial\nStrategic\nReputation\nEnvironmental\nSecurity",
+			"reqd": 1
+		},
+		{
+			"fieldname": "risk_type",
+			"fieldtype": "Select",
+			"label": "Risk Type",
+			"options": "Internal\nExternal\nStrategic\nOperational\nFinancial\nCompliance",
+			"reqd": 1
+		},
+		{
+			"fieldname": "severity",
+			"fieldtype": "Select",
+			"label": "Severity",
+			"options": "Critical\nHigh\nMedium\nLow",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Open",
+			"fieldname": "risk_status",
+			"fieldtype": "Select",
+			"label": "Risk Status",
+			"options": "Open\nUnder Analysis\nMitigation In Progress\nMonitoring\nClosed\nReopened",
+			"reqd": 1
+		},
+		{
+			"fieldname": "identification_date",
+			"fieldtype": "Date",
+			"label": "Identification Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "review_date",
+			"fieldtype": "Date",
+			"label": "Review Date"
+		},
+		{
+			"fieldname": "target_completion_date",
+			"fieldtype": "Date",
+			"label": "Target Completion Date"
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Description"
+		},
+		{
+			"fieldname": "description_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Description"
+		},
+		{
+			"fieldname": "risk_description",
+			"fieldtype": "Text Editor",
+			"label": "Risk Description",
+			"reqd": 1
+		},
+		{
+			"fieldname": "risk_statement",
+			"fieldtype": "Text Editor",
+			"label": "Risk Statement",
+			"reqd": 1
+		},
+		{
+			"fieldname": "affected_processes",
+			"fieldtype": "Text",
+			"label": "Affected Processes"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "affected_products",
+			"fieldtype": "Text",
+			"label": "Affected Products"
+		},
+		{
+			"fieldname": "affected_departments",
+			"fieldtype": "Text",
+			"label": "Affected Departments"
+		},
+		{
+			"fieldname": "stakeholders",
+			"fieldtype": "Text",
+			"label": "Stakeholders"
+		},
+		{
+			"fieldname": "tab_break_2",
+			"fieldtype": "Tab Break",
+			"label": "Analysis"
+		},
+		{
+			"fieldname": "analysis_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Analysis"
+		},
+		{
+			"fieldname": "analysis_method",
+			"fieldtype": "Select",
+			"label": "Analysis Method",
+			"options": "FMEA\nFMECA\nHAZOP\nRisk Matrix\nBow-Tie Analysis\nSWOT Analysis\nPEST Analysis",
+			"reqd": 1
+		},
+		{
+			"fieldname": "probability",
+			"fieldtype": "Select",
+			"label": "Probability",
+			"options": "Very Low (1)\nLow (2)\nMedium (3)\nHigh (4)\nVery High (5)",
+			"reqd": 1
+		},
+		{
+			"fieldname": "impact",
+			"fieldtype": "Select",
+			"label": "Impact",
+			"options": "Negligible (1)\nMinor (2)\nModerate (3)\nMajor (4)\nCatastrophic (5)",
+			"reqd": 1
+		},
+		{
+			"fieldname": "risk_score",
+			"fieldtype": "Int",
+			"label": "Risk Score",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "risk_level",
+			"fieldtype": "Select",
+			"label": "Risk Level",
+			"options": "Low\nMedium\nHigh\nExtreme",
+			"read_only": 1
+		},
+		{
+			"fieldname": "risk_matrix_position",
+			"fieldtype": "Data",
+			"label": "Risk Matrix Position",
+			"read_only": 1
+		},
+		{
+			"fieldname": "tolerability",
+			"fieldtype": "Select",
+			"label": "Tolerability",
+			"options": "Acceptable\nTolerable with Mitigation\nUnacceptable",
+			"read_only": 1
+		},
+		{
+			"fieldname": "tab_break_3",
+			"fieldtype": "Tab Break",
+			"label": "Causes"
+		},
+		{
+			"fieldname": "causes_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Causes"
+		},
+		{
+			"fieldname": "risk_causes",
+			"fieldtype": "Text Editor",
+			"label": "Risk Causes"
+		},
+		{
+			"fieldname": "contributing_factors",
+			"fieldtype": "Text Editor",
+			"label": "Contributing Factors"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "trigger_events",
+			"fieldtype": "Text Editor",
+			"label": "Trigger Events"
+		},
+		{
+			"fieldname": "tab_break_4",
+			"fieldtype": "Tab Break",
+			"label": "Consequences"
+		},
+		{
+			"fieldname": "consequences_section",
+			"fieldtype": "Section Break",
+			"label": "Potential Consequences"
+		},
+		{
+			"fieldname": "potential_consequences",
+			"fieldtype": "Text Editor",
+			"label": "Potential Consequences"
+		},
+		{
+			"fieldname": "health_impact",
+			"fieldtype": "Select",
+			"label": "Health Impact",
+			"options": "None\nMinor\nModerate\nSevere\nLife-Threatening"
+		},
+		{
+			"fieldname": "safety_impact",
+			"fieldtype": "Select",
+			"label": "Safety Impact",
+			"options": "None\nMinor\nModerate\nSevere\nCritical"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "quality_impact",
+			"fieldtype": "Select",
+			"label": "Quality Impact",
+			"options": "None\nMinor\nModerate\nMajor\nCritical"
+		},
+		{
+			"fieldname": "financial_impact",
+			"fieldtype": "Select",
+			"label": "Financial Impact",
+			"options": "None\nMinor\nModerate\nMajor\nCritical"
+		},
+		{
+			"fieldname": "reputation_impact",
+			"fieldtype": "Select",
+			"label": "Reputation Impact",
+			"options": "None\nMinor\nModerate\nMajor\nCritical"
+		},
+		{
+			"fieldname": "regulatory_impact",
+			"fieldtype": "Select",
+			"label": "Regulatory Impact",
+			"options": "None\nMinor\nModerate\nMajor\nCritical"
+		},
+		{
+			"fieldname": "tab_break_5",
+			"fieldtype": "Tab Break",
+			"label": "Mitigation"
+		},
+		{
+			"fieldname": "mitigation_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Mitigation"
+		},
+		{
+			"fieldname": "mitigation_strategy",
+			"fieldtype": "Select",
+			"label": "Mitigation Strategy",
+			"options": "Avoid\nReduce\nTransfer\nAccept"
+		},
+		{
+			"fieldname": "mitigation_actions",
+			"fieldtype": "Table",
+			"label": "Mitigation Actions",
+			"options": "Risk Mitigation Action"
+		},
+		{
+			"fieldname": "mitigation_owner",
+			"fieldtype": "Link",
+			"label": "Mitigation Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "mitigation_due_date",
+			"fieldtype": "Date",
+			"label": "Mitigation Due Date"
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "mitigation_status",
+			"fieldtype": "Select",
+			"label": "Mitigation Status",
+			"options": "Not Started\nIn Progress\nCompleted\nOverdue",
+			"read_only": 1
+		},
+		{
+			"fieldname": "residual_risk",
+			"fieldtype": "Select",
+			"label": "Residual Risk",
+			"options": "Low\nMedium\nHigh\nExtreme"
+		},
+		{
+			"fieldname": "residual_risk_score",
+			"fieldtype": "Int",
+			"label": "Residual Risk Score"
+		},
+		{
+			"fieldname": "tab_break_6",
+			"fieldtype": "Tab Break",
+			"label": "Monitoring"
+		},
+		{
+			"fieldname": "monitoring_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Monitoring"
+		},
+		{
+			"fieldname": "monitoring_method",
+			"fieldtype": "Select",
+			"label": "Monitoring Method",
+			"options": "Periodic Review\nContinuous Monitoring\nTrigger-Based Review\nEvent-Based Review"
+		},
+		{
+			"fieldname": "monitoring_frequency",
+			"fieldtype": "Select",
+			"label": "Monitoring Frequency",
+			"options": "Daily\nWeekly\nMonthly\nQuarterly\nSemi-Annually\nAnnually"
+		},
+		{
+			"fieldname": "monitoring_responsible",
+			"fieldtype": "Link",
+			"label": "Monitoring Responsible",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_7",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "early_warning_indicators",
+			"fieldtype": "Text Editor",
+			"label": "Early Warning Indicators"
+		},
+		{
+			"fieldname": "monitoring_results",
+			"fieldtype": "Table",
+			"label": "Monitoring Results",
+			"options": "Risk Monitoring Result"
+		},
+		{
+			"fieldname": "tab_break_7",
+			"fieldtype": "Tab Break",
+			"label": "Approvals"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "Risk Approvals"
+		},
+		{
+			"fieldname": "initiated_by",
+			"fieldtype": "Link",
+			"label": "Initiated By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "initiated_date",
+			"fieldtype": "Date",
+			"label": "Initiated Date"
+		},
+		{
+			"fieldname": "reviewed_by",
+			"fieldtype": "Link",
+			"label": "Reviewed By",
+			"options": "User"
+		},
+		{
+			"fieldname": "reviewed_date",
+			"fieldtype": "Date",
+			"label": "Reviewed Date"
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "qa_approval",
+			"fieldtype": "Link",
+			"label": "QA Approval",
+			"options": "User"
+		},
+		{
+			"fieldname": "qa_approval_date",
+			"fieldtype": "Date",
+			"label": "QA Approval Date"
+		},
+		{
+			"fieldname": "tab_break_8",
+			"fieldtype": "Tab Break",
+			"label": "Signature"
+		},
+		{
+			"fieldname": "signature_section",
+			"fieldtype": "Section Break",
+			"label": "Electronic Signature"
+		},
+		{
+			"fieldname": "electronic_signature",
+			"fieldtype": "Link",
+			"label": "Electronic Signature",
+			"options": "Electronic Signature"
+		},
+		{
+			"fieldname": "signature_status",
+			"fieldtype": "Select",
+			"label": "Signature Status",
+			"options": "Not Signed\nSigned\nRevoked",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "signature_date",
+			"fieldtype": "Date",
+			"label": "Signature Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signature_notes",
+			"fieldtype": "Text",
+			"label": "Signature Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 12:05:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Risk Assessment",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Quality Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Regulatory Officer",
+			"share": 1,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1,
+	"track_seen": 1
+}

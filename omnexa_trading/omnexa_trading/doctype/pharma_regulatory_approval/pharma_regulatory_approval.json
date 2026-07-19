@@ -1,0 +1,297 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:approval_number",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"approval_number",
+		"approval_date",
+		"batch_number",
+		"item_code",
+		"controlled_substance_type",
+		"column_break_1",
+		"license_number",
+		"license_expiry",
+		"regulatory_authority",
+		"approval_status",
+		"company",
+		"tab_break_details",
+		"substance_details_section",
+		"substance_name",
+		"schedule",
+		"quantity_requested",
+		"quantity_approved",
+		"column_break_2",
+		"storage_requirements",
+		"dispensing_requirements",
+		"record_keeping_requirements",
+		"tab_break_workflow",
+		"submitted_by",
+		"submitted_date",
+		"column_break_3",
+		"approved_by",
+		"approval_date_2",
+		"tab_break_conditions",
+		"approval_conditions",
+		"restrictions",
+		"column_break_4",
+		"valid_from",
+		"valid_until",
+		"tab_break_status",
+		"status",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "approval_number",
+			"fieldtype": "Data",
+			"label": "Approval Number",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "approval_date",
+			"fieldtype": "Date",
+			"label": "Approval Date",
+			"reqd": 1,
+			"default": "Today"
+		},
+		{
+			"fieldname": "batch_number",
+			"fieldtype": "Link",
+			"label": "Batch Number",
+			"options": "Pharma Batch"
+		},
+		{
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"label": "Item Code",
+			"options": "Item"
+		},
+		{
+			"fieldname": "controlled_substance_type",
+			"fieldtype": "Select",
+			"label": "Controlled Substance Type",
+			"options": "\nNarcotic\nPsychotropic\nPrecursor\nOther"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "license_number",
+			"fieldtype": "Data",
+			"label": "License Number",
+			"reqd": 1
+		},
+		{
+			"fieldname": "license_expiry",
+			"fieldtype": "Date",
+			"label": "License Expiry",
+			"reqd": 1
+		},
+		{
+			"fieldname": "regulatory_authority",
+			"fieldtype": "Data",
+			"label": "Regulatory Authority",
+			"reqd": 1
+		},
+		{
+			"fieldname": "approval_status",
+			"fieldtype": "Select",
+			"label": "Approval Status",
+			"options": "\nDraft\nPending\nApproved\nRejected\nExpired",
+			"default": "Draft",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Section Break",
+			"label": "Substance Details"
+		},
+		{
+			"fieldname": "substance_details_section",
+			"fieldtype": "Section Break",
+			"label": "Substance Details"
+		},
+		{
+			"fieldname": "substance_name",
+			"fieldtype": "Data",
+			"label": "Substance Name"
+		},
+		{
+			"fieldname": "schedule",
+			"fieldtype": "Select",
+			"label": "Schedule",
+			"options": "\nSchedule I\nSchedule II\nSchedule III\nSchedule IV\nSchedule V"
+		},
+		{
+			"fieldname": "quantity_requested",
+			"fieldtype": "Float",
+			"label": "Quantity Requested"
+		},
+		{
+			"fieldname": "quantity_approved",
+			"fieldtype": "Float",
+			"label": "Quantity Approved"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "storage_requirements",
+			"fieldtype": "Text",
+			"label": "Storage Requirements"
+		},
+		{
+			"fieldname": "dispensing_requirements",
+			"fieldtype": "Text",
+			"label": "Dispensing Requirements"
+		},
+		{
+			"fieldname": "record_keeping_requirements",
+			"fieldtype": "Text",
+			"label": "Record Keeping Requirements"
+		},
+		{
+			"fieldname": "tab_break_workflow",
+			"fieldtype": "Section Break",
+			"label": "Workflow"
+		},
+		{
+			"fieldname": "submitted_by",
+			"fieldtype": "Link",
+			"label": "Submitted By",
+			"options": "User"
+		},
+		{
+			"fieldname": "submitted_date",
+			"fieldtype": "Date",
+			"label": "Submitted Date"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approval_date_2",
+			"fieldtype": "Date",
+			"label": "Approval Date"
+		},
+		{
+			"fieldname": "tab_break_conditions",
+			"fieldtype": "Section Break",
+			"label": "Conditions"
+		},
+		{
+			"fieldname": "approval_conditions",
+			"fieldtype": "Text",
+			"label": "Approval Conditions"
+		},
+		{
+			"fieldname": "restrictions",
+			"fieldtype": "Text",
+			"label": "Restrictions"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "valid_from",
+			"fieldtype": "Date",
+			"label": "Valid From"
+		},
+		{
+			"fieldname": "valid_until",
+			"fieldtype": "Date",
+			"label": "Valid Until"
+		},
+		{
+			"fieldname": "tab_break_status",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nDraft\nSubmitted\nApproved\nRejected",
+			"default": "Draft"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Text",
+			"label": "Remarks"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Pharma Regulatory Approval",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Quality Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		}
+	],
+	"sort_field": "approval_date",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

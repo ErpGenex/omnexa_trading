@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-cold-chain-manager",
+	"page_name": "trading-cold-chain-manager",
+	"standard": "Yes",
+	"title": "Cold Chain Manager Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

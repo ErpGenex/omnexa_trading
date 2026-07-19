@@ -1,0 +1,403 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:drug_code",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"drug_code",
+		"drug_name",
+		"generic_name",
+		"scientific_name",
+		"trade_name",
+		"manufacturer",
+		"country_of_origin",
+		"column_break_1",
+		"strength",
+		"concentration",
+		"dosage_form",
+		"package_size",
+		"storage_temperature",
+		"shelf_life_months",
+		"tab_break_classification",
+		"drug_category",
+		"drug_group",
+		"therapeutic_class",
+		"atc_code",
+		"column_break_2",
+		"is_controlled",
+		"schedule_class",
+		"prescription_required",
+		"government_registration_number",
+		"tab_break_pricing",
+		"maximum_retail_price",
+		"wholesale_price",
+		"pharmacy_price",
+		"distributor_price",
+		"hospital_price",
+		"column_break_3",
+		"currency",
+		"price_list",
+		"pricing_history_section",
+		"pricing_history",
+		"tab_break_tracking",
+		"barcode",
+		"gs1_barcode",
+		"batch_tracking",
+		"expiry_tracking",
+		"serial_tracking",
+		"cold_chain_required",
+		"column_break_4",
+		"insurance_coverage",
+		"drug_alternatives_section",
+		"drug_alternatives",
+		"tab_break_safety",
+		"is_active",
+		"max_daily_dose",
+		"pregnancy_category",
+		"renal_adjustment_notes",
+		"hepatic_adjustment_notes",
+		"company"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "drug_code",
+			"fieldtype": "Data",
+			"label": "Drug Code",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "drug_name",
+			"fieldtype": "Data",
+			"label": "Drug Name",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "generic_name",
+			"fieldtype": "Data",
+			"label": "Generic Name",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "scientific_name",
+			"fieldtype": "Data",
+			"label": "Scientific Name"
+		},
+		{
+			"fieldname": "trade_name",
+			"fieldtype": "Data",
+			"label": "Trade Name"
+		},
+		{
+			"fieldname": "manufacturer",
+			"fieldtype": "Link",
+			"label": "Manufacturer",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "country_of_origin",
+			"fieldtype": "Link",
+			"label": "Country of Origin",
+			"options": "Country"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "strength",
+			"fieldtype": "Data",
+			"label": "Strength"
+		},
+		{
+			"fieldname": "concentration",
+			"fieldtype": "Data",
+			"label": "Concentration"
+		},
+		{
+			"fieldname": "dosage_form",
+			"fieldtype": "Data",
+			"label": "Dosage Form"
+		},
+		{
+			"fieldname": "package_size",
+			"fieldtype": "Data",
+			"label": "Package Size"
+		},
+		{
+			"fieldname": "storage_temperature",
+			"fieldtype": "Select",
+			"label": "Storage Temperature",
+			"options": "\nRoom Temperature\nRefrigerated (2-8°C)\nFrozen (-20°C)\nCold Chain Required"
+		},
+		{
+			"fieldname": "shelf_life_months",
+			"fieldtype": "Int",
+			"label": "Shelf Life (Months)"
+		},
+		{
+			"fieldname": "tab_break_classification",
+			"fieldtype": "Section Break",
+			"label": "Classification"
+		},
+		{
+			"fieldname": "drug_category",
+			"fieldtype": "Link",
+			"label": "Drug Category",
+			"options": "Item Group"
+		},
+		{
+			"fieldname": "drug_group",
+			"fieldtype": "Data",
+			"label": "Drug Group"
+		},
+		{
+			"fieldname": "therapeutic_class",
+			"fieldtype": "Data",
+			"label": "Therapeutic Class"
+		},
+		{
+			"fieldname": "atc_code",
+			"fieldtype": "Data",
+			"label": "ATC Code"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "is_controlled",
+			"fieldtype": "Check",
+			"label": "Controlled Substance",
+			"default": "0",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "schedule_class",
+			"fieldtype": "Select",
+			"label": "Schedule",
+			"options": "\nII\nIII\nIV\nV"
+		},
+		{
+			"fieldname": "prescription_required",
+			"fieldtype": "Check",
+			"label": "Prescription Required",
+			"default": "1"
+		},
+		{
+			"fieldname": "government_registration_number",
+			"fieldtype": "Data",
+			"label": "Government Registration Number"
+		},
+		{
+			"fieldname": "tab_break_pricing",
+			"fieldtype": "Section Break",
+			"label": "Pricing"
+		},
+		{
+			"fieldname": "maximum_retail_price",
+			"fieldtype": "Currency",
+			"label": "Maximum Retail Price"
+		},
+		{
+			"fieldname": "wholesale_price",
+			"fieldtype": "Currency",
+			"label": "Wholesale Price"
+		},
+		{
+			"fieldname": "pharmacy_price",
+			"fieldtype": "Currency",
+			"label": "Pharmacy Price"
+		},
+		{
+			"fieldname": "distributor_price",
+			"fieldtype": "Currency",
+			"label": "Distributor Price"
+		},
+		{
+			"fieldname": "hospital_price",
+			"fieldtype": "Currency",
+			"label": "Hospital Price"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "currency",
+			"fieldtype": "Link",
+			"label": "Currency",
+			"options": "Currency",
+			"default": "EGP"
+		},
+		{
+			"fieldname": "price_list",
+			"fieldtype": "Link",
+			"label": "Price List",
+			"options": "Price List"
+		},
+		{
+			"fieldname": "pricing_history_section",
+			"fieldtype": "Section Break",
+			"label": "Pricing History"
+		},
+		{
+			"fieldname": "pricing_history",
+			"fieldtype": "Table",
+			"label": "Pricing History",
+			"options": "Pharma Drug Pricing History"
+		},
+		{
+			"fieldname": "tab_break_tracking",
+			"fieldtype": "Section Break",
+			"label": "Tracking"
+		},
+		{
+			"fieldname": "barcode",
+			"fieldtype": "Data",
+			"label": "Barcode"
+		},
+		{
+			"fieldname": "gs1_barcode",
+			"fieldtype": "Data",
+			"label": "GS1 Barcode"
+		},
+		{
+			"fieldname": "batch_tracking",
+			"fieldtype": "Check",
+			"label": "Batch Tracking",
+			"default": "1"
+		},
+		{
+			"fieldname": "expiry_tracking",
+			"fieldtype": "Check",
+			"label": "Expiry Tracking",
+			"default": "1"
+		},
+		{
+			"fieldname": "serial_tracking",
+			"fieldtype": "Check",
+			"label": "Serial Tracking",
+			"default": "0"
+		},
+		{
+			"fieldname": "cold_chain_required",
+			"fieldtype": "Check",
+			"label": "Cold Chain Required",
+			"default": "0"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "insurance_coverage",
+			"fieldtype": "Text",
+			"label": "Insurance Coverage"
+		},
+		{
+			"fieldname": "drug_alternatives_section",
+			"fieldtype": "Section Break",
+			"label": "Drug Alternatives"
+		},
+		{
+			"fieldname": "drug_alternatives",
+			"fieldtype": "Table",
+			"label": "Drug Alternatives",
+			"options": "Pharma Drug Alternative"
+		},
+		{
+			"fieldname": "tab_break_safety",
+			"fieldtype": "Section Break",
+			"label": "Safety Information"
+		},
+		{
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"label": "Active",
+			"default": "1",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "max_daily_dose",
+			"fieldtype": "Float",
+			"label": "Max Daily Dose"
+		},
+		{
+			"fieldname": "pregnancy_category",
+			"fieldtype": "Select",
+			"label": "Pregnancy Category",
+			"options": "\nA\nB\nC\nD\nX"
+		},
+		{
+			"fieldname": "renal_adjustment_notes",
+			"fieldtype": "Small Text",
+			"label": "Renal Adjustment"
+		},
+		{
+			"fieldname": "hepatic_adjustment_notes",
+			"fieldtype": "Small Text",
+			"label": "Hepatic Adjustment"
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Pharma Drug Registration",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Desk User",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"export": 1,
+			"report": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

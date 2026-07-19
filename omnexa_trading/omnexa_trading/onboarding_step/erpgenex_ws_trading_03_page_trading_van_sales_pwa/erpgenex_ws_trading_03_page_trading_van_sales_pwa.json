@@ -1,0 +1,21 @@
+{
+ "action": "Go to Page",
+ "action_label": "Open",
+ "creation": "2026-07-06 14:36:29.537469",
+ "description": "Jump to the **Van Sales PWA** page.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-07-11 14:37:35.313895",
+ "modified_by": "Administrator",
+ "name": "ERPGENEX-WS-trading-03-page-trading_van_sales_pwa",
+ "owner": "Administrator",
+ "path": "trading-van-sales-pwa",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Open Van Sales PWA",
+ "validate_action": 1
+}

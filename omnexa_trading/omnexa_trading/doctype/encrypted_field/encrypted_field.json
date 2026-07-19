@@ -1,0 +1,50 @@
+{
+	"actions": [],
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"doctype",
+		"field_name",
+		"encryption_status",
+		"last_encrypted_date"
+	],
+	"fields": [
+		{
+			"fieldname": "doctype",
+			"fieldtype": "Link",
+			"label": "DocType",
+			"options": "DocType",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "field_name",
+			"fieldtype": "Data",
+			"label": "Field Name",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "encryption_status",
+			"fieldtype": "Select",
+			"label": "Encryption Status",
+			"options": "\nPending\nEncrypted\nFailed"
+		},
+		{
+			"fieldname": "last_encrypted_date",
+			"fieldtype": "Date",
+			"label": "Last Encrypted Date"
+		}
+	],
+	"istable": 1,
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Encrypted Field",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"track_changes": 0
+}

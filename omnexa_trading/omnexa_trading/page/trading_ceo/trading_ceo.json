@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-ceo",
+	"page_name": "trading-ceo",
+	"standard": "Yes",
+	"title": "CEO Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+	"actions": [],
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"alternative_drug_code",
+		"alternative_drug_name",
+		"generic_name",
+		"manufacturer",
+		"column_break_1",
+		"substitution_ratio",
+		"substitution_type",
+		"reason_for_alternative",
+		"is_active",
+		"notes"
+	],
+	"fields": [
+		{
+			"fieldname": "alternative_drug_code",
+			"fieldtype": "Data",
+			"label": "Alternative Drug Code",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "alternative_drug_name",
+			"fieldtype": "Data",
+			"label": "Alternative Drug Name",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "generic_name",
+			"fieldtype": "Data",
+			"label": "Generic Name"
+		},
+		{
+			"fieldname": "manufacturer",
+			"fieldtype": "Data",
+			"label": "Manufacturer"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "substitution_ratio",
+			"fieldtype": "Float",
+			"label": "Substitution Ratio",
+			"default": "1"
+		},
+		{
+			"fieldname": "substitution_type",
+			"fieldtype": "Select",
+			"label": "Substitution Type",
+			"options": "\nGeneric Equivalent\nTherapeutic Equivalent\nBrand Alternative"
+		},
+		{
+			"fieldname": "reason_for_alternative",
+			"fieldtype": "Text",
+			"label": "Reason for Alternative"
+		},
+		{
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"label": "Active",
+			"default": "1"
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Small Text",
+			"label": "Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Pharma Drug Alternative",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1
+		},
+		{
+			"role": "Desk User",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"export": 1,
+			"report": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

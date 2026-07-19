@@ -1,0 +1,14 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "pos-invoice",
+	"page_name": "pos-invoice",
+	"standard": "Yes",
+	"title": "POS Invoices",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Accounts Manager"},
+		{"role": "Accounts User"},
+		{"role": "Sales User"}
+	]
+}

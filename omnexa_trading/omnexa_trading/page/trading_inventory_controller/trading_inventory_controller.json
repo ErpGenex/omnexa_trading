@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-inventory-controller",
+	"page_name": "trading-inventory-controller",
+	"standard": "Yes",
+	"title": "Inventory Controller Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

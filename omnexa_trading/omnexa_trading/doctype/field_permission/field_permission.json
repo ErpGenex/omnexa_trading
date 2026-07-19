@@ -1,0 +1,178 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:permission_name",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"permission_name",
+		"target_doctype",
+		"field_name",
+		"column_break_1",
+		"role",
+		"company",
+		"tab_break_permissions",
+		"read_permission",
+		"write_permission",
+		"column_break_2",
+		"mask_permission",
+		"hide_permission",
+		"tab_break_conditions",
+		"condition",
+		"column_break_3",
+		"apply_to_all_companies",
+		"tab_break_status",
+		"status",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "permission_name",
+			"fieldtype": "Data",
+			"label": "Permission Name",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "target_doctype",
+			"fieldtype": "Link",
+			"label": "Target DocType",
+			"options": "DocType",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "field_name",
+			"fieldtype": "Data",
+			"label": "Field Name",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "role",
+			"fieldtype": "Link",
+			"label": "Role",
+			"options": "Role",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company"
+		},
+		{
+			"fieldname": "tab_break_permissions",
+			"fieldtype": "Section Break",
+			"label": "Permissions"
+		},
+		{
+			"fieldname": "read_permission",
+			"fieldtype": "Check",
+			"label": "Read Permission",
+			"default": "1"
+		},
+		{
+			"fieldname": "write_permission",
+			"fieldtype": "Check",
+			"label": "Write Permission",
+			"default": "0"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "mask_permission",
+			"fieldtype": "Check",
+			"label": "Mask Permission",
+			"default": "0"
+		},
+		{
+			"fieldname": "hide_permission",
+			"fieldtype": "Check",
+			"label": "Hide Permission",
+			"default": "0"
+		},
+		{
+			"fieldname": "tab_break_conditions",
+			"fieldtype": "Section Break",
+			"label": "Conditions"
+		},
+		{
+			"fieldname": "condition",
+			"fieldtype": "Code",
+			"label": "Condition (Python)"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "apply_to_all_companies",
+			"fieldtype": "Check",
+			"label": "Apply to All Companies",
+			"default": "0"
+		},
+		{
+			"fieldname": "tab_break_status",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nActive\nInactive",
+			"default": "Active"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Text",
+			"label": "Remarks"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Field Permission",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1
+		}
+	],
+	"sort_field": "target_doctype",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 1
+}

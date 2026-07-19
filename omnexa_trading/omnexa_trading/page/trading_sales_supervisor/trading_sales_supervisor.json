@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-sales-supervisor",
+	"page_name": "trading-sales-supervisor",
+	"standard": "Yes",
+	"title": "Sales Supervisor Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

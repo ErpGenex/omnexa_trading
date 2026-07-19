@@ -1,0 +1,13 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-workcenter",
+	"page_name": "trading-workcenter",
+	"title": "Commerce Workcenter",
+	"standard": "Yes",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Commerce System Administrator"},
+		{"role": "Commerce General Manager"}
+	]
+}

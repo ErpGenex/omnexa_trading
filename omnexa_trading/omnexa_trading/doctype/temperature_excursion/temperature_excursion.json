@@ -1,0 +1,305 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:excursion_number",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"excursion_number",
+		"excursion_date",
+		"excursion_time",
+		"batch_number",
+		"item_code",
+		"warehouse",
+		"column_break_1",
+		"temperature",
+		"temperature_unit",
+		"min_temperature",
+		"max_temperature",
+		"company",
+		"tab_break_details",
+		"equipment_id",
+		"equipment_type",
+		"sensor_id",
+		"location",
+		"column_break_2",
+		"duration_minutes",
+		"severity",
+		"tab_break_resolution",
+		"resolution_status",
+		"resolution_date",
+		"resolved_by",
+		"column_break_3",
+		"resolution_notes",
+		"corrective_action",
+		"tab_break_impact",
+		"batch_affected",
+		"quantity_affected",
+		"column_break_4",
+		"impact_assessment",
+		"disposition",
+		"tab_break_status",
+		"status",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "excursion_number",
+			"fieldtype": "Data",
+			"label": "Excursion Number",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "excursion_date",
+			"fieldtype": "Date",
+			"label": "Excursion Date",
+			"reqd": 1,
+			"default": "Today"
+		},
+		{
+			"fieldname": "excursion_time",
+			"fieldtype": "Time",
+			"label": "Excursion Time",
+			"reqd": 1,
+			"default": "Now"
+		},
+		{
+			"fieldname": "batch_number",
+			"fieldtype": "Link",
+			"label": "Batch Number",
+			"options": "Pharma Batch",
+			"reqd": 1
+		},
+		{
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"label": "Item Code",
+			"options": "Item"
+		},
+		{
+			"fieldname": "warehouse",
+			"fieldtype": "Link",
+			"label": "Warehouse",
+			"options": "Warehouse"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "temperature",
+			"fieldtype": "Float",
+			"label": "Temperature",
+			"reqd": 1
+		},
+		{
+			"fieldname": "temperature_unit",
+			"fieldtype": "Select",
+			"label": "Temperature Unit",
+			"options": "\n\u00b0C\n\u00b0F\nK",
+			"default": "\u00b0C"
+		},
+		{
+			"fieldname": "min_temperature",
+			"fieldtype": "Float",
+			"label": "Min Temperature"
+		},
+		{
+			"fieldname": "max_temperature",
+			"fieldtype": "Float",
+			"label": "Max Temperature"
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Section Break",
+			"label": "Excursion Details"
+		},
+		{
+			"fieldname": "equipment_id",
+			"fieldtype": "Data",
+			"label": "Equipment ID"
+		},
+		{
+			"fieldname": "equipment_type",
+			"fieldtype": "Select",
+			"label": "Equipment Type",
+			"options": "\nRefrigerator\nFreezer\nCold Room\nVehicle\nContainer"
+		},
+		{
+			"fieldname": "sensor_id",
+			"fieldtype": "Data",
+			"label": "Sensor ID"
+		},
+		{
+			"fieldname": "location",
+			"fieldtype": "Data",
+			"label": "Location"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "duration_minutes",
+			"fieldtype": "Int",
+			"label": "Duration (minutes)"
+		},
+		{
+			"fieldname": "severity",
+			"fieldtype": "Select",
+			"label": "Severity",
+			"options": "\nMinor\nModerate\nMajor\nCritical",
+			"reqd": 1,
+			"default": "Moderate"
+		},
+		{
+			"fieldname": "tab_break_resolution",
+			"fieldtype": "Section Break",
+			"label": "Resolution"
+		},
+		{
+			"fieldname": "resolution_status",
+			"fieldtype": "Select",
+			"label": "Resolution Status",
+			"options": "\nOpen\nIn Progress\nResolved\nClosed",
+			"default": "Open",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "resolution_date",
+			"fieldtype": "Date",
+			"label": "Resolution Date"
+		},
+		{
+			"fieldname": "resolved_by",
+			"fieldtype": "Link",
+			"label": "Resolved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "resolution_notes",
+			"fieldtype": "Text",
+			"label": "Resolution Notes"
+		},
+		{
+			"fieldname": "corrective_action",
+			"fieldtype": "Text",
+			"label": "Corrective Action"
+		},
+		{
+			"fieldname": "tab_break_impact",
+			"fieldtype": "Section Break",
+			"label": "Impact Assessment"
+		},
+		{
+			"fieldname": "batch_affected",
+			"fieldtype": "Check",
+			"label": "Batch Affected",
+			"default": "1"
+		},
+		{
+			"fieldname": "quantity_affected",
+			"fieldtype": "Float",
+			"label": "Quantity Affected"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "impact_assessment",
+			"fieldtype": "Text",
+			"label": "Impact Assessment"
+		},
+		{
+			"fieldname": "disposition",
+			"fieldtype": "Select",
+			"label": "Disposition",
+			"options": "\nRelease\nQuarantine\nDestroy\nReturn"
+		},
+		{
+			"fieldname": "tab_break_status",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nDraft\nSubmitted",
+			"default": "Draft"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Text",
+			"label": "Remarks"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Temperature Excursion",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Quality Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		}
+	],
+	"sort_field": "excursion_date",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

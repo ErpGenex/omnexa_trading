@@ -1,0 +1,67 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-07-05 09:50:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"event_type",
+		"event_timestamp",
+		"event_user",
+		"event_details",
+		"ip_address",
+		"device_info"
+	],
+	"fields": [
+		{
+			"fieldname": "event_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Event Type",
+			"options": "Created\nVerified\nRevoked\nModified\nViewed",
+			"reqd": 1
+		},
+		{
+			"fieldname": "event_timestamp",
+			"fieldtype": "Datetime",
+			"in_list_view": 1,
+			"label": "Event Timestamp",
+			"reqd": 1
+		},
+		{
+			"fieldname": "event_user",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "User",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "event_details",
+			"fieldtype": "Text",
+			"label": "Event Details"
+		},
+		{
+			"fieldname": "ip_address",
+			"fieldtype": "Data",
+			"label": "IP Address"
+		},
+		{
+			"fieldname": "device_info",
+			"fieldtype": "Data",
+			"label": "Device Info"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-07-05 09:50:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Signature Audit Trail",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
+}

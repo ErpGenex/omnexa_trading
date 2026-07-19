@@ -1,0 +1,91 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-07-05 10:15:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"test_case_id",
+		"test_case_title",
+		"test_status",
+		"test_date",
+		"tested_by",
+		"column_break_1",
+		"actual_result",
+		"pass_fail",
+		"deviations",
+		"observations"
+	],
+	"fields": [
+		{
+			"fieldname": "test_case_id",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Test Case ID",
+			"reqd": 1
+		},
+		{
+			"fieldname": "test_case_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Test Case Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "test_status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Test Status",
+			"options": "Not Started\nIn Progress\nCompleted\nFailed\nSkipped",
+			"reqd": 1
+		},
+		{
+			"fieldname": "test_date",
+			"fieldtype": "Date",
+			"label": "Test Date"
+		},
+		{
+			"fieldname": "tested_by",
+			"fieldtype": "Link",
+			"label": "Tested By",
+			"options": "User"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "actual_result",
+			"fieldtype": "Text",
+			"label": "Actual Result"
+		},
+		{
+			"fieldname": "pass_fail",
+			"fieldtype": "Select",
+			"label": "Pass/Fail",
+			"options": "Pass\nFail\nInconclusive"
+		},
+		{
+			"fieldname": "deviations",
+			"fieldtype": "Text",
+			"label": "Deviations"
+		},
+		{
+			"fieldname": "observations",
+			"fieldtype": "Text",
+			"label": "Observations"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-07-05 10:15:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Validation Test Result",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
+}

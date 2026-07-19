@@ -1,0 +1,14 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "pos-closing-entry",
+	"page_name": "pos-closing-entry",
+	"standard": "Yes",
+	"title": "POS Closing Entry",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Accounts Manager"},
+		{"role": "Accounts User"},
+		{"role": "Sales User"}
+	]
+}

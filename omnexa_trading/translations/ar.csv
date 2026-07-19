@@ -1,0 +1,1223 @@
+Acceptance Criteria,Acceptance Criteria
+Acceptance Criteria are required,Acceptance Criteria are required
+Acknowledgement Date,Acknowledgement تاريخ
+Acknowledgement Notes,Acknowledgement Notes
+Acknowledgement Required,Acknowledgement Required
+Acknowledgement Status,Acknowledgement حالة
+Action,إجراء
+Action Description,إجراء وصف
+Action Owner,إجراء Owner
+Action Type,إجراء نوع
+Active,نشط
+Active encryption key {0} not found,نشط encryption مفتاح { 0 } not found
+Actual Arrival,Actual Arrival
+Actual Completion Date,Actual Completion تاريخ
+Actual Condition,Actual Condition
+Actual Datetime,Actual Datetime
+Actual Delivery Date/Time,Actual Delivery تاريخ Time
+Actual Distance (KM),Actual Distance (KM)
+Actual End Date,Actual نهاية تاريخ
+Actual Hours,Actual Hours
+Actual KM,Actual KM
+Actual Landing Cost,Actual Landing تكلفة
+Actual Result,Actual Result
+Actual Start Date,Actual بداية تاريخ
+Actual Start Date cannot be after Actual End Date,Actual بداية تاريخ cannot be after Actual نهاية تاريخ
+Actual Value,Actual Value
+actual_qty,actual qty
+Additional Info,Additional Info
+Advising Bank,Advising بنك
+Affected Customers,Affected Customers
+Affected Departments,Affected Departments
+Affected Processes,Affected Processes
+Affected Products,Affected Products
+Alert Sent,Alert Sent
+Alert Time,Alert Time
+Algorithm,Algorithm
+Algorithm {0} not supported,Algorithm { 0 } not supported
+Allocate to Items,Allocate إلى Items
+Allowed Actions,Allowed إجراءات
+Allowed DocTypes,Allowed Doc Types
+Alternative Drug Code,Alternative Drug كود
+Alternative Drug Name,Alternative Drug اسم
+Amount,مبلغ
+An active signature already exists for this document,An نشط signature already exists لـ this مستند
+Analysis,Analysis
+Analysis Method,Analysis Method
+Apply On,Apply On
+Apply to All Companies,Apply إلى All Companies
+Approval,موافقة
+Approval Conditions,موافقة Conditions
+Approval Date,موافقة تاريخ
+Approval Number,موافقة رقم
+Approval Number {0} already exists,موافقة رقم { 0 } already exists
+Approval Status,موافقة حالة
+Approvals,موافقات
+Approved By,معتمد حسب
+Approved By and Approved Date are required,معتمد حسب و معتمد تاريخ are required
+Approved By and Approved Date are required for approved SOPs,معتمد حسب و معتمد تاريخ are required لـ معتمد SOPs
+Approved Date,معتمد تاريخ
+Area,Area
+Assessment,Assessment
+Assessment Date,Assessment تاريخ
+Assessment Findings,Assessment Findings
+Assessment Method,Assessment Method
+Assessment Question,Assessment Question
+Assessment Questions,Assessment Questions
+Assessment Result,Assessment Result
+Assessment Results,Assessment Results
+Assessment Score,Assessment درجة
+Assessment Score is required for this qualification status,Assessment درجة is required لـ this qualification حالة
+Assessment Score must be at least 70% for qualification,Assessment درجة must be at least 70% لـ qualification
+Assessment Status,Assessment حالة
+Assessment Team,Assessment Team
+Asset Owner,Asset Owner
+Assigned Vehicle,Assigned مركبة
+At least one commission tier is required.,At least one commission tier is required.
+At least one participant is required,At least one participant is required
+ATC Code,ATC كود
+Attachment,Attachment
+Attachments,Attachments
+Attendance Date,Attendance تاريخ
+Attendance Status,Attendance حالة
+Audit Findings,تدقيق Findings
+Audit Log,تدقيق سجل
+Audit Trail,تدقيق Trail
+Authentication,Authentication
+Authentication Details,Authentication تفاصيل
+Authentication Method,Authentication Method
+Authentication Timestamp,Authentication Timestamp
+Authentication Token,Authentication Token
+available_qty,متاح qty
+avg_temp,متوسط temp
+Backdated training is not allowed,Backdated training is not allowed
+Bank Information,بنك Information
+Barcode,Barcode
+Basic Information,Basic Information
+Batch Affected,Batch Affected
+Batch Details,Batch تفاصيل
+Batch Expiry,Batch Expiry
+Batch No,Batch No
+Batch Number,Batch رقم
+Batch Number is required,Batch رقم is required
+Batch Number {0} already exists,Batch رقم { 0 } already exists
+Batch Serial Number,Batch Serial رقم
+Batch Size,Batch Size
+Batch Tracking,Batch Tracking
+Batch tracking enabled for Item {0},Batch tracking enabled لـ صنف { 0 }
+Batch Validation,Batch تحقق
+Batch {0} (Item: {1}) expires on {2},Batch { 0 } (صنف: { 1 }) expires on { 2 }
+Batch {0} has expired on {1},Batch { 0 } has expired on { 1 }
+Batch {0} is a controlled substance and license has expired,Batch { 0 } is a controlled substance و license has expired
+Batch {0} is already approved,Batch { 0 } is already معتمد
+Batch {0} is already quarantined,Batch { 0 } is already quarantined
+Batch {0} is not active,Batch { 0 } is not نشط
+Batch {0} is not quarantined,Batch { 0 } is not quarantined
+Batch {0} marked as expired,Batch { 0 } marked as expired
+Batch {0} placed in quarantine,Batch { 0 } placed in quarantine
+Batch {0} quality status is {1}. Cannot sell.,Batch { 0 } جودة حالة is { 1 }. Cannot sell.
+Batch {0} quarantined due to temperature excursion,Batch { 0 } quarantined استحقاق إلى temperature excursion
+Batch {0} released from quarantine,Batch { 0 } released from quarantine
+Bill of Lading,Bill of Lading
+Bill of Lading Number,Bill of Lading رقم
+Branch,الفرع
+Branch belongs to another company.,فرع belongs إلى another شركة.
+Branch does not exist.,فرع does not exist.
+Cannot remove role as it is assigned to users,Cannot remove دور as it is assigned إلى users
+CAPA,CAPA
+CAPA Action,CAPA إجراء
+CAPA Approvals,CAPA موافقات
+CAPA Category,CAPA فئة
+CAPA Created,CAPA Created
+CAPA Date,CAPA تاريخ
+CAPA Information,CAPA Information
+CAPA must be initiated and dated before submission,CAPA must be initiated و dated before submission
+CAPA Number,CAPA رقم
+CAPA Reference,CAPA Reference
+CAPA Required,CAPA Required
+CAPA Status,CAPA حالة
+CAPA Team Member,CAPA Team Member
+CAPA Title,CAPA عنوان
+CAPA Type,CAPA نوع
+Capacity,Capacity
+Capacity cannot be negative.,Capacity cannot be negative.
+Caption,Caption
+Causes,Causes
+Certificate Attachment,Certificate Attachment
+Certificate Date,Certificate تاريخ
+Certificate Expiry,Certificate Expiry
+Certificate Issued,Certificate Issued
+Certificate Number,Certificate رقم
+Certificate of Origin,Certificate of Origin
+Certification,Certification
+Change Date,Change تاريخ
+Change Description,Change وصف
+Change Details,Change تفاصيل
+Change Reason,Change Reason
+Changed By,Changed حسب
+Charges,Charges
+City,City
+Classification,Classification
+Closed By,مغلق حسب
+Closing Date,Closing تاريخ
+Closing Date cannot be before Opening Date.,Closing تاريخ cannot be before Opening تاريخ.
+Closing Notes,Closing Notes
+Closure,Closure
+Cold Chain Authorized,Cold Chain Authorized
+Cold Chain Required,Cold Chain Required
+Color,Color
+Commerce Allowed Action,Commerce Allowed إجراء
+Commerce Allowed DocType,Commerce Allowed Doc نوع
+Commerce Dynamic Role,Commerce Dynamic دور
+Commerce Restricted DocType,Commerce Restricted Doc نوع
+Commercial Invoice,Commercial فاتورة
+Commercial strategy & credit,Commercial strategy & ائتمان
+Commission,Commission
+Commission Amount,Commission مبلغ
+Commission Expense Account,Commission مصروف حساب
+Commission Payable Account,Commission Payable حساب
+Commission rate cannot be negative.,Commission معدل cannot be negative.
+Commission Rule,Commission Rule
+Commission summary,Commission ملخص
+Commission tiers overlap. Please adjust ranges.,Commission tiers overlap. Please adjust ranges.
+Commission Type,Commission نوع
+Commissions & incentives,Commissions & incentives
+Company,الشركة
+Company filter is required.,شركة filter is required.
+Company is required,شركة is required
+Competitor Name,Competitor اسم
+Competitor Reference,Competitor Reference
+Competitors,Competitors
+Completion Date,Completion تاريخ
+Completion Rate,Completion معدل
+Compliance,الامتثال
+Compliance Performance,امتثال أداء
+Compliance Requirements,امتثال Requirements
+Concentration,Concentration
+Condition (Python),Condition (Python)
+Conditions,Conditions
+Configuration,الإعدادات
+Confirming Bank,Confirming بنك
+Consequences,Consequences
+Contact Email,اتصال بريد إلكتروني
+Contact Person,اتصال Person
+Contact Phone,اتصال Phone
+Container Charges,Container Charges
+Container Number,Container رقم
+Content,Content
+Contract Date,عقد تاريخ
+Contract Owner,عقد Owner
+Contracts,Contracts
+Contributing Factors,Contributing Factors
+Controlled Substance,Controlled Substance
+Controlled Substance Type,Controlled Substance نوع
+Controlled Substances Authorized,Controlled Substances Authorized
+Correct Answer,Correct Answer
+Correction,Correction
+Correction Date,Correction تاريخ
+Correction Effectiveness,Correction Effectiveness
+Correction Owner,Correction Owner
+Corrective,Corrective
+Corrective Action,Corrective إجراء
+Corrective Action Due Date,Corrective إجراء استحقاق تاريخ
+Corrective Action Effectiveness,Corrective إجراء Effectiveness
+Corrective Action Owner,Corrective إجراء Owner
+Corrective Action Status,Corrective إجراء حالة
+Corrective Actions,Corrective إجراءات
+Corrective Actions are required for this CAPA type,Corrective إجراءات are required لـ this CAPA نوع
+Cost Allocation,تكلفة Allocation
+Cost Allocation Method,تكلفة Allocation Method
+Cost Center,مركز التكلفة
+Cost Per Unit,تكلفة Per Unit
+Could not create Stock Entry: {0},Could not create Stock قيد: { 0 }
+Country,Country
+Country of Origin,Country of Origin
+Created By,Created حسب
+Created Date,Created تاريخ
+Creation Date,Creation تاريخ
+Criteria,Criteria
+Critical Temperature Alert: {0}°C for Batch {1} in Warehouse {2},Critical Temperature Alert: { 0 } ° C لـ Batch { 1 } in Warehouse { 2 }
+Currency,Currency
+Current Risk Level,Current مخاطر Level
+Current Risk Score,Current مخاطر درجة
+Current Version,Current إصدار
+Customer,العميل
+Customer / HCP,عميل HCP
+Customer Impact,عميل Impact
+Customer ledger,عميل دفتر أستاذ
+Customer Name,عميل اسم
+Customer notifications sent,عميل notifications sent
+Customer Profile,ملف العميل
+Customer Profile is required,عميل ملف is required
+Customer Profile not found,عميل ملف not found
+Customs Clearance,Customs Clearance
+Customs Duties,Customs Duties
+Dashboard Config,لوحة معلومات Config
+Data Type,بيانات نوع
+Date,التاريخ
+Days Until Expiry,Days Until Expiry
+Default income account not set for company,افتراضي دخل حساب not set لـ شركة
+Default receivable account not set for company,افتراضي receivable حساب not set لـ شركة
+Defect Description,Defect وصف
+Defect Type,Defect نوع
+Defects,Defects
+Definitions,Definitions
+Delivered Qty,Delivered Qty
+Delivery Performance,Delivery أداء
+Delivery Status,Delivery حالة
+Demurrage Charges,Demurrage Charges
+Department,Department
+Description,الوصف
+Destination Country,Destination Country
+Details,التفاصيل
+Deviation,Deviation
+Deviation Approvals,Deviation موافقات
+Deviation Category,Deviation فئة
+Deviation Description,Deviation وصف
+Deviation Information,Deviation Information
+Deviation must be reported and dated before submission,Deviation must be reported و dated before submission
+Deviation Number,Deviation رقم
+Deviation Status,Deviation حالة
+Deviation Team Member,Deviation Team Member
+Deviation Title,Deviation عنوان
+Deviation Type,Deviation نوع
+Deviations,Deviations
+Device Info,Device Info
+Discovery Date,Discovery تاريخ
+Discovery Date cannot be before Occurrence Date,Discovery تاريخ cannot be before Occurrence تاريخ
+Dispensing Requirements,Dispensing Requirements
+Disposition,Disposition
+Distances cannot be negative.,Distances cannot be negative.
+Distribution,Distribution
+Distribution fulfillment,Distribution fulfillment
+Distribution List,Distribution قائمة
+Distribution Order,Distribution Order
+Distribution Zone,Distribution Zone
+Distributor Price,Distributor سعر
+DocType,نوع المستند
+Document Binding,مستند Binding
+Document Hash,مستند Hash
+Document hash mismatch - document may have been modified,مستند hash mismatch - مستند may have been modified
+Document Information,مستند Information
+Document Link,مستند Link
+Document must be submitted before signing,مستند must be submitted before signing
+Document Name,مستند اسم
+Document Status,مستند حالة
+Document Type,مستند نوع
+Document type and name are required,مستند نوع و اسم are required
+Document Version,مستند إصدار
+Document {0} {1} does not exist,مستند { 0 } { 1 } does not exist
+Documentation,Documentation
+Documents,مستندات
+Dosage Form,Dosage نموذج
+Down Payment,Down دفعة
+Down Payment cannot be negative.,Down دفعة cannot be negative.
+Down Payment must be between zero and principal amount.,Down دفعة must be between zero و principal مبلغ.
+Driver,Driver
+Drug Alternatives,Drug Alternatives
+Drug Category,Drug فئة
+Drug Code,Drug كود
+Drug Group,Drug Group
+Drug Name,Drug اسم
+Drug Registration,Drug Registration
+Due Date,تاريخ الاستحقاق
+Duplicate,Duplicate
+Duplicate stop sequence in route plan.,Duplicate stop sequence in route خطة.
+Duration (Hours),Duration (Hours)
+Duration (minutes),Duration (minutes)
+Early Warning Indicators,Early Warning Indicators
+Effective Date,Effective تاريخ
+Effective Date cannot be after Expiry Date,Effective تاريخ cannot be after Expiry تاريخ
+Effective Date cannot be after Review Date,Effective تاريخ cannot be after Review تاريخ
+Effectiveness,Effectiveness
+Effectiveness Check,Effectiveness فحص
+Effectiveness Date,Effectiveness تاريخ
+Effectiveness Evaluation,Effectiveness Evaluation
+Effectiveness Notes,Effectiveness Notes
+Effectiveness Score,Effectiveness درجة
+Efficiency %,Efficiency%
+Electronic Signature,Electronic Signature
+Email,البريد الإلكتروني
+Employee,الموظف
+Employee Name,موظف اسم
+Encrypted Field,Encrypted Field
+Encrypted Fields,Encrypted Fields
+Encryption Key,Encryption مفتاح
+Encryption Status,Encryption حالة
+Equipment,Equipment
+Equipment Code,Equipment كود
+Equipment Description,Equipment وصف
+Equipment Details,Equipment تفاصيل
+Equipment ID,Equipment معرف
+Equipment Name,Equipment اسم
+Equipment Qualification,Equipment Qualification
+Equipment Required,Equipment Required
+Equipment Type,Equipment نوع
+Estimated Amount,Estimated مبلغ
+Estimated Cost,Estimated تكلفة
+Estimated Hours,Estimated Hours
+Estimated Rate,Estimated معدل
+Event Details,Event تفاصيل
+Event Timestamp,Event Timestamp
+Event Type,Event نوع
+Exclusions,Exclusions
+Excursion Date,Excursion تاريخ
+Excursion Details,Excursion تفاصيل
+Excursion Duration (minutes),Excursion Duration (minutes)
+Excursion Number,Excursion رقم
+Excursion Number {0} already exists,Excursion رقم { 0 } already exists
+Excursion Time,Excursion Time
+Excursion {0} resolved,Excursion { 0 } resolved
+Execution,Execution
+Execution Results,Execution Results
+Execution Status,Execution حالة
+Execution Summary,Execution ملخص
+Expected Condition,Expected Condition
+Expected Margin %,Expected Margin%
+Expected Profit,Expected Profit
+Expected Result,Expected Result
+Expected Selling Value,Expected Selling Value
+Expiry Date,Expiry تاريخ
+Expiry Date cannot be in the past,Expiry تاريخ cannot be in the past
+Expiry Date is required,Expiry تاريخ is required
+Expiry Date must be after Manufacturing Date,Expiry تاريخ must be after تصنيع تاريخ
+Expiry Date must be after Qualification Date,Expiry تاريخ must be after Qualification تاريخ
+Expiry Tracking,Expiry Tracking
+Export Documents,Export مستندات
+Export License,Export License
+Field Change,Field Change
+Field Changes,Field Changes
+Field Name,Field اسم
+Field Permission,Field Permission
+Field sales & distribution,Field مبيعات & distribution
+Field {0} does not exist in DocType {1},Field { 0 } does not exist in Doc نوع { 1 }
+Filters,Filters
+Final Rate (with Landing Cost),Final معدل (with Landing تكلفة)
+Finance,مالية
+Finance Amount,مالية مبلغ
+Financial Impact,مالي Impact
+Freight Charges,Freight Charges
+Frequency,Frequency
+From Amount,From مبلغ
+From Date and To Date are required,From تاريخ و إلى تاريخ are required
+From Warehouse,From Warehouse
+From Warehouse is required for Load Vehicle.,From Warehouse is required لـ Load مركبة.
+Fuel Type,Fuel نوع
+Fulfillment,Fulfillment
+Functional Requirements,Functional Requirements
+Further,Further
+GDP Compliant,GDP Compliant
+General ledger,عام دفتر أستاذ
+Generic Name,Generic اسم
+GL Account,GL حساب
+Government Batch Number,Government Batch رقم
+Government Registration Number,Government Registration رقم
+Grand Total,Grand إجمالي
+Gross Sales,Gross مبيعات
+GS1 Barcode,GS1 Barcode
+Health Impact,صحة Impact
+Hepatic Adjustment,Hepatic Adjustment
+Hide Permission,Hide Permission
+Hospital Price,Hospital سعر
+HS Code,HS كود
+Humidity (%),Humidity (%)
+Humidity Unit,Humidity Unit
+Icon,Icon
+Identification Date,Identification تاريخ
+Immediate Actions Taken,Immediate إجراءات Taken
+Immediate Correction,Immediate Correction
+Impact,Impact
+Impact Assessment,Impact Assessment
+Import LC,Import LC
+Import/Export Authorized,Import Export Authorized
+Improvement Actions,Improvement إجراءات
+Incoterms,Incoterms
+Initiated By,Initiated حسب
+Initiated Date,Initiated تاريخ
+Initiation Date,Initiation تاريخ
+Inspection Date,Inspection تاريخ
+Inspection Date cannot be in the future,Inspection تاريخ cannot be in the future
+Inspection Date is required,Inspection تاريخ is required
+Inspection Defect,Inspection Defect
+Inspection Notes,Inspection Notes
+Inspection Number,Inspection رقم
+Inspection Number is required,Inspection رقم is required
+Inspection Number {0} already exists,Inspection رقم { 0 } already exists
+Inspection Photo,Inspection Photo
+Inspection Photos,Inspection Photos
+Inspection Status,Inspection حالة
+Inspection Type,Inspection نوع
+Inspector,Inspector
+Installation Date,Installation تاريخ
+Installment,Installment
+Installment Count,Installment عدد
+Installment Count must be greater than zero.,Installment عدد must be greater than zero.
+Installment Frequency,Installment Frequency
+Installment Plan,Installment خطة
+Installment Plan is required for installment sales.,Installment خطة is required لـ installment مبيعات.
+Installment portfolio,Installment portfolio
+Installment Schedule,Installment Schedule
+Installment Slots Σ,Installment Slots
+Instructor,Instructor
+Instructor Contact,Instructor اتصال
+Instructor Department,Instructor Department
+Instructor Information,Instructor Information
+Instructor is required,Instructor is required
+Instructor Qualifications,Instructor Qualifications
+Insurance Certificate,Insurance Certificate
+Insurance Charges,Insurance Charges
+Insurance Coverage,Insurance Coverage
+Interest,Interest
+Interest Rate %,Interest معدل%
+Investigation,Investigation
+Investigation Findings,Investigation Findings
+Investigation Method,Investigation Method
+Investigation Team,Investigation Team
+Invoice,فاتورة
+Invoice is required,فاتورة is required
+Invoice must be submitted,فاتورة must be submitted
+Invoice Reference,فاتورة Reference
+IP Address,IP عنوان
+Is Active,Is نشط
+Issue Date,Issue تاريخ
+Issuing Authority,Issuing Authority
+Issuing Bank,Issuing بنك
+Item,صنف
+Item Code,صنف كود
+Item Code is required,صنف كود is required
+Item Name,صنف اسم
+Items,Items
+Journal Entry,قيد يومية
+Key Details,مفتاح تفاصيل
+Key Hash,مفتاح Hash
+Key Length,مفتاح Length
+Key Name,مفتاح اسم
+Key Name {0} already exists,مفتاح اسم { 0 } already exists
+Key Rotation,مفتاح Rotation
+Key Type,مفتاح نوع
+Key Value,مفتاح Value
+Landing Cost,Landing تكلفة
+Landing Cost Allocated,Landing تكلفة Allocated
+Last Encrypted Date,Last Encrypted تاريخ
+Last Rotation Date,Last Rotation تاريخ
+Late Penalty %,Late Penalty%
+LC Amendment Charges,LC Amendment Charges
+LC Amount,LC مبلغ
+LC Charges,LC Charges
+LC Confirmation Charges,LC Confirmation Charges
+LC Date,LC تاريخ
+LC Items,LC Items
+LC Number,LC رقم
+LC Opening Charges,LC Opening Charges
+LC Terms,LC Terms
+LC Type,LC نوع
+License Category,License فئة
+License Document,License مستند
+License Expiry,License Expiry
+License Expiry is required for Controlled Substances,License Expiry is required لـ Controlled Substances
+License has expired,License has expired
+License has expired on {0},License has expired on { 0 }
+License Number,License رقم
+License Number is required for Controlled Substances,License رقم is required لـ Controlled Substances
+License Scope,License Scope
+License Type,License نوع
+Line Reference,Line Reference
+Load omnexa_core pharma portal desk,Load omnexa أساسي pharma بوابة desk
+Load omnexa_core vertical portal desk,Load omnexa أساسي vertical بوابة desk
+Location,Location
+Location Information,Location Information
+Log Date,سجل تاريخ
+Log ID,سجل معرف
+Log ID {0} already exists,سجل معرف { 0 } already exists
+Log Number,سجل رقم
+Log Number {0} already exists,سجل رقم { 0 } already exists
+Log Time,سجل Time
+Logistics,Logistics
+Manufacturer,Manufacturer
+Manufacturing Date,تصنيع تاريخ
+Manufacturing Date is required,تصنيع تاريخ is required
+Mask Permission,Mask Permission
+Matched,Matched
+Material Name,Material اسم
+Material Type,Material نوع
+Materials,Materials
+Max Daily Dose,أقصى يومي Dose
+Max Participants,أقصى Participants
+Max Temperature,أقصى Temperature
+max_temp,أقصى temp
+Maximum Retail Price,Maximum تجزئة سعر
+Measurement Period,Measurement Period
+Metric Name,Metric اسم
+Metric Type,Metric نوع
+Min Participants,Min Participants
+Min Temperature,Min Temperature
+min_temp,min temp
+Mitigation,Mitigation
+Mitigation Actions,Mitigation إجراءات
+Mitigation Due Date,Mitigation استحقاق تاريخ
+Mitigation Owner,Mitigation Owner
+Mitigation Status,Mitigation حالة
+Mitigation Strategy,Mitigation Strategy
+Model,Model
+Modification Date,Modification تاريخ
+Modified By,Modified حسب
+Monitoring,Monitoring
+Monitoring Frequency,Monitoring Frequency
+Monitoring Method,Monitoring Method
+Monitoring Responsible,Monitoring Responsible
+Monitoring Results,Monitoring Results
+Name,الاسم
+Naming Series,Naming Series
+Near Expiry,Near Expiry
+Net After Returns,Net After Returns
+Net Sales,Net مبيعات
+Net Total,Net إجمالي
+New Price,جديد سعر
+New Value,جديد Value
+Next Rotation Date,Next Rotation تاريخ
+Notes,Notes
+Notification Date,Notification تاريخ
+Notification Sent,Notification Sent
+Notification Status,Notification حالة
+Number of participants exceeds maximum allowed,رقم of participants exceeds maximum allowed
+Number of participants is below minimum required,رقم of participants is below minimum required
+Objectives & Scope,Objectives & Scope
+Observations,Observations
+Occurrence Date,Occurrence تاريخ
+Old Price,Old سعر
+Old Value,Old Value
+Omnexa Journey assets missing. Run: bench build --app omnexa_healthcare,Omnexa Journey أصول missing. Run: bench build - - app omnexa رعاية صحية
+Omnexa Trading,Omnexa تجارة
+Only active signatures can be revoked,Only نشط signatures can be revoked
+Only approved protocols can be executed,Only معتمد protocols can be executed
+Only approved qualifications can be executed,Only معتمد qualifications can be executed
+Only CAPAs pending verification can be completed,Only CAPAs معلق verification can be مكتمل
+Only CAPAs under investigation can be completed,Only CAPAs under investigation can be مكتمل
+Only CAPAs with actions in progress can be verified,Only CAPAs with إجراءات in progress can be verified
+Only deviations under investigation can be completed,Only deviations under investigation can be مكتمل
+Only deviations with correction in progress can be completed,Only deviations with correction in progress can be مكتمل
+Only draft qualifications can be assessed,Only مسودة qualifications can be assessed
+Only in-progress protocols can be completed,Only in - progress protocols can be مكتمل
+Only in-progress qualifications can be completed,Only in - progress qualifications can be مكتمل
+Only open CAPAs can be investigated,Only مفتوح CAPAs can be investigated
+Only open deviations can be investigated,Only مفتوح deviations can be investigated
+Only open risks can be analyzed,Only مفتوح risks can be analyzed
+Only qualifications under review can be completed,Only qualifications under review can be مكتمل
+Only risks in mitigation or monitoring can have mitigation initiated,Only risks in mitigation or monitoring can have mitigation initiated
+Only risks under analysis can be completed,Only risks under analysis can be مكتمل
+Only risks with mitigation in progress can be completed,Only risks with mitigation in progress can be مكتمل
+Opening Date,Opening تاريخ
+Options,Options
+Order Owner,Order Owner
+Order Status,Order حالة
+Organization & network,Organization & network
+Overall Score,Overall درجة
+Overview,نظرة عامة
+Package Size,Package Size
+Packing List,Packing قائمة
+Parameter Name,Parameter اسم
+Parameter Type,Parameter نوع
+Participants,Participants
+Pass/Fail,Pass Fail
+Passing Criteria,Passing Criteria
+Passing Score,Passing درجة
+Payment Entry,دفعة قيد
+Payment Terms,دفعة Terms
+Payment Type,دفعة نوع
+Penalty,Penalty
+Performance,أداء
+Performance Metrics,أداء Metrics
+Performance Requirements,أداء Requirements
+Period From,Period From
+Period To,Period إلى
+Period To cannot be before Period From.,Period إلى cannot be before Period From.
+Permission Name,Permission اسم
+Permission Name {0} already exists,Permission اسم { 0 } already exists
+Permissions,Permissions
+Pharma Batch,Pharma Batch
+Pharma Batch {0} not found,Pharma Batch { 0 } not found
+Pharma Drug Alternative,Pharma Drug Alternative
+Pharma Drug License,Pharma Drug License
+Pharma Drug Pricing History,Pharma Drug Pricing History
+Pharma Drug Registration,Pharma Drug Registration
+Pharma Export Shipment,Pharma Export Shipment
+Pharma Import LC,Pharma Import LC
+Pharma Import LC Item,Pharma Import LC صنف
+Pharma Import License,Pharma Import License
+Pharma LC Request,Pharma LC طلب
+Pharma LC Request Item,Pharma LC طلب صنف
+Pharma Product Recall,Pharma منتج Recall
+Pharma Quality Inspection,Pharma جودة Inspection
+Pharma Regulatory Approval,Pharma Regulatory موافقة
+Pharma Sample Register,Pharma Sample Register
+Pharmaceutical,Pharmaceutical
+Pharmacy Price,Pharmacy سعر
+Photo,Photo
+Photo Proof,Photo Proof
+Plan Owner,خطة Owner
+Planned Arrival,Planned Arrival
+Planned Date,Planned تاريخ
+Planned Delivery Date,Planned Delivery تاريخ
+Planned Distance (KM),Planned Distance (KM)
+Planned End Date,Planned نهاية تاريخ
+Planned KM,Planned KM
+Planned Start Date,Planned بداية تاريخ
+Planned Start Date cannot be after Planned End Date,Planned بداية تاريخ cannot be after Planned نهاية تاريخ
+Points,Points
+Port Charges,Port Charges
+Port of Discharge,Port of Discharge
+Port of Loading,Port of Loading
+Portal Name,بوابة اسم
+Portal URL,بوابة URL
+Portal URL must start with '/app/commerce/',بوابة URL must بداية with ' app commerce '
+POS Invoices,POS Invoices
+Posting Date,Posting تاريخ
+Potential Consequences,Potential Consequences
+Pregnancy Category,Pregnancy فئة
+Prepared By,Prepared حسب
+Prepared By is required,Prepared حسب is required
+Prepared Date,Prepared تاريخ
+Prerequisites,Prerequisites
+Prescription is required for controlled substance {0},Prescription is required لـ controlled substance { 0 }
+Prescription Number,Prescription رقم
+Prescription number is required for controlled substances,Prescription رقم is required لـ controlled substances
+Prescription Required,Prescription Required
+Prevention Action,Prevention إجراء
+Preventive,Preventive
+Preventive Action Due Date,Preventive إجراء استحقاق تاريخ
+Preventive Action Effectiveness,Preventive إجراء Effectiveness
+Preventive Action Owner,Preventive إجراء Owner
+Preventive Action Status,Preventive إجراء حالة
+Preventive Actions,Preventive إجراءات
+Preventive Actions are required for this CAPA type,Preventive إجراءات are required لـ this CAPA نوع
+Preventive Due Date,Preventive استحقاق تاريخ
+Preventive Owner,Preventive Owner
+Preventive Status,Preventive حالة
+Price List,سعر قائمة
+Price Type,سعر نوع
+Pricing,Pricing
+Pricing History,Pricing History
+Principal,Principal
+Principal Amount,Principal مبلغ
+Principal Amount must be greater than zero.,Principal مبلغ must be greater than zero.
+Priority,Priority
+Probability,Probability
+Problem,Problem
+Problem Description,Problem وصف
+Problem Statement,Problem Statement
+Procedure,Procedure
+Process Area,Process Area
+Product,منتج
+Product Code,منتج كود
+Product Recall {0} initiated for {1} - Severity: {2},منتج Recall { 0 } initiated لـ { 1 } - Severity: { 2 }
+Proforma Invoice,Proforma فاتورة
+Progress,Progress
+projected_qty,projected qty
+Protocol Approvals,Protocol موافقات
+Protocol Date,Protocol تاريخ
+Protocol Information,Protocol Information
+Protocol must be prepared and dated before submission,Protocol must be prepared و dated before submission
+Protocol Number,Protocol رقم
+Protocol Title,Protocol عنوان
+Protocol Type,Protocol نوع
+Purchase Order,شراء Order
+Purpose,Purpose
+QA Approval,QA موافقة
+QA Approval Date,QA موافقة تاريخ
+QA Approval is required,QA موافقة is required
+QA Approval is required for approved SOPs,QA موافقة is required لـ معتمد SOPs
+QA Approver,QA Approver
+QA Approver is required,QA Approver is required
+qty,qty
+Qty,Qty
+Qualification Approvals,Qualification موافقات
+Qualification Criteria,Qualification Criteria
+Qualification Date,Qualification تاريخ
+Qualification Information,Qualification Information
+Qualification Level,Qualification Level
+Qualification Manager,Qualification مدير
+Qualification Manager is required,Qualification مدير is required
+Qualification must be prepared and dated before submission,Qualification must be prepared و dated before submission
+Qualification Number,Qualification رقم
+Qualification Objectives,Qualification Objectives
+Qualification Requirements,Qualification Requirements
+Qualification Schedule,Qualification Schedule
+Qualification Scope,Qualification Scope
+Qualification Stage,Qualification Stage
+Qualification Status,Qualification حالة
+Qualification Team,Qualification Team
+Qualification Team Member,Qualification Team Member
+Qualification Team Members,Qualification Team Members
+Qualification Test Procedure,Qualification Test Procedure
+Qualification Test Result,Qualification Test Result
+Qualification Title,Qualification عنوان
+Qualification Type,Qualification نوع
+Quality Assessment,جودة Assessment
+Quality Certificate,جودة Certificate
+Quality Control,جودة تحكم
+Quality Impact,جودة Impact
+Quality Inspection,جودة Inspection
+Quality Parameter,جودة Parameter
+Quality Parameters,جودة Parameters
+Quality Performance,جودة أداء
+Quality Requirements,جودة Requirements
+Quality Status,جودة حالة
+Quantity,Quantity
+Quantity Affected,Quantity Affected
+Quantity Approved,Quantity معتمد
+Quantity Authorized,Quantity Authorized
+Quantity Destroyed,Quantity Destroyed
+Quantity Recovered,Quantity Recovered
+Quantity Requested,Quantity Requested
+Quantity Sold,Quantity Sold
+Quarantine Date,Quarantine تاريخ
+Quarantine Reason,Quarantine Reason
+Quarantine Reason is required when Quality Status is Quarantined,Quarantine Reason is required when جودة حالة is Quarantined
+Question,Question
+Question Type,Question نوع
+Quoted Value,Quoted Value
+Rate,معدل
+Rate %,معدل%
+Read Permission,Read Permission
+Reason for Alternative,Reason لـ Alternative
+Reason for Change,Reason لـ Change
+Recall Customer,Recall عميل
+Recall Date,Recall تاريخ
+Recall notification sent to customer {0} for recall {1},Recall notification sent إلى عميل { 0 } لـ recall { 1 }
+Recall Number,Recall رقم
+Recall Number {0} already exists,Recall رقم { 0 } already exists
+Recall Product,Recall منتج
+Recall Reason,Recall Reason
+Recall Status,Recall حالة
+Recall Type,Recall نوع
+Recall {0} completed,Recall { 0 } مكتمل
+Recipient Name,Recipient اسم
+Recommendations,Recommendations
+Record Keeping Requirements,سجل Keeping Requirements
+Recovery Status,Recovery حالة
+References,References
+Region,Region
+Regulatory,Regulatory
+Regulatory Approval,Regulatory موافقة
+Regulatory Approval is required for Controlled Substances,Regulatory موافقة is required لـ Controlled Substances
+Regulatory Authority,Regulatory Authority
+Regulatory Compliance,Regulatory امتثال
+Regulatory Impact,Regulatory Impact
+Regulatory Information,Regulatory Information
+Regulatory Notification Sent,Regulatory Notification Sent
+Regulatory Reference,Regulatory Reference
+Regulatory Requirements,Regulatory Requirements
+Regulatory Standard,Regulatory Standard
+Regulatory Status,Regulatory حالة
+Rejection Reason,Rejection Reason
+Release Date,Release تاريخ
+Remarks,Remarks
+Renal Adjustment,Renal Adjustment
+Renewal Reminder (Days),Renewal Reminder (Days)
+Reoccurrence Prevented,Reoccurrence Prevented
+Rep Code,Rep كود
+Rep Code must be unique per company.,Rep كود must be unique per شركة.
+Rep Name,Rep اسم
+Rep target tracking,Rep target tracking
+Reported By,Reported حسب
+Reported Date,Reported تاريخ
+Reports · Finance,تقارير · مالية
+Representative,Representative
+Reputation Impact,Reputation Impact
+Request Date,طلب تاريخ
+Request Items,طلب Items
+Request Title,طلب عنوان
+Required By,Required حسب
+Required Corrective Actions,Required Corrective إجراءات
+Required Documents,Required مستندات
+Requirements,Requirements
+reserved_qty,reserved qty
+Residual Risk,Residual مخاطر
+Residual Risk Score,Residual مخاطر درجة
+Resolution,Resolution
+Resolution Date,Resolution تاريخ
+Resolution Notes,Resolution Notes
+Resolution Plan,Resolution خطة
+Resolution Status,Resolution حالة
+Resolved By,Resolved حسب
+Response Status,Response حالة
+Responsibilities,Responsibilities
+Responsibility,Responsibility
+Restricted DocTypes,Restricted Doc Types
+Restrictions,Restrictions
+Result,Result
+Result Value,Result Value
+Return Amount,Return مبلغ
+Returns,Returns
+Returns Amount,Returns مبلغ
+Review,Review
+Review Date,Review تاريخ
+Review Findings,Review Findings
+Reviewed By,Reviewed حسب
+Reviewed Date,Reviewed تاريخ
+Revocation,Revocation
+Revocation Date,Revocation تاريخ
+Revocation Details,Revocation تفاصيل
+Revocation Notes,Revocation Notes
+Revocation Reason,Revocation Reason
+Revoked By,Revoked حسب
+Risk Analysis,مخاطر Analysis
+Risk Approvals,مخاطر موافقات
+Risk Assessment,مخاطر Assessment
+Risk Category,مخاطر فئة
+Risk Causes,مخاطر Causes
+Risk Description,مخاطر وصف
+Risk Information,مخاطر Information
+Risk Level,مخاطر Level
+Risk Matrix Position,مخاطر مصفوفة Position
+Risk Mitigation,مخاطر Mitigation
+Risk Mitigation Action,مخاطر Mitigation إجراء
+Risk Monitoring,مخاطر Monitoring
+Risk Monitoring Result,مخاطر Monitoring Result
+Risk must be initiated and dated before submission,مخاطر must be initiated و dated before submission
+Risk Number,مخاطر رقم
+Risk Score,مخاطر درجة
+Risk Statement,مخاطر Statement
+Risk Status,مخاطر حالة
+Risk Title,مخاطر عنوان
+Risk Type,مخاطر نوع
+Role,الدور
+Role ID,دور معرف
+Role ID already exists,دور معرف already exists
+Role ID must start with 'commerce_',دور معرف must بداية with ' commerce '
+Role Name,دور اسم
+Root Cause,Root Cause
+Root Cause Analysis,Root Cause Analysis
+Root Cause is required for CAPA in this status,Root Cause is required لـ CAPA in this حالة
+Root Cause is required for deviation in this status,Root Cause is required لـ deviation in this حالة
+Rotation Frequency,Rotation Frequency
+Route,Route
+Route Date,Route تاريخ
+Route efficiency,Route efficiency
+Route Name,Route اسم
+Route Plan,Route خطة
+Route Plan does not exist.,Route خطة does not exist.
+Route Plan is required,Route خطة is required
+Route Plan must belong to same company and branch.,Route خطة must belong إلى same شركة و فرع.
+Row {0}: Qty must be greater than zero.,Row { 0 }: Qty must be greater than zero.
+Rule Name,Rule اسم
+Rule Owner,Rule Owner
+Safety Impact,Safety Impact
+Safety Information,Safety Information
+Safety Requirements,Safety Requirements
+Sales Invoice,فاتورة بيع
+Sales register,سجل المبيعات
+Sales Rep,مبيعات Rep
+Sales Representative,مبيعات Representative
+Sales Representative must belong to same branch.,مبيعات Representative must belong إلى same فرع.
+Sales Representative must match Route Plan assignment.,مبيعات Representative must match Route خطة assignment.
+Sales summary,مبيعات ملخص
+Sales Target,مبيعات Target
+Sample Date,Sample تاريخ
+Sample Type,Sample نوع
+Schedule,Schedule
+Schedule Reference,Schedule Reference
+Scientific Name,Scientific اسم
+Scope,Scope
+Score,درجة
+Score (0-100),درجة (0 - 100)
+Security Requirements,Security Requirements
+Sensor ID,Sensor معرف
+Sequence,Sequence
+Serial Number,Serial رقم
+Serial Numbers,Serial Numbers
+Serial Tracking,Serial Tracking
+Service Performance,خدمة أداء
+Session ID,Session معرف
+Set commission expense and payable accounts before submit.,Set commission مصروف و payable حسابات before اعتماد.
+Settlement,Settlement
+Settlement Reference,Settlement Reference
+Severity,Severity
+Shelf Life (Months),Shelf Life (Months)
+Shipment Date,Shipment تاريخ
+Shipment Details,Shipment تفاصيل
+Shipment Number,Shipment رقم
+Shipping & Customs Charges,Shipping & Customs Charges
+Shipping Line,Shipping Line
+Sidebar Config,Sidebar Config
+Signature,Signature
+Signature Audit Trail,Signature تدقيق Trail
+Signature Binding,Signature Binding
+Signature binding verification failed,Signature binding verification فشل
+Signature Date,Signature تاريخ
+Signature ID,Signature معرف
+Signature Information,Signature Information
+Signature Name,Signature اسم
+Signature Notes,Signature Notes
+Signature Proof,Signature Proof
+Signature Purpose,Signature Purpose
+Signature Status,Signature حالة
+Signature Time,Signature Time
+Signature Type,Signature نوع
+SOP Approvals,SOP موافقات
+SOP Category,SOP فئة
+SOP Content,SOP Content
+SOP Distribution,SOP Distribution
+SOP Document,SOP مستند
+SOP Information,SOP Information
+SOP Management,SOP إدارة
+SOP must be prepared and dated before submission,SOP must be prepared و dated before submission
+SOP Number,SOP رقم
+SOP Status,SOP حالة
+SOP Supporting Document,SOP Supporting مستند
+SOP Title,SOP عنوان
+SOP Type,SOP نوع
+SOP Version History,SOP إصدار History
+Source,Source
+Source Date,Source تاريخ
+Source Description,Source وصف
+Source Information,Source Information
+Source Reference,Source Reference
+Source Type,Source نوع
+Specification,Specification
+Stakeholders,Stakeholders
+Status,الحالة
+Status Bar,حالة Bar
+Stock Entry created for Batch {0},Stock قيد created لـ Batch { 0 }
+Stop Reference,Stop Reference
+Stops,Stops
+Storage Condition,Storage Condition
+Storage Requirements,Storage Requirements
+Storage Temperature,Storage Temperature
+Strength,Strength
+Submitted By,Submitted حسب
+Submitted Date,Submitted تاريخ
+Substance Details,Substance تفاصيل
+Substance Name,Substance اسم
+Substitution Ratio,Substitution Ratio
+Substitution Type,Substitution نوع
+Success Factors,Success Factors
+Supplier,المورد
+Supplier Address,مورد عنوان
+Supplier Details,مورد تفاصيل
+Supplier does not exist,مورد does not exist
+Supplier Information,مورد Information
+Supplier is required,مورد is required
+Supplier Name,مورد اسم
+Supplier Type,مورد نوع
+Supporting Documents,Supporting مستندات
+System Description,النظام وصف
+System Name,النظام اسم
+Taken On,Taken On
+Target Amount,Target مبلغ
+Target Audience,Target Audience
+Target Completion Date,Target Completion تاريخ
+Target Completion Date cannot be in the past,Target Completion تاريخ cannot be in the past
+Target DocType,Target Doc نوع
+Target Product Category,Target منتج فئة
+Target Region,Target Region
+Target Temperature,Target Temperature
+Target Value,Target Value
+Team,Team
+Team Member,Team Member
+Technical Lead,Technical عميل محتمل
+Temperature,Temperature
+Temperature Excursion,Temperature Excursion
+Temperature Excursion {0} created,Temperature Excursion { 0 } created
+Temperature Log,Temperature سجل
+Temperature Status,Temperature حالة
+Temperature Unit,Temperature Unit
+Tender,Tender
+Tender is required,Tender is required
+Tender Owner,Tender Owner
+Tender pipeline,Tender pipeline
+Tender Title,Tender عنوان
+Tenders,Tenders
+Test,Test
+Test Case ID,Test حالة معرف
+Test Case Title,Test حالة عنوان
+Test Cases,Test حالات
+Test Category,Test فئة
+Test Data Requirements,Test بيانات Requirements
+Test Date,Test تاريخ
+Test Description,Test وصف
+Test Environment,Test Environment
+Test ID,Test معرف
+Test Method,Test Method
+Test Name,Test اسم
+Test Plan,Test خطة
+Test Procedure,Test Procedure
+Test Procedures,Test Procedures
+Test Procedures & Results,Test Procedures & Results
+Test Reports,Test تقارير
+Test Result,Test Result
+Test Results,Test Results
+Test Status,Test حالة
+Test Strategy,Test Strategy
+Test Title,Test عنوان
+Test Tools,Test Tools
+Tested By,Tested حسب
+Therapeutic Class,Therapeutic Class
+Tier Code,Tier كود
+Tier To Amount cannot be below From Amount.,Tier إلى مبلغ cannot be below From مبلغ.
+Tiered Commission,Tiered Commission
+Tiers,Tiers
+Timestamp,Timestamp
+To Amount,إلى مبلغ
+To Warehouse,إلى Warehouse
+To Warehouse is required for Unload Vehicle.,إلى Warehouse is required لـ Unload مركبة.
+Tolerability,Tolerability
+Total Amount,إجمالي مبلغ
+Total Cost,إجمالي تكلفة
+Total Due,إجمالي استحقاق
+Total Landed Cost,إجمالي Landed تكلفة
+Total Landing Cost,إجمالي Landing تكلفة
+Total Qty,إجمالي Qty
+total_logs,إجمالي logs
+Totals,Totals
+Tracking,Tracking
+Trade Name,Trade اسم
+Trading,التجارة
+Trading Commission Rule,تجارة Commission Rule
+Trading Commission Settlement,تجارة Commission Settlement
+Trading Commission Tier,تجارة Commission Tier
+Trading Distribution Order,تجارة Distribution Order
+Trading Distribution Order Item,تجارة Distribution Order صنف
+Trading Installment Contract,تجارة Installment عقد
+Trading Installment Schedule,تجارة Installment Schedule
+Trading Route Plan,تجارة Route خطة
+Trading Route Plan Stop,تجارة Route خطة Stop
+Trading Sales Representa Mix,تجارة مبيعات Representa Mix
+Trading Sales Representative,تجارة مبيعات Representative
+Trading Tender,تجارة Tender
+Trading Tender Competitor,تجارة Tender Competitor
+Trading Tender Mix,تجارة Tender Mix
+Trading Van Sales Invoice,تجارة Van مبيعات فاتورة
+Trading Van Sales Invoice Item,تجارة Van مبيعات فاتورة صنف
+Trading Vehicle,تجارة مركبة
+Trading Vehicle Stock Transfer,تجارة مركبة Stock Transfer
+Trading Vehicle Stock Transfer Item,تجارة مركبة Stock Transfer صنف
+Trading Workcenter,تجارة Workcenter
+trading-analytics-dashboard,تجارة - تحليلات - لوحة معلومات
+trading-area-manager,تجارة - area - مدير
+trading-auditor,تجارة - auditor
+trading-cashier,تجارة - cashier
+trading-ceo,تجارة - ceo
+trading-chairman,تجارة - chairman
+trading-cold-chain-manager,تجارة - cold - chain - مدير
+trading-commercial-director,تجارة - commercial - director
+trading-customer-portal,تجارة - عميل - بوابة
+trading-customer-service,تجارة - عميل - خدمة
+trading-dispatch,تجارة - dispatch
+trading-executive-dashboard,تجارة - تنفيذي - لوحة معلومات
+trading-export-manager,تجارة - export - مدير
+trading-finance-desk,تجارة - مالية - desk
+trading-finance-director,تجارة - مالية - director
+trading-general-manager,تجارة - عام - مدير
+trading-hr-director,تجارة - الموارد البشرية - director
+trading-import-manager,تجارة - import - مدير
+trading-inventory-controller,تجارة - inventory - controller
+trading-operations-desk,تجارة - عمليات - desk
+trading-operations-director,تجارة - عمليات - director
+trading-purchase-manager,تجارة - شراء - مدير
+trading-quality-manager,تجارة - جودة - مدير
+trading-receiving,تجارة - receiving
+trading-regulatory-officer,تجارة - regulatory - officer
+trading-sales-director,تجارة - مبيعات - director
+trading-sales-supervisor,تجارة - مبيعات - supervisor
+trading-store-keeper,تجارة - store - keeper
+trading-treasury,تجارة - treasury
+trading-van-sales-pwa,تجارة - van - مبيعات - pwa
+trading-warehouse-manager,تجارة - warehouse - مدير
+Training,Training
+Training Approvals,Training موافقات
+Training Category,Training فئة
+Training Content,Training Content
+Training Date,Training تاريخ
+Training Due Date,Training استحقاق تاريخ
+Training Information,Training Information
+Training Level,Training Level
+Training Location,Training Location
+Training Material,Training Material
+Training Materials,Training Materials
+Training must be prepared and dated before submission,Training must be prepared و dated before submission
+Training Number,Training رقم
+Training Objectives,Training Objectives
+Training Participant,Training Participant
+Training Participants,Training Participants
+Training Record,Training سجل
+Training Required,Training Required
+Training Status,Training حالة
+Training Title,Training عنوان
+Training Type,Training نوع
+Transfer,Transfer
+Transfer Reference,Transfer Reference
+Transfer Type,Transfer نوع
+Transportation Charges,Transportation Charges
+Trigger Events,Trigger Events
+UOM,UOM
+Usage,Usage
+Used For,Used لـ
+User,المستخدم
+User Agent,مستخدم Agent
+User does not have permission to sign this document type,مستخدم does not have permission إلى sign this مستند نوع
+User Full Name,مستخدم Full اسم
+User is required,مستخدم is required
+User must be logged in to create signature,مستخدم must be logged in إلى create signature
+Valid From,Valid From
+Valid From date cannot be after Valid Until date,Valid From تاريخ cannot be after Valid Until تاريخ
+Valid Until,Valid Until
+Validation Level,تحقق Level
+Validation Manager,تحقق مدير
+Validation Manager is required,تحقق مدير is required
+Validation Objectives,تحقق Objectives
+Validation Protocol,تحقق Protocol
+Validation Requirements,تحقق Requirements
+Validation Schedule,تحقق Schedule
+Validation Scope,تحقق Scope
+Validation Stage,تحقق Stage
+Validation Team,تحقق Team
+Validation Team Member,تحقق Team Member
+Validation Team Members,تحقق Team Members
+Validation Test Case,تحقق Test حالة
+Validation Test Result,تحقق Test Result
+Van Sales (Z),Van مبيعات (Z)
+Van Sales Invoice,Van مبيعات فاتورة
+Variance,Variance
+Variance Amount,Variance مبلغ
+Vehicle,مركبة
+Vehicle Code,مركبة كود
+Vehicle Code must be unique per company.,مركبة كود must be unique per شركة.
+Vehicle must belong to same branch.,مركبة must belong إلى same فرع.
+Vehicle must match Route Plan assignment.,مركبة must match Route خطة assignment.
+Vehicle Name,مركبة اسم
+Vehicle Stock Transfer,مركبة Stock Transfer
+Vehicle transfer summary,مركبة transfer ملخص
+Vehicle Type,مركبة نوع
+Vendor Assessment Team Member,Vendor Assessment Team Member
+Vendor Performance Metric,Vendor أداء Metric
+Vendor Qualification,Vendor Qualification
+Vendor Required Document,Vendor Required مستند
+Verification,Verification
+Verification Criteria,Verification Criteria
+Verification Date,Verification تاريخ
+Verification Details,Verification تفاصيل
+Verification Hash,Verification Hash
+Verification Method,Verification Method
+Verification Notes,Verification Notes
+Verification Results,Verification Results
+Verification Status,Verification حالة
+Verification Timestamp,Verification Timestamp
+Version,إصدار
+Version Control,إصدار تحكم
+Version History,إصدار History
+Version Management,إصدار إدارة
+Vessel Name,Vessel اسم
+Warehouse,Warehouse
+Warehouse Receipt,Warehouse Receipt
+Warning: Batch {0} expires in {1} days,Warning: Batch { 0 } expires in { 1 } days
+Warning: Expiry Date exceeds expected shelf life,Warning: Expiry تاريخ exceeds expected shelf life
+Weight,Weight
+Wholesale Price,Wholesale سعر
+Workflow,سير العمل
+Write Permission,Write Permission
+You are not in the distribution list for this SOP,You are not in the distribution قائمة لـ this SOP
+Zone,Zone
+Zone Code,Zone كود
+Zone Name,Zone اسم
+{page_name},{ page اسم }

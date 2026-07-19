@@ -1,0 +1,219 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:key_name",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"key_name",
+		"key_type",
+		"algorithm",
+		"key_length",
+		"column_break_1",
+		"company",
+		"status",
+		"tab_break_details",
+		"key_value",
+		"key_hash",
+		"column_break_2",
+		"created_date",
+		"expiry_date",
+		"tab_break_usage",
+		"used_for",
+		"column_break_3",
+		"encrypted_fields",
+		"tab_break_rotation",
+		"rotation_frequency",
+		"last_rotation_date",
+		"column_break_4",
+		"next_rotation_date",
+		"tab_break_status_2",
+		"active",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "key_name",
+			"fieldtype": "Data",
+			"label": "Key Name",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "key_type",
+			"fieldtype": "Select",
+			"label": "Key Type",
+			"options": "\nSymmetric\nAsymmetric\nHash",
+			"reqd": 1,
+			"default": "Symmetric"
+		},
+		{
+			"fieldname": "algorithm",
+			"fieldtype": "Select",
+			"label": "Algorithm",
+			"options": "\nAES\nRSA\nSHA256\nSHA512\nFernet",
+			"reqd": 1,
+			"default": "AES"
+		},
+		{
+			"fieldname": "key_length",
+			"fieldtype": "Select",
+			"label": "Key Length",
+			"options": "\n128\n256\n512\n1024\n2048",
+			"reqd": 1,
+			"default": "256"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nActive\nInactive\nExpired",
+			"default": "Active",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Section Break",
+			"label": "Key Details"
+		},
+		{
+			"fieldname": "key_value",
+			"fieldtype": "Password",
+			"label": "Key Value",
+			"reqd": 1,
+			"hidden": 1
+		},
+		{
+			"fieldname": "key_hash",
+			"fieldtype": "Data",
+			"label": "Key Hash",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "created_date",
+			"fieldtype": "Date",
+			"label": "Created Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "expiry_date",
+			"fieldtype": "Date",
+			"label": "Expiry Date"
+		},
+		{
+			"fieldname": "tab_break_usage",
+			"fieldtype": "Section Break",
+			"label": "Usage"
+		},
+		{
+			"fieldname": "used_for",
+			"fieldtype": "Text",
+			"label": "Used For"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "encrypted_fields",
+			"fieldtype": "Table",
+			"label": "Encrypted Fields",
+			"options": "Encrypted Field"
+		},
+		{
+			"fieldname": "tab_break_rotation",
+			"fieldtype": "Section Break",
+			"label": "Key Rotation"
+		},
+		{
+			"fieldname": "rotation_frequency",
+			"fieldtype": "Select",
+			"label": "Rotation Frequency",
+			"options": "\nNever\nMonthly\nQuarterly\nSemi-Annually\nAnnually",
+			"default": "Annually"
+		},
+		{
+			"fieldname": "last_rotation_date",
+			"fieldtype": "Date",
+			"label": "Last Rotation Date"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "next_rotation_date",
+			"fieldtype": "Date",
+			"label": "Next Rotation Date"
+		},
+		{
+			"fieldname": "tab_break_status_2",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"fieldname": "active",
+			"fieldtype": "Check",
+			"label": "Active",
+			"default": "1"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Text",
+			"label": "Remarks"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Encryption Key",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1
+		}
+	],
+	"sort_field": "created_date",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

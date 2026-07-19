@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-van-sales-pwa",
+	"page_name": "trading-van-sales-pwa",
+	"standard": "Yes",
+	"title": "Medical Representative Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

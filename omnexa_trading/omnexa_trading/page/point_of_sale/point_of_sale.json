@@ -1,0 +1,14 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "point-of-sale",
+	"page_name": "point-of-sale",
+	"standard": "Yes",
+	"title": "Point of Sale",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Accounts Manager"},
+		{"role": "Accounts User"},
+		{"role": "Sales User"}
+	]
+}

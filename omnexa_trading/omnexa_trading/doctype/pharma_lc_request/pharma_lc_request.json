@@ -1,0 +1,269 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "format:LC-REQ-{YYYY}-{#####}",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_overview",
+		"request_title",
+		"lc_type",
+		"lc_amount",
+		"currency",
+		"column_break_1",
+		"request_date",
+		"required_by",
+		"status",
+		"tab_break_supplier",
+		"supplier",
+		"supplier_address",
+		"column_break_2",
+		"purchase_order",
+		"proforma_invoice",
+		"tab_break_bank",
+		"issuing_bank",
+		"advising_bank",
+		"column_break_3",
+		"lc_terms",
+		"payment_terms",
+		"tab_break_items",
+		"items_section",
+		"request_items",
+		"tab_break_approval",
+		"approved_by",
+		"approval_date",
+		"column_break_4",
+		"rejection_reason",
+		"import_lc",
+		"company"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_overview",
+			"fieldtype": "Section Break",
+			"label": "Overview"
+		},
+		{
+			"fieldname": "request_title",
+			"fieldtype": "Data",
+			"label": "Request Title",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "lc_type",
+			"fieldtype": "Select",
+			"label": "LC Type",
+			"options": "\nIrrevocable\nRevocable\nConfirmed\nUnconfirmed\nTransferable\nNon-Transferable",
+			"reqd": 1,
+			"default": "Irrevocable"
+		},
+		{
+			"fieldname": "lc_amount",
+			"fieldtype": "Currency",
+			"label": "LC Amount",
+			"reqd": 1
+		},
+		{
+			"fieldname": "currency",
+			"fieldtype": "Link",
+			"label": "Currency",
+			"options": "Currency",
+			"reqd": 1,
+			"default": "USD"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "request_date",
+			"fieldtype": "Date",
+			"label": "Request Date",
+			"reqd": 1,
+			"default": "Today"
+		},
+		{
+			"fieldname": "required_by",
+			"fieldtype": "Date",
+			"label": "Required By"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nDraft\nPending Approval\nApproved\nRejected\nLC Opened",
+			"reqd": 1,
+			"default": "Draft",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "tab_break_supplier",
+			"fieldtype": "Section Break",
+			"label": "Supplier Information"
+		},
+		{
+			"fieldname": "supplier",
+			"fieldtype": "Link",
+			"label": "Supplier",
+			"options": "Supplier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "supplier_address",
+			"fieldtype": "Link",
+			"label": "Supplier Address",
+			"options": "Address"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "purchase_order",
+			"fieldtype": "Link",
+			"label": "Purchase Order",
+			"options": "Purchase Order"
+		},
+		{
+			"fieldname": "proforma_invoice",
+			"fieldtype": "Link",
+			"label": "Proforma Invoice",
+			"options": "Purchase Invoice"
+		},
+		{
+			"fieldname": "tab_break_bank",
+			"fieldtype": "Section Break",
+			"label": "Bank Information"
+		},
+		{
+			"fieldname": "issuing_bank",
+			"fieldtype": "Link",
+			"label": "Issuing Bank",
+			"options": "Supplier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "advising_bank",
+			"fieldtype": "Link",
+			"label": "Advising Bank",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "lc_terms",
+			"fieldtype": "Text",
+			"label": "LC Terms"
+		},
+		{
+			"fieldname": "payment_terms",
+			"fieldtype": "Link",
+			"label": "Payment Terms",
+			"options": "Payment Terms"
+		},
+		{
+			"fieldname": "tab_break_items",
+			"fieldtype": "Section Break",
+			"label": "Items"
+		},
+		{
+			"fieldname": "items_section",
+			"fieldtype": "Section Break",
+			"label": "Request Items"
+		},
+		{
+			"fieldname": "request_items",
+			"fieldtype": "Table",
+			"label": "Request Items",
+			"options": "Pharma LC Request Item"
+		},
+		{
+			"fieldname": "tab_break_approval",
+			"fieldtype": "Section Break",
+			"label": "Approval"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User",
+			"read_only": 1
+		},
+		{
+			"fieldname": "approval_date",
+			"fieldtype": "Datetime",
+			"label": "Approval Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "rejection_reason",
+			"fieldtype": "Text",
+			"label": "Rejection Reason"
+		},
+		{
+			"fieldname": "import_lc",
+			"fieldtype": "Link",
+			"label": "Import LC",
+			"options": "Pharma Import LC",
+			"read_only": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Pharma LC Request",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Desk User",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"export": 1,
+			"report": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

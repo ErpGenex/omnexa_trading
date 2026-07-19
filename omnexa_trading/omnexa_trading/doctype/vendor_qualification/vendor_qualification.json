@@ -1,0 +1,513 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:qualification_number",
+	"creation": "2026-07-05 11:45:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"qualification_section",
+		"qualification_number",
+		"qualification_title",
+		"supplier",
+		"supplier_name",
+		"supplier_type",
+		"column_break_1",
+		"qualification_status",
+		"qualification_date",
+		"expiry_date",
+		"qualification_level",
+		"tab_break_1",
+		"supplier_section",
+		"supplier_address",
+		"contact_person",
+		"contact_email",
+		"column_break_2",
+		"contact_phone",
+		"country",
+		"regulatory_status",
+		"tab_break_2",
+		"criteria_section",
+		"qualification_criteria",
+		"qualification_scope",
+		"acceptance_criteria",
+		"column_break_3",
+		"quality_requirements",
+		"compliance_requirements",
+		"tab_break_3",
+		"assessment_section",
+		"assessment_method",
+		"assessment_team",
+		"assessment_date",
+		"column_break_4",
+		"assessment_findings",
+		"assessment_score",
+		"assessment_result",
+		"tab_break_4",
+		"documents_section",
+		"required_documents",
+		"document_status",
+		"column_break_5",
+		"audit_findings",
+		"corrective_actions",
+		"tab_break_5",
+		"performance_section",
+		"performance_metrics",
+		"delivery_performance",
+		"quality_performance",
+		"column_break_6",
+		"service_performance",
+		"compliance_performance",
+		"tab_break_6",
+		"approval_section",
+		"prepared_by",
+		"prepared_date",
+		"reviewed_by",
+		"reviewed_date",
+		"column_break_7",
+		"approved_by",
+		"approved_date",
+		"qa_approval",
+		"qa_approval_date",
+		"tab_break_7",
+		"signature_section",
+		"electronic_signature",
+		"signature_status",
+		"column_break_8",
+		"signature_date",
+		"signature_notes"
+	],
+	"fields": [
+		{
+			"fieldname": "qualification_section",
+			"fieldtype": "Section Break",
+			"label": "Qualification Information"
+		},
+		{
+			"fieldname": "qualification_number",
+			"fieldtype": "Data",
+			"label": "Qualification Number",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "qualification_title",
+			"fieldtype": "Data",
+			"label": "Qualification Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "supplier",
+			"fieldtype": "Link",
+			"label": "Supplier",
+			"options": "Supplier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "supplier_name",
+			"fieldtype": "Data",
+			"label": "Supplier Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "supplier_type",
+			"fieldtype": "Select",
+			"label": "Supplier Type",
+			"options": "Manufacturer\nDistributor\nService Provider\nContractor\nConsultant",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Draft",
+			"fieldname": "qualification_status",
+			"fieldtype": "Select",
+			"label": "Qualification Status",
+			"options": "Draft\nUnder Review\nApproved\nQualified\nConditional\nDisqualified\nExpired",
+			"reqd": 1
+		},
+		{
+			"fieldname": "qualification_date",
+			"fieldtype": "Date",
+			"label": "Qualification Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "expiry_date",
+			"fieldtype": "Date",
+			"label": "Expiry Date"
+		},
+		{
+			"fieldname": "qualification_level",
+			"fieldtype": "Select",
+			"label": "Qualification Level",
+			"options": "Preferred\nApproved\nConditional\nProbationary",
+			"reqd": 1
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Supplier"
+		},
+		{
+			"fieldname": "supplier_section",
+			"fieldtype": "Section Break",
+			"label": "Supplier Details"
+		},
+		{
+			"fieldname": "supplier_address",
+			"fieldtype": "Text",
+			"label": "Supplier Address"
+		},
+		{
+			"fieldname": "contact_person",
+			"fieldtype": "Data",
+			"label": "Contact Person"
+		},
+		{
+			"fieldname": "contact_email",
+			"fieldtype": "Data",
+			"label": "Contact Email"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "contact_phone",
+			"fieldtype": "Data",
+			"label": "Contact Phone"
+		},
+		{
+			"fieldname": "country",
+			"fieldtype": "Link",
+			"label": "Country",
+			"options": "Country"
+		},
+		{
+			"fieldname": "regulatory_status",
+			"fieldtype": "Select",
+			"label": "Regulatory Status",
+			"options": "GMP Certified\nGDP Certified\nISO Certified\nFDA Registered\nEMA Registered\nLocal Authority Approved\nPending Approval"
+		},
+		{
+			"fieldname": "tab_break_2",
+			"fieldtype": "Tab Break",
+			"label": "Criteria"
+		},
+		{
+			"fieldname": "criteria_section",
+			"fieldtype": "Section Break",
+			"label": "Qualification Criteria"
+		},
+		{
+			"fieldname": "qualification_criteria",
+			"fieldtype": "Text Editor",
+			"label": "Qualification Criteria",
+			"reqd": 1
+		},
+		{
+			"fieldname": "qualification_scope",
+			"fieldtype": "Text Editor",
+			"label": "Qualification Scope",
+			"reqd": 1
+		},
+		{
+			"fieldname": "acceptance_criteria",
+			"fieldtype": "Text Editor",
+			"label": "Acceptance Criteria",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "quality_requirements",
+			"fieldtype": "Text Editor",
+			"label": "Quality Requirements"
+		},
+		{
+			"fieldname": "compliance_requirements",
+			"fieldtype": "Text Editor",
+			"label": "Compliance Requirements"
+		},
+		{
+			"fieldname": "tab_break_3",
+			"fieldtype": "Tab Break",
+			"label": "Assessment"
+		},
+		{
+			"fieldname": "assessment_section",
+			"fieldtype": "Section Break",
+			"label": "Assessment"
+		},
+		{
+			"fieldname": "assessment_method",
+			"fieldtype": "Select",
+			"label": "Assessment Method",
+			"options": "On-site Audit\nRemote Audit\nDocument Review\nQuestionnaire\nThird-Party Audit"
+		},
+		{
+			"fieldname": "assessment_team",
+			"fieldtype": "Table",
+			"label": "Assessment Team",
+			"options": "Vendor Assessment Team Member"
+		},
+		{
+			"fieldname": "assessment_date",
+			"fieldtype": "Date",
+			"label": "Assessment Date"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "assessment_findings",
+			"fieldtype": "Text Editor",
+			"label": "Assessment Findings"
+		},
+		{
+			"fieldname": "assessment_score",
+			"fieldtype": "Percent",
+			"label": "Assessment Score"
+		},
+		{
+			"fieldname": "assessment_result",
+			"fieldtype": "Select",
+			"label": "Assessment Result",
+			"options": "Pass\nFail\nConditional"
+		},
+		{
+			"fieldname": "tab_break_4",
+			"fieldtype": "Tab Break",
+			"label": "Documents"
+		},
+		{
+			"fieldname": "documents_section",
+			"fieldtype": "Section Break",
+			"label": "Documentation"
+		},
+		{
+			"fieldname": "required_documents",
+			"fieldtype": "Table",
+			"label": "Required Documents",
+			"options": "Vendor Required Document"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "document_status",
+			"fieldtype": "Select",
+			"label": "Document Status",
+			"options": "Incomplete\nComplete\nUnder Review\nApproved"
+		},
+		{
+			"fieldname": "audit_findings",
+			"fieldtype": "Text Editor",
+			"label": "Audit Findings"
+		},
+		{
+			"fieldname": "corrective_actions",
+			"fieldtype": "Text Editor",
+			"label": "Required Corrective Actions"
+		},
+		{
+			"fieldname": "tab_break_5",
+			"fieldtype": "Tab Break",
+			"label": "Performance"
+		},
+		{
+			"fieldname": "performance_section",
+			"fieldtype": "Section Break",
+			"label": "Performance Metrics"
+		},
+		{
+			"fieldname": "performance_metrics",
+			"fieldtype": "Table",
+			"label": "Performance Metrics",
+			"options": "Vendor Performance Metric"
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "delivery_performance",
+			"fieldtype": "Select",
+			"label": "Delivery Performance",
+			"options": "Excellent\nGood\nSatisfactory\nPoor\nUnacceptable"
+		},
+		{
+			"fieldname": "quality_performance",
+			"fieldtype": "Select",
+			"label": "Quality Performance",
+			"options": "Excellent\nGood\nSatisfactory\nPoor\nUnacceptable"
+		},
+		{
+			"fieldname": "service_performance",
+			"fieldtype": "Select",
+			"label": "Service Performance",
+			"options": "Excellent\nGood\nSatisfactory\nPoor\nUnacceptable"
+		},
+		{
+			"fieldname": "compliance_performance",
+			"fieldtype": "Select",
+			"label": "Compliance Performance",
+			"options": "Excellent\nGood\nSatisfactory\nPoor\nUnacceptable"
+		},
+		{
+			"fieldname": "tab_break_6",
+			"fieldtype": "Tab Break",
+			"label": "Approvals"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "Qualification Approvals"
+		},
+		{
+			"fieldname": "prepared_by",
+			"fieldtype": "Link",
+			"label": "Prepared By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "prepared_date",
+			"fieldtype": "Date",
+			"label": "Prepared Date"
+		},
+		{
+			"fieldname": "reviewed_by",
+			"fieldtype": "Link",
+			"label": "Reviewed By",
+			"options": "User"
+		},
+		{
+			"fieldname": "reviewed_date",
+			"fieldtype": "Date",
+			"label": "Reviewed Date"
+		},
+		{
+			"fieldname": "column_break_7",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "qa_approval",
+			"fieldtype": "Link",
+			"label": "QA Approval",
+			"options": "User"
+		},
+		{
+			"fieldname": "qa_approval_date",
+			"fieldtype": "Date",
+			"label": "QA Approval Date"
+		},
+		{
+			"fieldname": "tab_break_7",
+			"fieldtype": "Tab Break",
+			"label": "Signature"
+		},
+		{
+			"fieldname": "signature_section",
+			"fieldtype": "Section Break",
+			"label": "Electronic Signature"
+		},
+		{
+			"fieldname": "electronic_signature",
+			"fieldtype": "Link",
+			"label": "Electronic Signature",
+			"options": "Electronic Signature"
+		},
+		{
+			"fieldname": "signature_status",
+			"fieldtype": "Select",
+			"label": "Signature Status",
+			"options": "Not Signed\nSigned\nRevoked",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "signature_date",
+			"fieldtype": "Date",
+			"label": "Signature Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signature_notes",
+			"fieldtype": "Text",
+			"label": "Signature Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 11:45:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Vendor Qualification",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Quality Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Regulatory Officer",
+			"share": 1,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1,
+	"track_seen": 1
+}

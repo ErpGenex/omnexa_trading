@@ -1,0 +1,614 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:deviation_number",
+	"creation": "2026-07-05 11:15:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"deviation_section",
+		"deviation_number",
+		"deviation_title",
+		"deviation_type",
+		"deviation_category",
+		"severity",
+		"column_break_1",
+		"deviation_status",
+		"occurrence_date",
+		"discovery_date",
+		"reported_date",
+		"tab_break_1",
+		"location_section",
+		"location",
+		"department",
+		"process_area",
+		"column_break_2",
+		"equipment",
+		"batch_number",
+		"product_code",
+		"tab_break_2",
+		"description_section",
+		"deviation_description",
+		"expected_condition",
+		"actual_condition",
+		"column_break_3",
+		"immediate_actions",
+		"impact_assessment",
+		"risk_level",
+		"tab_break_3",
+		"investigation_section",
+		"investigation_method",
+		"investigation_team",
+		"investigation_findings",
+		"column_break_4",
+		"root_cause_analysis",
+		"root_cause",
+		"contributing_factors",
+		"tab_break_4",
+		"assessment_section",
+		"quality_impact",
+		"safety_impact",
+		"regulatory_impact",
+		"column_break_5",
+		"customer_impact",
+		"financial_impact",
+		"reputation_impact",
+		"tab_break_5",
+		"correction_section",
+		"immediate_correction",
+		"correction_owner",
+		"correction_date",
+		"column_break_6",
+		"correction_effectiveness",
+		"tab_break_6",
+		"preventive_section",
+		"preventive_actions",
+		"preventive_owner",
+		"preventive_due_date",
+		"column_break_7",
+		"preventive_status",
+		"tab_break_7",
+		"capa_section",
+		"capa_required",
+		"capa_reference",
+		"column_break_8",
+		"capa_created",
+		"capa_date",
+		"tab_break_8",
+		"approval_section",
+		"reported_by",
+		"reported_date",
+		"reviewed_by",
+		"reviewed_date",
+		"column_break_9",
+		"approved_by",
+		"approved_date",
+		"qa_approval",
+		"qa_approval_date",
+		"tab_break_9",
+		"signature_section",
+		"electronic_signature",
+		"signature_status",
+		"column_break_10",
+		"signature_date",
+		"signature_notes"
+	],
+	"fields": [
+		{
+			"fieldname": "deviation_section",
+			"fieldtype": "Section Break",
+			"label": "Deviation Information"
+		},
+		{
+			"fieldname": "deviation_number",
+			"fieldtype": "Data",
+			"label": "Deviation Number",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "deviation_title",
+			"fieldtype": "Data",
+			"label": "Deviation Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "deviation_type",
+			"fieldtype": "Select",
+			"label": "Deviation Type",
+			"options": "Process Deviation\nProduct Deviation\nDocumentation Deviation\nEquipment Deviation\nPersonnel Deviation\nEnvironmental Deviation\nSystem Deviation",
+			"reqd": 1
+		},
+		{
+			"fieldname": "deviation_category",
+			"fieldtype": "Select",
+			"label": "Deviation Category",
+			"options": "Quality\nSafety\nCompliance\nOperational\nEnvironmental\nSecurity",
+			"reqd": 1
+		},
+		{
+			"fieldname": "severity",
+			"fieldtype": "Select",
+			"label": "Severity",
+			"options": "Critical\nMajor\nMinor",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Open",
+			"fieldname": "deviation_status",
+			"fieldtype": "Select",
+			"label": "Deviation Status",
+			"options": "Open\nUnder Investigation\nCorrection In Progress\nVerification Pending\nClosed\nReopened",
+			"reqd": 1
+		},
+		{
+			"fieldname": "occurrence_date",
+			"fieldtype": "Date",
+			"label": "Occurrence Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "discovery_date",
+			"fieldtype": "Date",
+			"label": "Discovery Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "reported_date",
+			"fieldtype": "Date",
+			"label": "Reported Date"
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Location"
+		},
+		{
+			"fieldname": "location_section",
+			"fieldtype": "Section Break",
+			"label": "Location Information"
+		},
+		{
+			"fieldname": "location",
+			"fieldtype": "Data",
+			"label": "Location"
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Data",
+			"label": "Department"
+		},
+		{
+			"fieldname": "process_area",
+			"fieldtype": "Data",
+			"label": "Process Area"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "equipment",
+			"fieldtype": "Data",
+			"label": "Equipment"
+		},
+		{
+			"fieldname": "batch_number",
+			"fieldtype": "Data",
+			"label": "Batch Number"
+		},
+		{
+			"fieldname": "product_code",
+			"fieldtype": "Data",
+			"label": "Product Code"
+		},
+		{
+			"fieldname": "tab_break_2",
+			"fieldtype": "Tab Break",
+			"label": "Description"
+		},
+		{
+			"fieldname": "description_section",
+			"fieldtype": "Section Break",
+			"label": "Deviation Description"
+		},
+		{
+			"fieldname": "deviation_description",
+			"fieldtype": "Text Editor",
+			"label": "Deviation Description",
+			"reqd": 1
+		},
+		{
+			"fieldname": "expected_condition",
+			"fieldtype": "Text Editor",
+			"label": "Expected Condition",
+			"reqd": 1
+		},
+		{
+			"fieldname": "actual_condition",
+			"fieldtype": "Text Editor",
+			"label": "Actual Condition",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "immediate_actions",
+			"fieldtype": "Text Editor",
+			"label": "Immediate Actions Taken"
+		},
+		{
+			"fieldname": "impact_assessment",
+			"fieldtype": "Text Editor",
+			"label": "Impact Assessment"
+		},
+		{
+			"fieldname": "risk_level",
+			"fieldtype": "Select",
+			"label": "Risk Level",
+			"options": "High\nMedium\nLow"
+		},
+		{
+			"fieldname": "tab_break_3",
+			"fieldtype": "Tab Break",
+			"label": "Investigation"
+		},
+		{
+			"fieldname": "investigation_section",
+			"fieldtype": "Section Break",
+			"label": "Investigation"
+		},
+		{
+			"fieldname": "investigation_method",
+			"fieldtype": "Select",
+			"label": "Investigation Method",
+			"options": "Root Cause Analysis\nFishbone Diagram\n5 Whys\nProcess Mapping\nFailure Mode Analysis\nStatistical Analysis"
+		},
+		{
+			"fieldname": "investigation_team",
+			"fieldtype": "Table",
+			"label": "Investigation Team",
+			"options": "Deviation Team Member"
+		},
+		{
+			"fieldname": "investigation_findings",
+			"fieldtype": "Text Editor",
+			"label": "Investigation Findings"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "root_cause_analysis",
+			"fieldtype": "Text Editor",
+			"label": "Root Cause Analysis",
+			"reqd": 1
+		},
+		{
+			"fieldname": "root_cause",
+			"fieldtype": "Text",
+			"label": "Root Cause",
+			"reqd": 1
+		},
+		{
+			"fieldname": "contributing_factors",
+			"fieldtype": "Text Editor",
+			"label": "Contributing Factors"
+		},
+		{
+			"fieldname": "tab_break_4",
+			"fieldtype": "Tab Break",
+			"label": "Assessment"
+		},
+		{
+			"fieldname": "assessment_section",
+			"fieldtype": "Section Break",
+			"label": "Impact Assessment"
+		},
+		{
+			"fieldname": "quality_impact",
+			"fieldtype": "Select",
+			"label": "Quality Impact",
+			"options": "Critical\nSignificant\nMinor\nNone"
+		},
+		{
+			"fieldname": "safety_impact",
+			"fieldtype": "Select",
+			"label": "Safety Impact",
+			"options": "Critical\nSignificant\nMinor\nNone"
+		},
+		{
+			"fieldname": "regulatory_impact",
+			"fieldtype": "Select",
+			"label": "Regulatory Impact",
+			"options": "Critical\nSignificant\nMinor\nNone"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "customer_impact",
+			"fieldtype": "Select",
+			"label": "Customer Impact",
+			"options": "Critical\nSignificant\nMinor\nNone"
+		},
+		{
+			"fieldname": "financial_impact",
+			"fieldtype": "Select",
+			"label": "Financial Impact",
+			"options": "Critical\nSignificant\nMinor\nNone"
+		},
+		{
+			"fieldname": "reputation_impact",
+			"fieldtype": "Select",
+			"label": "Reputation Impact",
+			"options": "Critical\nSignificant\nMinor\nNone"
+		},
+		{
+			"fieldname": "tab_break_5",
+			"fieldtype": "Tab Break",
+			"label": "Correction"
+		},
+		{
+			"fieldname": "correction_section",
+			"fieldtype": "Section Break",
+			"label": "Correction"
+		},
+		{
+			"fieldname": "immediate_correction",
+			"fieldtype": "Text Editor",
+			"label": "Immediate Correction"
+		},
+		{
+			"fieldname": "correction_owner",
+			"fieldtype": "Link",
+			"label": "Correction Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "correction_date",
+			"fieldtype": "Date",
+			"label": "Correction Date"
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "correction_effectiveness",
+			"fieldtype": "Select",
+			"label": "Correction Effectiveness",
+			"options": "Not Evaluated\nEffective\nPartially Effective\nIneffective"
+		},
+		{
+			"fieldname": "tab_break_6",
+			"fieldtype": "Tab Break",
+			"label": "Preventive"
+		},
+		{
+			"fieldname": "preventive_section",
+			"fieldtype": "Section Break",
+			"label": "Preventive Actions"
+		},
+		{
+			"fieldname": "preventive_actions",
+			"fieldtype": "Text Editor",
+			"label": "Preventive Actions"
+		},
+		{
+			"fieldname": "preventive_owner",
+			"fieldtype": "Link",
+			"label": "Preventive Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "preventive_due_date",
+			"fieldtype": "Date",
+			"label": "Preventive Due Date"
+		},
+		{
+			"fieldname": "column_break_7",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "preventive_status",
+			"fieldtype": "Select",
+			"label": "Preventive Status",
+			"options": "Not Required\nPending\nIn Progress\nCompleted"
+		},
+		{
+			"fieldname": "tab_break_7",
+			"fieldtype": "Tab Break",
+			"label": "CAPA"
+		},
+		{
+			"fieldname": "capa_section",
+			"fieldtype": "Section Break",
+			"label": "CAPA Reference"
+		},
+		{
+			"default": "0",
+			"fieldname": "capa_required",
+			"fieldtype": "Check",
+			"label": "CAPA Required"
+		},
+		{
+			"fieldname": "capa_reference",
+			"fieldtype": "Link",
+			"label": "CAPA Reference",
+			"options": "CAPA"
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "capa_created",
+			"fieldtype": "Check",
+			"label": "CAPA Created",
+			"read_only": 1
+		},
+		{
+			"fieldname": "capa_date",
+			"fieldtype": "Date",
+			"label": "CAPA Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "tab_break_8",
+			"fieldtype": "Tab Break",
+			"label": "Approvals"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "Deviation Approvals"
+		},
+		{
+			"fieldname": "reported_by",
+			"fieldtype": "Link",
+			"label": "Reported By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "reported_date",
+			"fieldtype": "Date",
+			"label": "Reported Date"
+		},
+		{
+			"fieldname": "reviewed_by",
+			"fieldtype": "Link",
+			"label": "Reviewed By",
+			"options": "User"
+		},
+		{
+			"fieldname": "reviewed_date",
+			"fieldtype": "Date",
+			"label": "Reviewed Date"
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "qa_approval",
+			"fieldtype": "Link",
+			"label": "QA Approval",
+			"options": "User"
+		},
+		{
+			"fieldname": "qa_approval_date",
+			"fieldtype": "Date",
+			"label": "QA Approval Date"
+		},
+		{
+			"fieldname": "tab_break_9",
+			"fieldtype": "Tab Break",
+			"label": "Signature"
+		},
+		{
+			"fieldname": "signature_section",
+			"fieldtype": "Section Break",
+			"label": "Electronic Signature"
+		},
+		{
+			"fieldname": "electronic_signature",
+			"fieldtype": "Link",
+			"label": "Electronic Signature",
+			"options": "Electronic Signature"
+		},
+		{
+			"fieldname": "signature_status",
+			"fieldtype": "Select",
+			"label": "Signature Status",
+			"options": "Not Signed\nSigned\nRevoked",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_10",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "signature_date",
+			"fieldtype": "Date",
+			"label": "Signature Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signature_notes",
+			"fieldtype": "Text",
+			"label": "Signature Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 11:15:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Deviation",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Quality Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Regulatory Officer",
+			"share": 1,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1,
+	"track_seen": 1
+}

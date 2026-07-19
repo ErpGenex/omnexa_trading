@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-regulatory-officer",
+	"page_name": "trading-regulatory-officer",
+	"standard": "Yes",
+	"title": "Regulatory Officer Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-07-06 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"assessment_date",
+		"column_break_1",
+		"score",
+		"result",
+		"notes"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Employee",
+			"options": "Employee"
+		},
+		{
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Employee Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "assessment_date",
+			"fieldtype": "Date",
+			"label": "Assessment Date"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "score",
+			"fieldtype": "Percent",
+			"in_list_view": 1,
+			"label": "Score"
+		},
+		{
+			"fieldname": "result",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Result",
+			"options": "Not Assessed\nPassed\nFailed"
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Text",
+			"label": "Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-07-06 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Assessment Result",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
+}

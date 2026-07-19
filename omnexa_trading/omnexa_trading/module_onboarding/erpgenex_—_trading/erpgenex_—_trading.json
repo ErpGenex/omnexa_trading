@@ -1,0 +1,41 @@
+{
+ "allow_roles": [
+  {
+   "role": "Desk User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2026-04-20 00:31:43.489410",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://frappe.io/framework",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-07-11 14:37:35.338520",
+ "modified_by": "Administrator",
+ "module": "Omnexa Trading",
+ "name": "ERPGENEX \u2014 Trading",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "ERPGENEX-WS-trading-01-page-trading_workcenter"
+  },
+  {
+   "step": "ERPGENEX-WS-trading-02-page-trading_executive_dashboard"
+  },
+  {
+   "step": "ERPGENEX-WS-trading-03-page-trading_van_sales_pwa"
+  },
+  {
+   "step": "ERPGENEX-WS-trading-04-page-trading_ceo"
+  },
+  {
+   "step": "ERPGENEX-WS-trading-home"
+  }
+ ],
+ "subtitle": "Guided setup for this workspace.",
+ "success_message": "You are ready to work in Trading.",
+ "title": "Trading"
+}

@@ -1,0 +1,322 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:recall_number",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"recall_number",
+		"recall_date",
+		"recall_type",
+		"recall_reason",
+		"batch_number",
+		"item_code",
+		"column_break_1",
+		"severity",
+		"recall_status",
+		"company",
+		"initiated_by",
+		"tab_break_details",
+		"affected_products_section",
+		"affected_products",
+		"column_break_2",
+		"quantity_affected",
+		"quantity_recovered",
+		"quantity_destroyed",
+		"tab_break_customers",
+		"affected_customers_section",
+		"affected_customers",
+		"column_break_3",
+		"notification_status",
+		"notification_date",
+		"tab_break_resolution",
+		"resolution_plan",
+		"corrective_actions",
+		"column_break_4",
+		"resolution_date",
+		"resolved_by",
+		"tab_break_regulatory",
+		"regulatory_notification",
+		"regulatory_authority",
+		"column_break_5",
+		"regulatory_reference",
+		"regulatory_compliance",
+		"tab_break_status",
+		"status",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "recall_number",
+			"fieldtype": "Data",
+			"label": "Recall Number",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "recall_date",
+			"fieldtype": "Date",
+			"label": "Recall Date",
+			"reqd": 1,
+			"default": "Today"
+		},
+		{
+			"fieldname": "recall_type",
+			"fieldtype": "Select",
+			"label": "Recall Type",
+			"options": "\nVoluntary\nMandatory",
+			"reqd": 1
+		},
+		{
+			"fieldname": "recall_reason",
+			"fieldtype": "Select",
+			"label": "Recall Reason",
+			"options": "\nQuality Issue\nSafety Concern\nLabeling Error\nPackaging Defect\nContamination\nAdverse Event\nRegulatory Non-Compliance\nOther",
+			"reqd": 1
+		},
+		{
+			"fieldname": "batch_number",
+			"fieldtype": "Link",
+			"label": "Batch Number",
+			"options": "Pharma Batch"
+		},
+		{
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"label": "Item Code",
+			"options": "Item"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "severity",
+			"fieldtype": "Select",
+			"label": "Severity",
+			"options": "\nClass I (Life Threatening)\nClass II (Serious Health Risk)\nClass III (Minor Health Risk)",
+			"reqd": 1,
+			"default": "Class II (Serious Health Risk)"
+		},
+		{
+			"fieldname": "recall_status",
+			"fieldtype": "Select",
+			"label": "Recall Status",
+			"options": "\nDraft\nInitiated\nIn Progress\nCompleted\nClosed",
+			"default": "Draft",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "initiated_by",
+			"fieldtype": "Link",
+			"label": "Initiated By",
+			"options": "User"
+		},
+		{
+			"fieldname": "tab_break_details",
+			"fieldtype": "Section Break",
+			"label": "Affected Products"
+		},
+		{
+			"fieldname": "affected_products_section",
+			"fieldtype": "Section Break",
+			"label": "Affected Products"
+		},
+		{
+			"fieldname": "affected_products",
+			"fieldtype": "Table",
+			"label": "Affected Products",
+			"options": "Recall Product"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "quantity_affected",
+			"fieldtype": "Float",
+			"label": "Quantity Affected"
+		},
+		{
+			"fieldname": "quantity_recovered",
+			"fieldtype": "Float",
+			"label": "Quantity Recovered"
+		},
+		{
+			"fieldname": "quantity_destroyed",
+			"fieldtype": "Float",
+			"label": "Quantity Destroyed"
+		},
+		{
+			"fieldname": "tab_break_customers",
+			"fieldtype": "Section Break",
+			"label": "Affected Customers"
+		},
+		{
+			"fieldname": "affected_customers_section",
+			"fieldtype": "Section Break",
+			"label": "Affected Customers"
+		},
+		{
+			"fieldname": "affected_customers",
+			"fieldtype": "Table",
+			"label": "Affected Customers",
+			"options": "Recall Customer"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "notification_status",
+			"fieldtype": "Select",
+			"label": "Notification Status",
+			"options": "\nNot Sent\nPartial\nComplete"
+		},
+		{
+			"fieldname": "notification_date",
+			"fieldtype": "Date",
+			"label": "Notification Date"
+		},
+		{
+			"fieldname": "tab_break_resolution",
+			"fieldtype": "Section Break",
+			"label": "Resolution"
+		},
+		{
+			"fieldname": "resolution_plan",
+			"fieldtype": "Text",
+			"label": "Resolution Plan"
+		},
+		{
+			"fieldname": "corrective_actions",
+			"fieldtype": "Text",
+			"label": "Corrective Actions"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "resolution_date",
+			"fieldtype": "Date",
+			"label": "Resolution Date"
+		},
+		{
+			"fieldname": "resolved_by",
+			"fieldtype": "Link",
+			"label": "Resolved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "tab_break_regulatory",
+			"fieldtype": "Section Break",
+			"label": "Regulatory"
+		},
+		{
+			"fieldname": "regulatory_notification",
+			"fieldtype": "Check",
+			"label": "Regulatory Notification Sent",
+			"default": "0"
+		},
+		{
+			"fieldname": "regulatory_authority",
+			"fieldtype": "Data",
+			"label": "Regulatory Authority"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "regulatory_reference",
+			"fieldtype": "Data",
+			"label": "Regulatory Reference"
+		},
+		{
+			"fieldname": "regulatory_compliance",
+			"fieldtype": "Select",
+			"label": "Regulatory Compliance",
+			"options": "\nPending\nIn Progress\nCompliant"
+		},
+		{
+			"fieldname": "tab_break_status",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nDraft\nSubmitted\nApproved\nRejected",
+			"default": "Draft"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Text",
+			"label": "Remarks"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Pharma Product Recall",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Quality Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		}
+	],
+	"sort_field": "recall_date",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

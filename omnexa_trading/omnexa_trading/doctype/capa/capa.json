@@ -1,0 +1,615 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:capa_number",
+	"creation": "2026-07-05 11:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"capa_section",
+		"capa_number",
+		"capa_title",
+		"capa_type",
+		"capa_category",
+		"severity",
+		"column_break_1",
+		"capa_status",
+		"initiation_date",
+		"target_completion_date",
+		"actual_completion_date",
+		"tab_break_1",
+		"source_section",
+		"source_type",
+		"source_reference",
+		"source_description",
+		"column_break_2",
+		"source_date",
+		"reported_by",
+		"department",
+		"tab_break_2",
+		"problem_section",
+		"problem_description",
+		"problem_statement",
+		"column_break_3",
+		"impact_assessment",
+		"risk_level",
+		"tab_break_3",
+		"investigation_section",
+		"investigation_method",
+		"investigation_team",
+		"investigation_findings",
+		"column_break_4",
+		"root_cause_analysis",
+		"root_cause",
+		"contributing_factors",
+		"tab_break_4",
+		"corrective_section",
+		"corrective_actions",
+		"corrective_action_owner",
+		"corrective_action_due_date",
+		"column_break_5",
+		"corrective_action_status",
+		"corrective_action_effectiveness",
+		"tab_break_5",
+		"preventive_section",
+		"preventive_actions",
+		"preventive_action_owner",
+		"preventive_action_due_date",
+		"column_break_6",
+		"preventive_action_status",
+		"preventive_action_effectiveness",
+		"tab_break_6",
+		"verification_section",
+		"verification_method",
+		"verification_criteria",
+		"verification_date",
+		"column_break_7",
+		"verification_results",
+		"verification_status",
+		"tab_break_7",
+		"effectiveness_section",
+		"effectiveness_check",
+		"effectiveness_date",
+		"effectiveness_score",
+		"column_break_8",
+		"effectiveness_notes",
+		"reoccurrence_prevented",
+		"tab_break_8",
+		"approval_section",
+		"initiated_by",
+		"initiated_date",
+		"reviewed_by",
+		"reviewed_date",
+		"column_break_9",
+		"approved_by",
+		"approved_date",
+		"qa_approval",
+		"qa_approval_date",
+		"tab_break_9",
+		"signature_section",
+		"electronic_signature",
+		"signature_status",
+		"column_break_10",
+		"signature_date",
+		"signature_notes"
+	],
+	"fields": [
+		{
+			"fieldname": "capa_section",
+			"fieldtype": "Section Break",
+			"label": "CAPA Information"
+		},
+		{
+			"fieldname": "capa_number",
+			"fieldtype": "Data",
+			"label": "CAPA Number",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "capa_title",
+			"fieldtype": "Data",
+			"label": "CAPA Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "capa_type",
+			"fieldtype": "Select",
+			"label": "CAPA Type",
+			"options": "Corrective\nPreventive\nBoth",
+			"reqd": 1
+		},
+		{
+			"fieldname": "capa_category",
+			"fieldtype": "Select",
+			"label": "CAPA Category",
+			"options": "Quality\nCompliance\nSafety\nOperational\nDocumentation\nTraining\nEquipment\nSupplier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "severity",
+			"fieldtype": "Select",
+			"label": "Severity",
+			"options": "Critical\nMajor\nMinor",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Open",
+			"fieldname": "capa_status",
+			"fieldtype": "Select",
+			"label": "CAPA Status",
+			"options": "Open\nUnder Investigation\nActions In Progress\nVerification Pending\nClosed\nReopened",
+			"reqd": 1
+		},
+		{
+			"fieldname": "initiation_date",
+			"fieldtype": "Date",
+			"label": "Initiation Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "target_completion_date",
+			"fieldtype": "Date",
+			"label": "Target Completion Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "actual_completion_date",
+			"fieldtype": "Date",
+			"label": "Actual Completion Date"
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Source"
+		},
+		{
+			"fieldname": "source_section",
+			"fieldtype": "Section Break",
+			"label": "Source Information"
+		},
+		{
+			"fieldname": "source_type",
+			"fieldtype": "Select",
+			"label": "Source Type",
+			"options": "Complaint\nAudit Finding\nDeviation\nNonconformance\nAdverse Event\nInternal Review\nCustomer Feedback\nRegulatory Finding",
+			"reqd": 1
+		},
+		{
+			"fieldname": "source_reference",
+			"fieldtype": "Data",
+			"label": "Source Reference"
+		},
+		{
+			"fieldname": "source_description",
+			"fieldtype": "Text Editor",
+			"label": "Source Description",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "source_date",
+			"fieldtype": "Date",
+			"label": "Source Date"
+		},
+		{
+			"fieldname": "reported_by",
+			"fieldtype": "Link",
+			"label": "Reported By",
+			"options": "User"
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Data",
+			"label": "Department"
+		},
+		{
+			"fieldname": "tab_break_2",
+			"fieldtype": "Tab Break",
+			"label": "Problem"
+		},
+		{
+			"fieldname": "problem_section",
+			"fieldtype": "Section Break",
+			"label": "Problem Description"
+		},
+		{
+			"fieldname": "problem_description",
+			"fieldtype": "Text Editor",
+			"label": "Problem Description",
+			"reqd": 1
+		},
+		{
+			"fieldname": "problem_statement",
+			"fieldtype": "Text Editor",
+			"label": "Problem Statement",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "impact_assessment",
+			"fieldtype": "Text Editor",
+			"label": "Impact Assessment"
+		},
+		{
+			"fieldname": "risk_level",
+			"fieldtype": "Select",
+			"label": "Risk Level",
+			"options": "High\nMedium\nLow"
+		},
+		{
+			"fieldname": "tab_break_3",
+			"fieldtype": "Tab Break",
+			"label": "Investigation"
+		},
+		{
+			"fieldname": "investigation_section",
+			"fieldtype": "Section Break",
+			"label": "Investigation"
+		},
+		{
+			"fieldname": "investigation_method",
+			"fieldtype": "Select",
+			"label": "Investigation Method",
+			"options": "Root Cause Analysis\nFishbone Diagram\n5 Whys\nProcess Mapping\nFailure Mode Analysis\nStatistical Analysis"
+		},
+		{
+			"fieldname": "investigation_team",
+			"fieldtype": "Table",
+			"label": "Investigation Team",
+			"options": "CAPA Team Member"
+		},
+		{
+			"fieldname": "investigation_findings",
+			"fieldtype": "Text Editor",
+			"label": "Investigation Findings"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "root_cause_analysis",
+			"fieldtype": "Text Editor",
+			"label": "Root Cause Analysis",
+			"reqd": 1
+		},
+		{
+			"fieldname": "root_cause",
+			"fieldtype": "Text",
+			"label": "Root Cause",
+			"reqd": 1
+		},
+		{
+			"fieldname": "contributing_factors",
+			"fieldtype": "Text Editor",
+			"label": "Contributing Factors"
+		},
+		{
+			"fieldname": "tab_break_4",
+			"fieldtype": "Tab Break",
+			"label": "Corrective"
+		},
+		{
+			"fieldname": "corrective_section",
+			"fieldtype": "Section Break",
+			"label": "Corrective Actions"
+		},
+		{
+			"fieldname": "corrective_actions",
+			"fieldtype": "Table",
+			"label": "Corrective Actions",
+			"options": "CAPA Action"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "corrective_action_owner",
+			"fieldtype": "Link",
+			"label": "Corrective Action Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "corrective_action_due_date",
+			"fieldtype": "Date",
+			"label": "Corrective Action Due Date"
+		},
+		{
+			"fieldname": "corrective_action_status",
+			"fieldtype": "Select",
+			"label": "Corrective Action Status",
+			"options": "Not Started\nIn Progress\nCompleted\nOverdue",
+			"read_only": 1
+		},
+		{
+			"fieldname": "corrective_action_effectiveness",
+			"fieldtype": "Select",
+			"label": "Corrective Action Effectiveness",
+			"options": "Not Evaluated\nEffective\nPartially Effective\nIneffective"
+		},
+		{
+			"fieldname": "tab_break_5",
+			"fieldtype": "Tab Break",
+			"label": "Preventive"
+		},
+		{
+			"fieldname": "preventive_section",
+			"fieldtype": "Section Break",
+			"label": "Preventive Actions"
+		},
+		{
+			"fieldname": "preventive_actions",
+			"fieldtype": "Table",
+			"label": "Preventive Actions",
+			"options": "CAPA Action"
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "preventive_action_owner",
+			"fieldtype": "Link",
+			"label": "Preventive Action Owner",
+			"options": "User"
+		},
+		{
+			"fieldname": "preventive_action_due_date",
+			"fieldtype": "Date",
+			"label": "Preventive Action Due Date"
+		},
+		{
+			"fieldname": "preventive_action_status",
+			"fieldtype": "Select",
+			"label": "Preventive Action Status",
+			"options": "Not Started\nIn Progress\nCompleted\nOverdue",
+			"read_only": 1
+		},
+		{
+			"fieldname": "preventive_action_effectiveness",
+			"fieldtype": "Select",
+			"label": "Preventive Action Effectiveness",
+			"options": "Not Evaluated\nEffective\nPartially Effective\nIneffective"
+		},
+		{
+			"fieldname": "tab_break_6",
+			"fieldtype": "Tab Break",
+			"label": "Verification"
+		},
+		{
+			"fieldname": "verification_section",
+			"fieldtype": "Section Break",
+			"label": "Verification"
+		},
+		{
+			"fieldname": "verification_method",
+			"fieldtype": "Select",
+			"label": "Verification Method",
+			"options": "Document Review\nProcess Observation\nData Analysis\nTesting\nAudit"
+		},
+		{
+			"fieldname": "verification_criteria",
+			"fieldtype": "Text Editor",
+			"label": "Verification Criteria"
+		},
+		{
+			"fieldname": "verification_date",
+			"fieldtype": "Date",
+			"label": "Verification Date"
+		},
+		{
+			"fieldname": "column_break_7",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "verification_results",
+			"fieldtype": "Text Editor",
+			"label": "Verification Results"
+		},
+		{
+			"fieldname": "verification_status",
+			"fieldtype": "Select",
+			"label": "Verification Status",
+			"options": "Pending\nVerified\nFailed"
+		},
+		{
+			"fieldname": "tab_break_7",
+			"fieldtype": "Tab Break",
+			"label": "Effectiveness"
+		},
+		{
+			"fieldname": "effectiveness_section",
+			"fieldtype": "Section Break",
+			"label": "Effectiveness Check"
+		},
+		{
+			"fieldname": "effectiveness_check",
+			"fieldtype": "Text Editor",
+			"label": "Effectiveness Check"
+		},
+		{
+			"fieldname": "effectiveness_date",
+			"fieldtype": "Date",
+			"label": "Effectiveness Date"
+		},
+		{
+			"fieldname": "effectiveness_score",
+			"fieldtype": "Percent",
+			"label": "Effectiveness Score"
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "effectiveness_notes",
+			"fieldtype": "Text Editor",
+			"label": "Effectiveness Notes"
+		},
+		{
+			"fieldname": "reoccurrence_prevented",
+			"fieldtype": "Check",
+			"label": "Reoccurrence Prevented"
+		},
+		{
+			"fieldname": "tab_break_8",
+			"fieldtype": "Tab Break",
+			"label": "Approvals"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "CAPA Approvals"
+		},
+		{
+			"fieldname": "initiated_by",
+			"fieldtype": "Link",
+			"label": "Initiated By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "initiated_date",
+			"fieldtype": "Date",
+			"label": "Initiated Date"
+		},
+		{
+			"fieldname": "reviewed_by",
+			"fieldtype": "Link",
+			"label": "Reviewed By",
+			"options": "User"
+		},
+		{
+			"fieldname": "reviewed_date",
+			"fieldtype": "Date",
+			"label": "Reviewed Date"
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "qa_approval",
+			"fieldtype": "Link",
+			"label": "QA Approval",
+			"options": "User"
+		},
+		{
+			"fieldname": "qa_approval_date",
+			"fieldtype": "Date",
+			"label": "QA Approval Date"
+		},
+		{
+			"fieldname": "tab_break_9",
+			"fieldtype": "Tab Break",
+			"label": "Signature"
+		},
+		{
+			"fieldname": "signature_section",
+			"fieldtype": "Section Break",
+			"label": "Electronic Signature"
+		},
+		{
+			"fieldname": "electronic_signature",
+			"fieldtype": "Link",
+			"label": "Electronic Signature",
+			"options": "Electronic Signature"
+		},
+		{
+			"fieldname": "signature_status",
+			"fieldtype": "Select",
+			"label": "Signature Status",
+			"options": "Not Signed\nSigned\nRevoked",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_10",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "signature_date",
+			"fieldtype": "Date",
+			"label": "Signature Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signature_notes",
+			"fieldtype": "Text",
+			"label": "Signature Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 11:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "CAPA",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Quality Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Regulatory Officer",
+			"share": 1,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1,
+	"track_seen": 1
+}

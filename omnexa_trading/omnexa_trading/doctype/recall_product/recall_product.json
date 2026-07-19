@@ -1,0 +1,68 @@
+{
+	"actions": [],
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"batch_number",
+		"item_code",
+		"item_name",
+		"quantity_affected",
+		"quantity_recovered",
+		"quantity_destroyed",
+		"recovery_status"
+	],
+	"fields": [
+		{
+			"fieldname": "batch_number",
+			"fieldtype": "Link",
+			"label": "Batch Number",
+			"options": "Pharma Batch",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"label": "Item Code",
+			"options": "Item"
+		},
+		{
+			"fieldname": "item_name",
+			"fieldtype": "Data",
+			"label": "Item Name"
+		},
+		{
+			"fieldname": "quantity_affected",
+			"fieldtype": "Float",
+			"label": "Quantity Affected",
+			"reqd": 1
+		},
+		{
+			"fieldname": "quantity_recovered",
+			"fieldtype": "Float",
+			"label": "Quantity Recovered"
+		},
+		{
+			"fieldname": "quantity_destroyed",
+			"fieldtype": "Float",
+			"label": "Quantity Destroyed"
+		},
+		{
+			"fieldname": "recovery_status",
+			"fieldtype": "Select",
+			"label": "Recovery Status",
+			"options": "\nPending\nIn Progress\nRecovered\nDestroyed"
+		}
+	],
+	"istable": 1,
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Recall Product",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"track_changes": 0
+}

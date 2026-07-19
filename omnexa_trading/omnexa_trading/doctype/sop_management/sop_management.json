@@ -1,0 +1,466 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:sop_number",
+	"creation": "2026-07-05 10:20:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"sop_section",
+		"sop_number",
+		"sop_title",
+		"sop_category",
+		"sop_type",
+		"department",
+		"column_break_1",
+		"sop_status",
+		"effective_date",
+		"review_date",
+		"expiry_date",
+		"tab_break_1",
+		"content_section",
+		"sop_purpose",
+		"sop_scope",
+		"responsibilities",
+		"column_break_2",
+		"procedure",
+		"references",
+		"definitions",
+		"tab_break_2",
+		"approval_section",
+		"prepared_by",
+		"prepared_date",
+		"reviewed_by",
+		"reviewed_date",
+		"column_break_3",
+		"approved_by",
+		"approved_date",
+		"qa_approval",
+		"qa_approval_date",
+		"tab_break_3",
+		"version_section",
+		"current_version",
+		"version_history",
+		"column_break_4",
+		"change_reason",
+		"change_description",
+		"tab_break_4",
+		"distribution_section",
+		"distribution_list",
+		"column_break_5",
+		"acknowledgement_required",
+		"acknowledgement_status",
+		"tab_break_5",
+		"training_section",
+		"training_required",
+		"training_status",
+		"column_break_6",
+		"target_audience",
+		"training_due_date",
+		"tab_break_6",
+		"attachment_section",
+		"sop_attachment",
+		"column_break_7",
+		"supporting_documents",
+		"tab_break_7",
+		"signature_section",
+		"electronic_signature",
+		"signature_status",
+		"column_break_8",
+		"signature_date",
+		"signature_notes"
+	],
+	"fields": [
+		{
+			"fieldname": "sop_section",
+			"fieldtype": "Section Break",
+			"label": "SOP Information"
+		},
+		{
+			"fieldname": "sop_number",
+			"fieldtype": "Data",
+			"label": "SOP Number",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "sop_title",
+			"fieldtype": "Data",
+			"label": "SOP Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "sop_category",
+			"fieldtype": "Select",
+			"label": "SOP Category",
+			"options": "Quality\nOperations\nSafety\nCompliance\nTraining\nIT\nHR\nFinance\nMaintenance",
+			"reqd": 1
+		},
+		{
+			"fieldname": "sop_type",
+			"fieldtype": "Select",
+			"label": "SOP Type",
+			"options": "Standard Operating Procedure\nWork Instruction\nPolicy\nGuideline\nForm\nTemplate",
+			"reqd": 1
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Data",
+			"label": "Department"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Draft",
+			"fieldname": "sop_status",
+			"fieldtype": "Select",
+			"label": "SOP Status",
+			"options": "Draft\nUnder Review\nApproved\nPublished\nSuperseded\nWithdrawn",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_date",
+			"fieldtype": "Date",
+			"label": "Effective Date"
+		},
+		{
+			"fieldname": "review_date",
+			"fieldtype": "Date",
+			"label": "Review Date"
+		},
+		{
+			"fieldname": "expiry_date",
+			"fieldtype": "Date",
+			"label": "Expiry Date"
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Content"
+		},
+		{
+			"fieldname": "content_section",
+			"fieldtype": "Section Break",
+			"label": "SOP Content"
+		},
+		{
+			"fieldname": "sop_purpose",
+			"fieldtype": "Text Editor",
+			"label": "Purpose",
+			"reqd": 1
+		},
+		{
+			"fieldname": "sop_scope",
+			"fieldtype": "Text Editor",
+			"label": "Scope",
+			"reqd": 1
+		},
+		{
+			"fieldname": "responsibilities",
+			"fieldtype": "Text Editor",
+			"label": "Responsibilities"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "procedure",
+			"fieldtype": "Text Editor",
+			"label": "Procedure",
+			"reqd": 1
+		},
+		{
+			"fieldname": "references",
+			"fieldtype": "Text Editor",
+			"label": "References"
+		},
+		{
+			"fieldname": "definitions",
+			"fieldtype": "Text Editor",
+			"label": "Definitions"
+		},
+		{
+			"fieldname": "tab_break_2",
+			"fieldtype": "Tab Break",
+			"label": "Approvals"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "SOP Approvals"
+		},
+		{
+			"fieldname": "prepared_by",
+			"fieldtype": "Link",
+			"label": "Prepared By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "prepared_date",
+			"fieldtype": "Date",
+			"label": "Prepared Date"
+		},
+		{
+			"fieldname": "reviewed_by",
+			"fieldtype": "Link",
+			"label": "Reviewed By",
+			"options": "User"
+		},
+		{
+			"fieldname": "reviewed_date",
+			"fieldtype": "Date",
+			"label": "Reviewed Date"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "qa_approval",
+			"fieldtype": "Link",
+			"label": "QA Approval",
+			"options": "User"
+		},
+		{
+			"fieldname": "qa_approval_date",
+			"fieldtype": "Date",
+			"label": "QA Approval Date"
+		},
+		{
+			"fieldname": "tab_break_3",
+			"fieldtype": "Tab Break",
+			"label": "Version Control"
+		},
+		{
+			"fieldname": "version_section",
+			"fieldtype": "Section Break",
+			"label": "Version Management"
+		},
+		{
+			"default": "1.0",
+			"fieldname": "current_version",
+			"fieldtype": "Data",
+			"label": "Current Version",
+			"read_only": 1
+		},
+		{
+			"fieldname": "version_history",
+			"fieldtype": "Table",
+			"label": "Version History",
+			"options": "SOP Version History"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "change_reason",
+			"fieldtype": "Data",
+			"label": "Change Reason"
+		},
+		{
+			"fieldname": "change_description",
+			"fieldtype": "Text Editor",
+			"label": "Change Description"
+		},
+		{
+			"fieldname": "tab_break_4",
+			"fieldtype": "Tab Break",
+			"label": "Distribution"
+		},
+		{
+			"fieldname": "distribution_section",
+			"fieldtype": "Section Break",
+			"label": "Distribution"
+		},
+		{
+			"fieldname": "distribution_list",
+			"fieldtype": "Table",
+			"label": "Distribution List",
+			"options": "SOP Distribution"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "1",
+			"fieldname": "acknowledgement_required",
+			"fieldtype": "Check",
+			"label": "Acknowledgement Required"
+		},
+		{
+			"fieldname": "acknowledgement_status",
+			"fieldtype": "Select",
+			"label": "Acknowledgement Status",
+			"options": "Not Required\nPending\nIn Progress\nCompleted",
+			"read_only": 1
+		},
+		{
+			"fieldname": "tab_break_5",
+			"fieldtype": "Tab Break",
+			"label": "Training"
+		},
+		{
+			"fieldname": "training_section",
+			"fieldtype": "Section Break",
+			"label": "Training"
+		},
+		{
+			"default": "1",
+			"fieldname": "training_required",
+			"fieldtype": "Check",
+			"label": "Training Required"
+		},
+		{
+			"fieldname": "training_status",
+			"fieldtype": "Select",
+			"label": "Training Status",
+			"options": "Not Required\nPending\nScheduled\nIn Progress\nCompleted",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "target_audience",
+			"fieldtype": "Text",
+			"label": "Target Audience"
+		},
+		{
+			"fieldname": "training_due_date",
+			"fieldtype": "Date",
+			"label": "Training Due Date"
+		},
+		{
+			"fieldname": "tab_break_6",
+			"fieldtype": "Tab Break",
+			"label": "Attachments"
+		},
+		{
+			"fieldname": "attachment_section",
+			"fieldtype": "Section Break",
+			"label": "Attachments"
+		},
+		{
+			"fieldname": "sop_attachment",
+			"fieldtype": "Attach",
+			"label": "SOP Document"
+		},
+		{
+			"fieldname": "column_break_7",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "supporting_documents",
+			"fieldtype": "Table",
+			"label": "Supporting Documents",
+			"options": "SOP Supporting Document"
+		},
+		{
+			"fieldname": "tab_break_7",
+			"fieldtype": "Tab Break",
+			"label": "Signature"
+		},
+		{
+			"fieldname": "signature_section",
+			"fieldtype": "Section Break",
+			"label": "Electronic Signature"
+		},
+		{
+			"fieldname": "electronic_signature",
+			"fieldtype": "Link",
+			"label": "Electronic Signature",
+			"options": "Electronic Signature"
+		},
+		{
+			"fieldname": "signature_status",
+			"fieldtype": "Select",
+			"label": "Signature Status",
+			"options": "Not Signed\nSigned\nRevoked",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "signature_date",
+			"fieldtype": "Date",
+			"label": "Signature Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signature_notes",
+			"fieldtype": "Text",
+			"label": "Signature Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 10:20:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "SOP Management",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Quality Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Regulatory Officer",
+			"share": 1,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1,
+	"track_seen": 1
+}

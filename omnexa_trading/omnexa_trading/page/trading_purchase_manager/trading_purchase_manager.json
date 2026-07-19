@@ -1,0 +1,16 @@
+{
+	"doctype": "Page",
+	"module": "Omnexa Trading",
+	"name": "trading-purchase-manager",
+	"page_name": "trading-purchase-manager",
+	"standard": "Yes",
+	"title": "Purchase Manager Portal",
+	"roles": [
+		{
+			"role": "System Manager"
+		},
+		{
+			"role": "Company Admin"
+		}
+	]
+}

@@ -1,0 +1,344 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "field:inspection_number",
+	"creation": "2026-07-05 00:00:00",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"tab_break_basic",
+		"inspection_number",
+		"inspection_date",
+		"inspection_type",
+		"item_code",
+		"item_name",
+		"batch_number",
+		"batch_expiry",
+		"column_break_1",
+		"manufacturer",
+		"supplier",
+		"warehouse",
+		"company",
+		"inspector",
+		"tab_break_quality",
+		"inspection_status",
+		"approval_status",
+		"approved_by",
+		"approval_date",
+		"column_break_2",
+		"quality_parameters_section",
+		"quality_parameters",
+		"defects_section",
+		"defects",
+		"tab_break_results",
+		"test_results_section",
+		"test_results",
+		"column_break_3",
+		"overall_score",
+		"passing_score",
+		"tab_break_attachments",
+		"quality_certificate",
+		"test_reports",
+		"column_break_4",
+		"inspection_photos",
+		"tab_break_notes",
+		"inspection_notes",
+		"recommendations",
+		"tab_break_status",
+		"status",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "tab_break_basic",
+			"fieldtype": "Section Break",
+			"label": "Basic Information"
+		},
+		{
+			"fieldname": "inspection_number",
+			"fieldtype": "Data",
+			"label": "Inspection Number",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "inspection_date",
+			"fieldtype": "Date",
+			"label": "Inspection Date",
+			"reqd": 1,
+			"default": "Today"
+		},
+		{
+			"fieldname": "inspection_type",
+			"fieldtype": "Select",
+			"label": "Inspection Type",
+			"options": "\nIncoming\nIn-Process\nFinal\nStability\nRetesting",
+			"reqd": 1
+		},
+		{
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"label": "Item Code",
+			"options": "Item",
+			"reqd": 1
+		},
+		{
+			"fieldname": "item_name",
+			"fieldtype": "Data",
+			"label": "Item Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "batch_number",
+			"fieldtype": "Link",
+			"label": "Batch Number",
+			"options": "Pharma Batch",
+			"reqd": 1
+		},
+		{
+			"fieldname": "batch_expiry",
+			"fieldtype": "Date",
+			"label": "Batch Expiry",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "manufacturer",
+			"fieldtype": "Link",
+			"label": "Manufacturer",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "supplier",
+			"fieldtype": "Link",
+			"label": "Supplier",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "warehouse",
+			"fieldtype": "Link",
+			"label": "Warehouse",
+			"options": "Warehouse"
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "inspector",
+			"fieldtype": "Link",
+			"label": "Inspector",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fieldname": "tab_break_quality",
+			"fieldtype": "Section Break",
+			"label": "Quality Assessment"
+		},
+		{
+			"fieldname": "inspection_status",
+			"fieldtype": "Select",
+			"label": "Inspection Status",
+			"options": "\nDraft\nPending\nPassed\nFailed\nHold",
+			"default": "Draft",
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "approval_status",
+			"fieldtype": "Select",
+			"label": "Approval Status",
+			"options": "\nPending\nApproved\nRejected"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approval_date",
+			"fieldtype": "Date",
+			"label": "Approval Date"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "quality_parameters_section",
+			"fieldtype": "Section Break",
+			"label": "Quality Parameters"
+		},
+		{
+			"fieldname": "quality_parameters",
+			"fieldtype": "Table",
+			"label": "Quality Parameters",
+			"options": "Quality Parameter"
+		},
+		{
+			"fieldname": "defects_section",
+			"fieldtype": "Section Break",
+			"label": "Defects"
+		},
+		{
+			"fieldname": "defects",
+			"fieldtype": "Table",
+			"label": "Defects",
+			"options": "Inspection Defect"
+		},
+		{
+			"fieldname": "tab_break_results",
+			"fieldtype": "Section Break",
+			"label": "Test Results"
+		},
+		{
+			"fieldname": "test_results_section",
+			"fieldtype": "Section Break",
+			"label": "Test Results"
+		},
+		{
+			"fieldname": "test_results",
+			"fieldtype": "Table",
+			"label": "Test Results",
+			"options": "Test Result"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "overall_score",
+			"fieldtype": "Float",
+			"label": "Overall Score",
+			"read_only": 1
+		},
+		{
+			"fieldname": "passing_score",
+			"fieldtype": "Float",
+			"label": "Passing Score",
+			"default": "80"
+		},
+		{
+			"fieldname": "tab_break_attachments",
+			"fieldtype": "Section Break",
+			"label": "Attachments"
+		},
+		{
+			"fieldname": "quality_certificate",
+			"fieldtype": "Attach",
+			"label": "Quality Certificate"
+		},
+		{
+			"fieldname": "test_reports",
+			"fieldtype": "Table",
+			"label": "Test Reports",
+			"options": "Test Result"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "inspection_photos",
+			"fieldtype": "Table",
+			"label": "Inspection Photos",
+			"options": "Inspection Photo"
+		},
+		{
+			"fieldname": "tab_break_notes",
+			"fieldtype": "Section Break",
+			"label": "Notes"
+		},
+		{
+			"fieldname": "inspection_notes",
+			"fieldtype": "Text",
+			"label": "Inspection Notes"
+		},
+		{
+			"fieldname": "recommendations",
+			"fieldtype": "Text",
+			"label": "Recommendations"
+		},
+		{
+			"fieldname": "tab_break_status",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "Status",
+			"options": "\nDraft\nSubmitted\nCompleted",
+			"default": "Draft"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Text",
+			"label": "Remarks"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-07-05 00:00:00",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Pharma Quality Inspection",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "System Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Company Admin",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Quality Manager",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"delete": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1,
+			"cancel": 1
+		},
+		{
+			"role": "Inspector",
+			"read": 1,
+			"write": 1,
+			"create": 1,
+			"export": 1,
+			"report": 1,
+			"submit": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

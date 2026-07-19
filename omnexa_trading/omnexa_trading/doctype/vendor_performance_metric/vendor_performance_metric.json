@@ -1,0 +1,74 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-07-05 12:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"metric_name",
+		"metric_type",
+		"target_value",
+		"actual_value",
+		"column_break_1",
+		"score",
+		"measurement_period",
+		"notes"
+	],
+	"fields": [
+		{
+			"fieldname": "metric_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Metric Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "metric_type",
+			"fieldtype": "Select",
+			"label": "Metric Type",
+			"options": "Delivery\nQuality\nService\nCompliance\nCost\nInnovation",
+			"reqd": 1
+		},
+		{
+			"fieldname": "target_value",
+			"fieldtype": "Float",
+			"label": "Target Value"
+		},
+		{
+			"fieldname": "actual_value",
+			"fieldtype": "Float",
+			"label": "Actual Value"
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "score",
+			"fieldtype": "Percent",
+			"label": "Score"
+		},
+		{
+			"fieldname": "measurement_period",
+			"fieldtype": "Data",
+			"label": "Measurement Period"
+		},
+		{
+			"fieldname": "notes",
+			"fieldtype": "Text",
+			"label": "Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-07-05 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Vendor Performance Metric",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": []
+}

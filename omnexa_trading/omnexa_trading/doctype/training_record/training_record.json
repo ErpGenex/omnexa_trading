@@ -1,0 +1,548 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:training_number",
+	"creation": "2026-07-05 10:40:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"training_section",
+		"training_number",
+		"training_title",
+		"training_category",
+		"training_type",
+		"training_level",
+		"column_break_1",
+		"training_status",
+		"training_date",
+		"training_duration",
+		"training_location",
+		"tab_break_1",
+		"content_section",
+		"training_objectives",
+		"training_content",
+		"prerequisites",
+		"column_break_2",
+		"target_audience",
+		"max_participants",
+		"min_participants",
+		"tab_break_2",
+		"instructor_section",
+		"instructor_name",
+		"instructor_qualifications",
+		"column_break_3",
+		"instructor_department",
+		"instructor_contact",
+		"tab_break_3",
+		"participants_section",
+		"training_participants",
+		"column_break_4",
+		"attendance_status",
+		"completion_rate",
+		"tab_break_4",
+		"materials_section",
+		"training_materials",
+		"column_break_5",
+		"equipment_required",
+		"tab_break_5",
+		"assessment_section",
+		"assessment_method",
+		"passing_score",
+		"assessment_questions",
+		"column_break_6",
+		"assessment_results",
+		"tab_break_6",
+		"certification_section",
+		"certificate_issued",
+		"certificate_number",
+		"certificate_expiry",
+		"column_break_7",
+		"certificate_attachment",
+		"tab_break_7",
+		"effectiveness_section",
+		"effectiveness_evaluation",
+		"effectiveness_score",
+		"column_break_8",
+		"improvement_actions",
+		"tab_break_8",
+		"approval_section",
+		"prepared_by",
+		"prepared_date",
+		"reviewed_by",
+		"reviewed_date",
+		"column_break_9",
+		"approved_by",
+		"approved_date",
+		"qa_approval",
+		"qa_approval_date",
+		"tab_break_9",
+		"signature_section",
+		"electronic_signature",
+		"signature_status",
+		"column_break_10",
+		"signature_date",
+		"signature_notes"
+	],
+	"fields": [
+		{
+			"fieldname": "training_section",
+			"fieldtype": "Section Break",
+			"label": "Training Information"
+		},
+		{
+			"fieldname": "training_number",
+			"fieldtype": "Data",
+			"label": "Training Number",
+			"read_only": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "training_title",
+			"fieldtype": "Data",
+			"label": "Training Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "training_category",
+			"fieldtype": "Select",
+			"label": "Training Category",
+			"options": "GMP\nGDP\nQuality Control\nSafety\nCompliance\nTechnical\nSoft Skills\nManagement\nOnboarding",
+			"reqd": 1
+		},
+		{
+			"fieldname": "training_type",
+			"fieldtype": "Select",
+			"label": "Training Type",
+			"options": "Classroom\nOnline\nOn-the-Job\nWorkshop\nSeminar\nWebinar",
+			"reqd": 1
+		},
+		{
+			"fieldname": "training_level",
+			"fieldtype": "Select",
+			"label": "Training Level",
+			"options": "Basic\nIntermediate\nAdvanced\nExpert",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Scheduled",
+			"fieldname": "training_status",
+			"fieldtype": "Select",
+			"label": "Training Status",
+			"options": "Scheduled\nIn Progress\nCompleted\nCancelled\nPostponed",
+			"reqd": 1
+		},
+		{
+			"fieldname": "training_date",
+			"fieldtype": "Date",
+			"label": "Training Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "training_duration",
+			"fieldtype": "Float",
+			"label": "Duration (Hours)"
+		},
+		{
+			"fieldname": "training_location",
+			"fieldtype": "Data",
+			"label": "Training Location"
+		},
+		{
+			"fieldname": "tab_break_1",
+			"fieldtype": "Tab Break",
+			"label": "Content"
+		},
+		{
+			"fieldname": "content_section",
+			"fieldtype": "Section Break",
+			"label": "Training Content"
+		},
+		{
+			"fieldname": "training_objectives",
+			"fieldtype": "Text Editor",
+			"label": "Training Objectives",
+			"reqd": 1
+		},
+		{
+			"fieldname": "training_content",
+			"fieldtype": "Text Editor",
+			"label": "Training Content"
+		},
+		{
+			"fieldname": "prerequisites",
+			"fieldtype": "Text Editor",
+			"label": "Prerequisites"
+		},
+		{
+			"fieldname": "column_break_2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "target_audience",
+			"fieldtype": "Text",
+			"label": "Target Audience"
+		},
+		{
+			"fieldname": "max_participants",
+			"fieldtype": "Int",
+			"label": "Max Participants"
+		},
+		{
+			"fieldname": "min_participants",
+			"fieldtype": "Int",
+			"label": "Min Participants"
+		},
+		{
+			"fieldname": "tab_break_2",
+			"fieldtype": "Tab Break",
+			"label": "Instructor"
+		},
+		{
+			"fieldname": "instructor_section",
+			"fieldtype": "Section Break",
+			"label": "Instructor Information"
+		},
+		{
+			"fieldname": "instructor_name",
+			"fieldtype": "Link",
+			"label": "Instructor",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "instructor_qualifications",
+			"fieldtype": "Text",
+			"label": "Instructor Qualifications"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "instructor_department",
+			"fieldtype": "Data",
+			"label": "Instructor Department"
+		},
+		{
+			"fieldname": "instructor_contact",
+			"fieldtype": "Data",
+			"label": "Instructor Contact"
+		},
+		{
+			"fieldname": "tab_break_3",
+			"fieldtype": "Tab Break",
+			"label": "Participants"
+		},
+		{
+			"fieldname": "participants_section",
+			"fieldtype": "Section Break",
+			"label": "Training Participants"
+		},
+		{
+			"fieldname": "training_participants",
+			"fieldtype": "Table",
+			"label": "Participants",
+			"options": "Training Participant"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "attendance_status",
+			"fieldtype": "Select",
+			"label": "Attendance Status",
+			"options": "Not Started\nIn Progress\nCompleted",
+			"read_only": 1
+		},
+		{
+			"fieldname": "completion_rate",
+			"fieldtype": "Percent",
+			"label": "Completion Rate",
+			"read_only": 1
+		},
+		{
+			"fieldname": "tab_break_4",
+			"fieldtype": "Tab Break",
+			"label": "Materials"
+		},
+		{
+			"fieldname": "materials_section",
+			"fieldtype": "Section Break",
+			"label": "Training Materials"
+		},
+		{
+			"fieldname": "training_materials",
+			"fieldtype": "Table",
+			"label": "Training Materials",
+			"options": "Training Material"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "location",
+			"fieldtype": "Data",
+			"label": "Location"
+		},
+		{
+			"fieldname": "equipment_required",
+			"fieldtype": "Text",
+			"label": "Equipment Required"
+		},
+		{
+			"fieldname": "tab_break_5",
+			"fieldtype": "Tab Break",
+			"label": "Assessment"
+		},
+		{
+			"fieldname": "assessment_section",
+			"fieldtype": "Section Break",
+			"label": "Assessment"
+		},
+		{
+			"fieldname": "assessment_method",
+			"fieldtype": "Select",
+			"label": "Assessment Method",
+			"options": "Written Test\nPractical Test\nOral Test\nProject\nObservation\nNo Assessment"
+		},
+		{
+			"fieldname": "passing_score",
+			"fieldtype": "Percent",
+			"label": "Passing Score"
+		},
+		{
+			"fieldname": "assessment_questions",
+			"fieldtype": "Table",
+			"label": "Assessment Questions",
+			"options": "Assessment Question"
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "assessment_results",
+			"fieldtype": "Table",
+			"label": "Assessment Results",
+			"options": "Assessment Result"
+		},
+		{
+			"fieldname": "tab_break_6",
+			"fieldtype": "Tab Break",
+			"label": "Certification"
+		},
+		{
+			"fieldname": "certification_section",
+			"fieldtype": "Section Break",
+			"label": "Certification"
+		},
+		{
+			"default": "0",
+			"fieldname": "certificate_issued",
+			"fieldtype": "Check",
+			"label": "Certificate Issued"
+		},
+		{
+			"fieldname": "certificate_number",
+			"fieldtype": "Data",
+			"label": "Certificate Number"
+		},
+		{
+			"fieldname": "certificate_expiry",
+			"fieldtype": "Date",
+			"label": "Certificate Expiry"
+		},
+		{
+			"fieldname": "column_break_7",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "certificate_attachment",
+			"fieldtype": "Attach",
+			"label": "Certificate Attachment"
+		},
+		{
+			"fieldname": "tab_break_7",
+			"fieldtype": "Tab Break",
+			"label": "Effectiveness"
+		},
+		{
+			"fieldname": "effectiveness_section",
+			"fieldtype": "Section Break",
+			"label": "Effectiveness Evaluation"
+		},
+		{
+			"fieldname": "effectiveness_evaluation",
+			"fieldtype": "Text Editor",
+			"label": "Effectiveness Evaluation"
+		},
+		{
+			"fieldname": "effectiveness_score",
+			"fieldtype": "Percent",
+			"label": "Effectiveness Score"
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "improvement_actions",
+			"fieldtype": "Text Editor",
+			"label": "Improvement Actions"
+		},
+		{
+			"fieldname": "tab_break_8",
+			"fieldtype": "Tab Break",
+			"label": "Approvals"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "Training Approvals"
+		},
+		{
+			"fieldname": "prepared_by",
+			"fieldtype": "Link",
+			"label": "Prepared By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "prepared_date",
+			"fieldtype": "Date",
+			"label": "Prepared Date"
+		},
+		{
+			"fieldname": "reviewed_by",
+			"fieldtype": "Link",
+			"label": "Reviewed By",
+			"options": "User"
+		},
+		{
+			"fieldname": "reviewed_date",
+			"fieldtype": "Date",
+			"label": "Reviewed Date"
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "qa_approval",
+			"fieldtype": "Link",
+			"label": "QA Approval",
+			"options": "User"
+		},
+		{
+			"fieldname": "qa_approval_date",
+			"fieldtype": "Date",
+			"label": "QA Approval Date"
+		},
+		{
+			"fieldname": "tab_break_9",
+			"fieldtype": "Tab Break",
+			"label": "Signature"
+		},
+		{
+			"fieldname": "signature_section",
+			"fieldtype": "Section Break",
+			"label": "Electronic Signature"
+		},
+		{
+			"fieldname": "electronic_signature",
+			"fieldtype": "Link",
+			"label": "Electronic Signature",
+			"options": "Electronic Signature"
+		},
+		{
+			"fieldname": "signature_status",
+			"fieldtype": "Select",
+			"label": "Signature Status",
+			"options": "Not Signed\nSigned\nRevoked",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_10",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "signature_date",
+			"fieldtype": "Date",
+			"label": "Signature Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "signature_notes",
+			"fieldtype": "Text",
+			"label": "Signature Notes"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-05 10:40:00.000000",
+	"modified_by": "Administrator",
+	"module": "Omnexa Trading",
+	"name": "Training Record",
+	"naming_rule": "Expression",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Quality Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Pharma Regulatory Officer",
+			"share": 1,
+			"write": 0
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1,
+	"track_seen": 1
+}
