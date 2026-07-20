@@ -238,22 +238,38 @@ def create_pharma_users(company, branch, roles):
 
 def create_pharma_portals():
 	"""Create pharmaceutical trading role portal pages."""
-	from omnexa_trading.pharma_portal_scaffold import scaffold_pharma_portals
-
-	portals = scaffold_pharma_portals(skip_existing_js=False)
-	_log(f"Scaffolded {len(portals)} pharma role portals")
-	return portals
+	try:
+		from omnexa_trading.pharma_portal_scaffold import scaffold_pharma_portals
+	except Exception as e:
+		_log(f"Error importing pharma_portal_scaffold: {e}")
+		return []
+	
+	try:
+		portals = scaffold_pharma_portals(skip_existing_js=False)
+		_log(f"Scaffolded {len(portals)} pharma role portals")
+		return portals
+	except Exception as e:
+		_log(f"Error scaffolding pharma portals: {e}")
+		return []
 
 
 def create_pharma_workspaces():
 	"""Sync trading workspace with pharma compliance sections."""
-	from omnexa_trading.patches.v1_0.remove_pharma_warehouse_management_workspace import execute as remove_legacy_workspace
-	from omnexa_trading.workspace.trading_workspace import sync_trading_workspace_menu
-
-	remove_legacy_workspace()
-	stats = sync_trading_workspace_menu(save=True, rebuild=True)
-	_log(f"Trading workspace synced: {stats}")
-	return [stats]
+	try:
+		from omnexa_trading.patches.v1_0.remove_pharma_warehouse_management_workspace import execute as remove_legacy_workspace
+		from omnexa_trading.workspace.trading_workspace import sync_trading_workspace_menu
+	except Exception as e:
+		_log(f"Error importing workspace modules: {e}")
+		return []
+	
+	try:
+		remove_legacy_workspace()
+		stats = sync_trading_workspace_menu(save=True, rebuild=True)
+		_log(f"Trading workspace synced: {stats}")
+		return [stats]
+	except Exception as e:
+		_log(f"Error syncing trading workspace: {e}")
+		return []
 
 def seed_pharma_demo_data(company, branch):
     """Seed pharmaceutical trading demo data"""
@@ -262,40 +278,58 @@ def seed_pharma_demo_data(company, branch):
     _log("=" * 50)
     
     # Import demo data functions
-    from omnexa_trading.omnexa_trading.data.demo_data import (
-        create_demo_suppliers,
-        create_demo_customers,
-        create_demo_warehouses,
-        create_demo_item_groups
-    )
+    try:
+        from omnexa_trading.omnexa_trading.data.demo_data import (
+            create_demo_suppliers,
+            create_demo_customers,
+            create_demo_warehouses,
+            create_demo_item_groups
+        )
+    except Exception as e:
+        _log(f"Error importing demo_data module: {e}")
+        return {
+            "item_groups": 0,
+            "suppliers": 0,
+            "customers": 0,
+            "warehouses": 0
+        }
     
-    _log("\n1. Creating item groups...")
-    item_groups = create_demo_item_groups()
-    
-    _log("\n2. Creating demo suppliers...")
-    suppliers = create_demo_suppliers()
-    
-    _log("\n3. Creating demo customers...")
-    customers = create_demo_customers()
-    
-    _log("\n4. Creating specialized warehouses...")
-    warehouses = create_demo_warehouses()
-    
-    _log("\n" + "=" * 50)
-    _log("Demo Data Seeding Summary")
-    _log("=" * 50)
-    _log(f"Item Groups: {item_groups}")
-    _log(f"Suppliers: {suppliers}")
-    _log(f"Customers: {customers}")
-    _log(f"Warehouses: {warehouses}")
-    _log("=" * 50)
-    
-    return {
-        "item_groups": item_groups,
-        "suppliers": suppliers,
-        "customers": customers,
-        "warehouses": warehouses
-    }
+    try:
+        _log("\n1. Creating item groups...")
+        item_groups = create_demo_item_groups()
+        
+        _log("\n2. Creating demo suppliers...")
+        suppliers = create_demo_suppliers()
+        
+        _log("\n3. Creating demo customers...")
+        customers = create_demo_customers()
+        
+        _log("\n4. Creating specialized warehouses...")
+        warehouses = create_demo_warehouses()
+        
+        _log("\n" + "=" * 50)
+        _log("Demo Data Seeding Summary")
+        _log("=" * 50)
+        _log(f"Item Groups: {item_groups}")
+        _log(f"Suppliers: {suppliers}")
+        _log(f"Customers: {customers}")
+        _log(f"Warehouses: {warehouses}")
+        _log("=" * 50)
+        
+        return {
+            "item_groups": item_groups,
+            "suppliers": suppliers,
+            "customers": customers,
+            "warehouses": warehouses
+        }
+    except Exception as e:
+        _log(f"Error seeding demo data: {e}")
+        return {
+            "item_groups": 0,
+            "suppliers": 0,
+            "customers": 0,
+            "warehouses": 0
+        }
 
 
 def seed_pharma_operational_transactions(company):

@@ -161,6 +161,10 @@ def get_dynamic_commerce_roles():
     Get dynamically added commerce roles from database
     """
     try:
+        # Check if Commerce Dynamic Role DocType exists
+        if not frappe.db.exists("DocType", "Commerce Dynamic Role"):
+            return []
+        
         # Get custom roles that start with commerce_
         dynamic_roles = frappe.db.sql("""
             SELECT 
@@ -188,6 +192,13 @@ def add_dynamic_commerce_role(role_data):
     Add a new dynamic commerce role and portal
     """
     try:
+        # Check if Commerce Dynamic Role DocType exists
+        if not frappe.db.exists("DocType", "Commerce Dynamic Role"):
+            return {
+                "success": False,
+                "message": "Commerce Dynamic Role DocType not found. Please ensure the Trading module is properly installed."
+            }
+        
         # Create new dynamic role
         dynamic_role = frappe.get_doc({
             "doctype": "Commerce Dynamic Role",
@@ -230,6 +241,13 @@ def remove_dynamic_commerce_role(role_id):
     Remove a dynamic commerce role
     """
     try:
+        # Check if Commerce Dynamic Role DocType exists
+        if not frappe.db.exists("DocType", "Commerce Dynamic Role"):
+            return {
+                "success": False,
+                "message": "Commerce Dynamic Role DocType not found. Please ensure the Trading module is properly installed."
+            }
+        
         # Get the dynamic role
         dynamic_role = frappe.get_doc("Commerce Dynamic Role", {"role_id": role_id
 	})
