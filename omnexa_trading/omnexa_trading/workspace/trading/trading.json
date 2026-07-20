@@ -658,6 +658,35 @@
    "link_to": "General Ledger",
    "report_ref_doctype": "Journal Entry",
    "type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "External Portals",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Portal",
+   "link_count": 0,
+   "link_to": "trading-customer-portal",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Van Sales PWA",
+   "link_count": 0,
+   "link_to": "trading-van-sales-pwa",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "title": "Trading"

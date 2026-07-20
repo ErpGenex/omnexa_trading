@@ -1,0 +1,38 @@
+---
+no_breadcrumbs: 1
+full_width: 1
+no_header: 1
+---
+
+{% extends "templates/web.html" %}
+
+{% block head_include %}
+{{ super() }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% endblock %}
+
+{% block title %}Omnexa Trading | التجارة العالمية{% endblock %}
+
+{% block page_content %}
+<div class="trading-site trading-premium" data-page="home">
+  <header class="trading-header" id="trading-header"></header>
+  <section class="trading-hero trading-hero-premium" id="trading-hero"></section>
+  <div class="trading-value-bar" id="trading-trust-strip"></div>
+  <section class="trading-section trading-reveal" id="trading-categories-section"></section>
+  <section class="trading-section trading-section-alt trading-reveal" id="trading-features-section"></section>
+  <section class="trading-stats trading-reveal" id="trading-stats"></section>
+  <section class="trading-cta-band trading-reveal" id="trading-cta-band"></section>
+  <footer class="trading-footer" id="trading-footer"></footer>
+</div>
+<script>
+  (function () {
+    function boot() {
+      if (window.TradingSite) window.TradingSite.init("home");
+    }
+    if (typeof frappe !== "undefined" && frappe.ready) frappe.ready(boot);
+    else if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+    else boot();
+  })();
+</script>
+{% endblock %}
