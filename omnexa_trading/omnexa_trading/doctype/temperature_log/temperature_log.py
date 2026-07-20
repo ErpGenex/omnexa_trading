@@ -77,8 +77,7 @@ class TemperatureLog(Document):
 				"batch_number": self.batch_number,
 				"excursion_flag": 1,
 				"log_date": self.log_date,
-				"name": ("!=", self.name),
-			},
+				"name": ("!=", self.name)},
 			["log_time"],
 			order_by="log_time DESC",
 			limit=1,
@@ -162,7 +161,8 @@ class TemperatureLog(Document):
 @frappe.whitelist()
 def get_temperature_logs(batch_no, from_date=None, to_date=None):
 	"""Get temperature logs for a batch"""
-	filters = {"batch_number": batch_no}
+	filters = {"batch_number": batch_no
+	}
 	
 	if from_date:
 		filters["log_date"] = [">=", from_date]

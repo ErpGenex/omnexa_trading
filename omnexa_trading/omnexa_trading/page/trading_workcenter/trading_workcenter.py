@@ -231,7 +231,8 @@ def remove_dynamic_commerce_role(role_id):
     """
     try:
         # Get the dynamic role
-        dynamic_role = frappe.get_doc("Commerce Dynamic Role", {"role_id": role_id})
+        dynamic_role = frappe.get_doc("Commerce Dynamic Role", {"role_id": role_id
+	})
         
         if dynamic_role:
             # Mark as inactive instead of deleting
@@ -263,9 +264,12 @@ def get_commerce_workcenter_stats():
     try:
         stats = {
             "total_portals": len(get_commerce_roles()) + len(get_dynamic_commerce_roles()),
-            "active_users": frappe.db.count("User", {"enabled": 1}),
-            "today_sales": frappe.db.count("Sales Order", {"transaction_date": frappe.utils.today()}),
-            "active_customers": frappe.db.count("Customer", {"status": "Active"})
+            "active_users": frappe.db.count("User", {"enabled": 1
+	}),
+            "today_sales": frappe.db.count("Sales Order", {"transaction_date": frappe.utils.today()
+	}),
+            "active_customers": frappe.db.count("Customer", {"status": "Active"
+	})
         }
         
         return stats

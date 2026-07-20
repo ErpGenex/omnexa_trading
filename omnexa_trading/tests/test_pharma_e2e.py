@@ -39,7 +39,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 		# Step 1: Create batch
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"E2E-BATCH-{day}",
+			"batch_number": f"E2E-BATCH-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -57,7 +58,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 		# Step 2: Create quality inspection
 		inspection = frappe.get_doc({
 			"doctype": "Pharma Quality Inspection",
-			"inspection_number": f"E2E-QI-{day}",
+			"inspection_number": f"E2E-QI-{day
+	}",
 			"inspection_date": today(),
 			"inspection_type": "Incoming",
 			"inspector": inspector_link(self.inspector),
@@ -85,8 +87,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 				"item_code": item_link(self.item),
 				"qty": 10,
 				"rate": 100,
-				"batch_no": batch.batch_number,
-			}],
+				"batch_no": batch.batch_number
+	}],
 		)
 		invoice.insert()
 		invoice.submit()
@@ -106,7 +108,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 		day = now_datetime().strftime("%Y%m%d")
 		controlled_batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"E2E-CTRL-{day}",
+			"batch_number": f"E2E-CTRL-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -116,8 +119,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 			"warehouse": self.warehouse.name,
 			"company": self.company.name,
 			"quality_status": "Approved",
-			"is_active": 1,
-		})
+			"is_active": 1
+	})
 		controlled_batch.insert()
 		controlled_batch.submit()
 		
@@ -139,8 +142,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 				"controlled_substance_flag": 1,
 				"license_number": "E2E-LICENSE-001",
 				"license_expiry": add_days(today(), 365),
-				"regulatory_approval": approval_name,
-			},
+				"regulatory_approval": approval_name
+	},
 		)
 		controlled_batch.reload()
 		
@@ -154,8 +157,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 				"item_code": item_link(self.item),
 				"qty": 10,
 				"rate": 100,
-				"batch_no": controlled_batch.batch_number,
-			}],
+				"batch_no": controlled_batch.batch_number
+	}],
 			prescription_number="E2E-RX-001",
 		)
 		invoice.insert()
@@ -175,7 +178,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 		# Step 1: Create cold chain batch
 		cold_chain_batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"E2E-COLD-{day}",
+			"batch_number": f"E2E-COLD-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -195,7 +199,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 		# Step 2: Create temperature log
 		temp_log = frappe.get_doc({
 			"doctype": "Temperature Log",
-			"log_number": f"E2E-TEMP-{day}",
+			"log_number": f"E2E-TEMP-{day
+	}",
 			"log_date": today(),
 			"batch_number": cold_chain_batch.name,
 			"item_code": item_link(self.item),
@@ -228,7 +233,8 @@ class TestPharmaEndToEnd(FrappeTestCase):
 		# Step 1: Create batch
 		recall_batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"E2E-RECALL-{day}",
+			"batch_number": f"E2E-RECALL-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),

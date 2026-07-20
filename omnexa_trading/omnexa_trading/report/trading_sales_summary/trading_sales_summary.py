@@ -53,15 +53,26 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Invoice"), "fieldname": "van_sales_invoice", "fieldtype": "Link", "options": "Trading Van Sales Invoice", "width": 150},
-		{"label": _("Posting Date"), "fieldname": "posting_date", "fieldtype": "Date", "width": 110},
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120},
-		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170},
-		{"label": _("Customer"), "fieldname": "customer_profile", "fieldtype": "Link", "options": "Customer Profile", "width": 150},
-		{"label": _("Payment Type"), "fieldname": "payment_type", "fieldtype": "Data", "width": 110},
-		{"label": _("Net Total"), "fieldname": "net_total", "fieldtype": "Currency", "width": 120},
-		{"label": _("Grand Total"), "fieldname": "grand_total", "fieldtype": "Currency", "width": 120},
-		{"label": _("Returns"), "fieldname": "return_amount", "fieldtype": "Currency", "width": 110},
-		{"label": _("Net After Returns"), "fieldname": "net_after_returns", "fieldtype": "Currency", "width": 150},
-		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100},
+		{"label": _("Invoice"), "fieldname": "van_sales_invoice", "fieldtype": "Link", "options": "Trading Van Sales Invoice", "width": 150
+	},
+		{"label": _("Posting Date"), "fieldname": "posting_date", "fieldtype": "Date", "width": 110
+	},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120
+	},
+		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170
+	},
+		{"label": _("Customer"), "fieldname": "customer_profile", "fieldtype": "Link", "options": "Customer Profile", "width": 150
+	},
+		{"label": _("Payment Type"), "fieldname": "payment_type", "fieldtype": "Data", "width": 110
+	},
+		{"label": _("Net Total"), "fieldname": "net_total", "fieldtype": "Currency", "width": 120
+	},
+		{"label": _("Grand Total"), "fieldname": "grand_total", "fieldtype": "Currency", "width": 120
+	},
+		{"label": _("Returns"), "fieldname": "return_amount", "fieldtype": "Currency", "width": 110
+	},
+		{"label": _("Net After Returns"), "fieldname": "net_after_returns", "fieldtype": "Currency", "width": 150
+	},
+		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100
+	},
 	]

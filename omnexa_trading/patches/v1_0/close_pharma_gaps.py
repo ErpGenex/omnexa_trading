@@ -23,4 +23,5 @@ def execute():
 	create_pharma_roles()
 
 	frappe.db.commit()
-	return {"scaffolded": len(scaffolded), "status": "pharma_gaps_closed"}
+	return {"scaffolded": len(scaffolded), "status": "pharma_gaps_closed"
+	}

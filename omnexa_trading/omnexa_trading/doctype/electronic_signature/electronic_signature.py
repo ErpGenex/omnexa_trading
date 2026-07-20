@@ -149,7 +149,8 @@ class ElectronicSignature(Document):
 			"event_type": "Sign",
 			"document_type": self.document_type,
 			"document_name": self.document_name,
-			"event_details": f"Electronic signature applied by {self.user_full_name} ({self.signature_type})"
+			"event_details": f"Electronic signature applied by {self.user_full_name} ({self.signature_type
+	})"
 		}).insert()
 	
 	def _update_document_signature_status(self):
@@ -177,7 +178,8 @@ class ElectronicSignature(Document):
 			"event_type": "Revoke Signature",
 			"document_type": self.document_type,
 			"document_name": self.document_name,
-			"event_details": f"Electronic signature revoked by {self.revocation_by}. Reason: {self.revocation_reason}"
+			"event_details": f"Electronic signature revoked by {self.revocation_by}. Reason: {self.revocation_reason
+	}"
 		}).insert()
 
 @frappe.whitelist()
@@ -202,7 +204,8 @@ def create_electronic_signature(document_type, document_name, signature_type, si
 	# Create signature
 	signature = frappe.get_doc({
 		"doctype": "Electronic Signature",
-		"signature_name": f"{signature_type} - {document_name}",
+		"signature_name": f"{signature_type} - {document_name
+	}",
 		"signature_type": signature_type,
 		"signature_purpose": signature_purpose,
 		"user": frappe.session.user,
@@ -266,7 +269,8 @@ def revoke_electronic_signature(signature_id, revocation_reason):
 	signature.revocation_reason = revocation_reason
 	signature.cancel()
 	
-	return {"success": True, "message": "Signature revoked successfully"}
+	return {"success": True, "message": "Signature revoked successfully"
+	}
 
 @frappe.whitelist()
 def get_document_signatures(document_type, document_name):
@@ -312,18 +316,26 @@ def check_signature_required(document_type, document_name):
 	})
 	
 	if existing_signature:
-		return {"required": False, "message": "Document already has active signature"}
+		return {"required": False, "message": "Document already has active signature"
+	}
 	
 	# Check document type signature requirements (configurable)
 	signature_requirements = {
-		"Pharma Quality Inspection": {"required": True, "type": "Approval"},
-		"Pharma Regulatory Approval": {"required": True, "type": "Authorization"},
-		"Pharma Product Recall": {"required": True, "type": "Authorization"},
-		"Temperature Excursion": {"required": True, "type": "Verification"},
-		"CAPA": {"required": True, "type": "Approval"},
-		"Deviation": {"required": True, "type": "Verification"}
+		"Pharma Quality Inspection": {"required": True, "type": "Approval"
+	},
+		"Pharma Regulatory Approval": {"required": True, "type": "Authorization"
+	},
+		"Pharma Product Recall": {"required": True, "type": "Authorization"
+	},
+		"Temperature Excursion": {"required": True, "type": "Verification"
+	},
+		"CAPA": {"required": True, "type": "Approval"
+	},
+		"Deviation": {"required": True, "type": "Verification"
+	}
 	}
 	
-	requirement = signature_requirements.get(document_type, {"required": False, "type": None})
+	requirement = signature_requirements.get(document_type, {"required": False, "type": None
+	})
 	
 	return requirement

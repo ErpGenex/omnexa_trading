@@ -78,7 +78,8 @@ def generate_encryption_key(algorithm="AES", key_length=256):
 		return base64.b64encode(key).decode('utf-8')
 
 def _get_encryption_key(key_name):
-	name = frappe.db.get_value("Encryption Key", {"key_name": key_name, "active": 1}, "name")
+	name = frappe.db.get_value("Encryption Key", {"key_name": key_name, "active": 1
+	}, "name")
 	if not name:
 		frappe.throw(_("Active encryption key {0} not found").format(key_name))
 	key = frappe.get_doc("Encryption Key", name)
@@ -167,7 +168,8 @@ def rotate_key(key_name):
 	Returns:
 	- New key name
 	"""
-	old_key = frappe.get_doc("Encryption Key", {"key_name": key_name})
+	old_key = frappe.get_doc("Encryption Key", {"key_name": key_name
+	})
 	
 	# Generate new key
 	new_key_value = generate_encryption_key(old_key.algorithm, old_key.key_length)

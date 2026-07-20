@@ -60,10 +60,16 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 130},
-		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 110},
-		{"label": _("Tenders"), "fieldname": "tender_count", "fieldtype": "Int", "width": 90},
-		{"label": _("Estimated Cost"), "fieldname": "estimated_cost", "fieldtype": "Currency", "width": 130},
-		{"label": _("Expected Selling Value"), "fieldname": "expected_selling_value", "fieldtype": "Currency", "width": 160},
-		{"label": _("Expected Profit"), "fieldname": "expected_profit", "fieldtype": "Currency", "width": 130},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 130
+	},
+		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 110
+	},
+		{"label": _("Tenders"), "fieldname": "tender_count", "fieldtype": "Int", "width": 90
+	},
+		{"label": _("Estimated Cost"), "fieldname": "estimated_cost", "fieldtype": "Currency", "width": 130
+	},
+		{"label": _("Expected Selling Value"), "fieldname": "expected_selling_value", "fieldtype": "Currency", "width": 160
+	},
+		{"label": _("Expected Profit"), "fieldname": "expected_profit", "fieldtype": "Currency", "width": 130
+	},
 	]

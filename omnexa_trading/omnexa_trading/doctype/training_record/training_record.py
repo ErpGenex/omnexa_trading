@@ -156,7 +156,8 @@ def record_attendance(training_name, participant_list):
 	
 	training.save()
 	
-	return {"success": True, "message": "Attendance recorded successfully"}
+	return {"success": True, "message": "Attendance recorded successfully"
+	}
 
 @frappe.whitelist()
 def record_assessment_results(training_name, assessment_results):
@@ -182,7 +183,8 @@ def record_assessment_results(training_name, assessment_results):
 	
 	training.save()
 	
-	return {"success": True, "message": "Assessment results recorded successfully"}
+	return {"success": True, "message": "Assessment results recorded successfully"
+	}
 
 @frappe.whitelist()
 def get_training_summary(category=None, status=None):
@@ -210,8 +212,10 @@ def get_training_summary(category=None, status=None):
 	
 	summary = {
 		"total": len(trainings),
-		"by_status": {},
-		"by_category": {},
+		"by_status": {
+	},
+		"by_category": {
+	},
 		"average_completion": 0,
 		"upcoming_trainings": []
 	}
@@ -362,7 +366,8 @@ def schedule_training_reminder():
 	for training in upcoming_trainings:
 		# Get participants
 		participants = frappe.get_all("Training Participant",
-			filters={"parent": training.name},
+			filters={"parent": training.name
+	},
 			fields=["employee", "employee_name"]
 		)
 		
@@ -390,4 +395,5 @@ def schedule_training_reminder():
 					reference_name=training.name
 				)
 	
-	return {"success": True, "reminders_sent": len(upcoming_trainings)}
+	return {"success": True, "reminders_sent": len(upcoming_trainings)
+	}

@@ -103,7 +103,8 @@ def create_demo_customers():
                     "payment_terms": "Net 30" if random.random() > 0.5 else "Net 45",
                     "tax_id": f"CUST{random.randint(100000000, 999999999)}",
                     "is_internal_customer": 0,
-                    "customer_code": f"CUST-{customer_seq:05d}"
+                    "customer_code": f"CUST-{customer_seq:05d
+	}"
                 })
                 customer.insert()
                 customer_count += 1
@@ -126,16 +127,26 @@ def create_demo_warehouses():
         return 0
     
     warehouses = [
-        {"warehouse_name": "Main Warehouse - Cairo", "warehouse_type": "Main"},
-        {"warehouse_name": "Cold Warehouse - Cairo", "warehouse_type": "Sub"},
-        {"warehouse_name": "Controlled Drugs Warehouse", "warehouse_type": "Sub"},
-        {"warehouse_name": "Returns Warehouse", "warehouse_type": "Sub"},
-        {"warehouse_name": "Damaged Warehouse", "warehouse_type": "Sub"},
-        {"warehouse_name": "Quarantine Warehouse", "warehouse_type": "Sub"},
-        {"warehouse_name": "Branch Warehouse - Alexandria", "warehouse_type": "Sub"},
-        {"warehouse_name": "Branch Warehouse - Giza", "warehouse_type": "Sub"},
-        {"warehouse_name": "Pharmacy Warehouse - Downtown", "warehouse_type": "POS"},
-        {"warehouse_name": "Pharmacy Warehouse - Maadi", "warehouse_type": "POS"}
+        {"warehouse_name": "Main Warehouse - Cairo", "warehouse_type": "Main"
+	},
+        {"warehouse_name": "Cold Warehouse - Cairo", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Controlled Drugs Warehouse", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Returns Warehouse", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Damaged Warehouse", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Quarantine Warehouse", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Branch Warehouse - Alexandria", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Branch Warehouse - Giza", "warehouse_type": "Sub"
+	},
+        {"warehouse_name": "Pharmacy Warehouse - Downtown", "warehouse_type": "POS"
+	},
+        {"warehouse_name": "Pharmacy Warehouse - Maadi", "warehouse_type": "POS"
+	}
     ]
     
     created_count = 0
@@ -161,7 +172,8 @@ def create_demo_warehouses():
                 "warehouse_type": warehouse["warehouse_type"],
                 "is_group": 0,
                 "company": company,
-                "warehouse_code": f"WH-{warehouse_seq:03d}"
+                "warehouse_code": f"WH-{warehouse_seq:03d
+	}"
             })
             wh.insert()
             created_count += 1

@@ -15,42 +15,42 @@ TRADING_DEMO_SPECS: list[dict] = [
 		"email": "pharma.warehouse.manager@pharmatrade-egypt.com",
 		"first_name": "Ahmed",
 		"last_name": "Mohamed",
-		"route": "/app/trading-warehouse-manager",
+		"route": "/app/trading-warehouse-manager"
 	},
 	{
 		"role": "Pharma Quality Manager",
 		"email": "pharma.quality.manager@pharmatrade-egypt.com",
 		"first_name": "Sara",
 		"last_name": "Ali",
-		"route": "/app/trading-quality-manager",
+		"route": "/app/trading-quality-manager"
 	},
 	{
 		"role": "Pharma Sales Representative",
 		"email": "pharma.sales.rep@pharmatrade-egypt.com",
 		"first_name": "Omar",
 		"last_name": "Hassan",
-		"route": "/app/trading-van-sales-pwa",
+		"route": "/app/trading-van-sales-pwa"
 	},
 	{
 		"role": "Pharma Finance Manager",
 		"email": "pharma.finance.manager@pharmatrade-egypt.com",
 		"first_name": "Nour",
 		"last_name": "Said",
-		"route": "/app/trading-finance-desk",
+		"route": "/app/trading-finance-desk"
 	},
 	{
 		"role": "Sales Manager",
 		"email": "pharma.sales.rep@pharmatrade-egypt.com",
 		"first_name": "Omar",
 		"last_name": "Hassan",
-		"route": "/app/trading-executive-dashboard",
+		"route": "/app/trading-executive-dashboard"
 	},
 	{
 		"role": "Company Admin",
 		"email": "pharma.finance.manager@pharmatrade-egypt.com",
 		"first_name": "Nour",
 		"last_name": "Said",
-		"route": "/app/trading-executive-dashboard",
+		"route": "/app/trading-executive-dashboard"
 	},
 ]
 
@@ -63,10 +63,11 @@ def _demo_credentials_payload() -> dict:
 				"role": spec["role"],
 				"email": spec["email"],
 				"route": spec["route"],
-				"name": f"{spec['first_name']} {spec['last_name']}",
-			}
+				"name": f"{spec['first_name']} {spec['last_name']}"
+	}
 		)
-	return {"password": DEMO_PASSWORD, "users": users}
+	return {"password": DEMO_PASSWORD, "users": users
+	}
 
 
 @frappe.whitelist()
@@ -84,5 +85,5 @@ def run_pharma_demo_setup() -> dict:
 	return {
 		"ok": True,
 		"message": f"Pharma demo ready — {result.get('company', '')} / {result.get('branch', '')}",
-		"result": result,
+		"result": result
 	}

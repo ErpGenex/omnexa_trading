@@ -62,12 +62,20 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 130},
-		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 110},
-		{"label": _("Frequency"), "fieldname": "installment_frequency", "fieldtype": "Data", "width": 100},
-		{"label": _("Contracts"), "fieldname": "contract_count", "fieldtype": "Int", "width": 90},
-		{"label": _("Principal"), "fieldname": "principal_amount", "fieldtype": "Currency", "width": 120},
-		{"label": _("Down Payment"), "fieldname": "down_payment", "fieldtype": "Currency", "width": 120},
-		{"label": _("Finance Amount"), "fieldname": "finance_amount", "fieldtype": "Currency", "width": 130},
-		{"label": _("Installment Slots Σ"), "fieldname": "total_installment_slots", "fieldtype": "Int", "width": 130},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 130
+	},
+		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 110
+	},
+		{"label": _("Frequency"), "fieldname": "installment_frequency", "fieldtype": "Data", "width": 100
+	},
+		{"label": _("Contracts"), "fieldname": "contract_count", "fieldtype": "Int", "width": 90
+	},
+		{"label": _("Principal"), "fieldname": "principal_amount", "fieldtype": "Currency", "width": 120
+	},
+		{"label": _("Down Payment"), "fieldname": "down_payment", "fieldtype": "Currency", "width": 120
+	},
+		{"label": _("Finance Amount"), "fieldname": "finance_amount", "fieldtype": "Currency", "width": 130
+	},
+		{"label": _("Installment Slots Σ"), "fieldname": "total_installment_slots", "fieldtype": "Int", "width": 130
+	},
 	]

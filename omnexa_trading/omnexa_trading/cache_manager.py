@@ -54,7 +54,8 @@ def get_cached_batch_info(batch_no):
 	
 	# Get batch info from database
 	batch_info = frappe.db.get_value("Pharma Batch", 
-		{"batch_number": batch_no},
+		{"batch_number": batch_no
+	},
 		["name", "batch_number", "item_code", "expiry_date", "quality_status", "is_active"]
 	)
 	
@@ -254,7 +255,8 @@ def cache_regulatory_approval(batch_no):
 	cache_key = f"reg_approval:{batch_no}"
 	
 	approval_info = frappe.db.get_value("Pharma Regulatory Approval",
-		{"batch_number": batch_no, "approval_status": "Approved"},
+		{"batch_number": batch_no, "approval_status": "Approved"
+	},
 		["name", "approval_status", "license_expiry", "valid_from", "valid_until"]
 	)
 	

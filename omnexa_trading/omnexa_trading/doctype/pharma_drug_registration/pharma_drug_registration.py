@@ -93,11 +93,16 @@ class PharmaDrugRegistration(Document):
 	def update_pricing_history(self):
 		"""Record initial pricing in history"""
 		price_types = [
-			{"field": "maximum_retail_price", "type": "Maximum Retail Price"},
-			{"field": "wholesale_price", "type": "Wholesale Price"},
-			{"field": "pharmacy_price", "type": "Pharmacy Price"},
-			{"field": "distributor_price", "type": "Distributor Price"},
-			{"field": "hospital_price", "type": "Hospital Price"}
+			{"field": "maximum_retail_price", "type": "Maximum Retail Price"
+	},
+			{"field": "wholesale_price", "type": "Wholesale Price"
+	},
+			{"field": "pharmacy_price", "type": "Pharmacy Price"
+	},
+			{"field": "distributor_price", "type": "Distributor Price"
+	},
+			{"field": "hospital_price", "type": "Hospital Price"
+	}
 		]
 		
 		for price in price_types:
@@ -120,11 +125,16 @@ class PharmaDrugRegistration(Document):
 			return
 		
 		price_types = [
-			{"field": "maximum_retail_price", "type": "Maximum Retail Price"},
-			{"field": "wholesale_price", "type": "Wholesale Price"},
-			{"field": "pharmacy_price", "type": "Pharmacy Price"},
-			{"field": "distributor_price", "type": "Distributor Price"},
-			{"field": "hospital_price", "type": "Hospital Price"}
+			{"field": "maximum_retail_price", "type": "Maximum Retail Price"
+	},
+			{"field": "wholesale_price", "type": "Wholesale Price"
+	},
+			{"field": "pharmacy_price", "type": "Pharmacy Price"
+	},
+			{"field": "distributor_price", "type": "Distributor Price"
+	},
+			{"field": "hospital_price", "type": "Hospital Price"
+	}
 		]
 		
 		for price in price_types:

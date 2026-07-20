@@ -102,7 +102,8 @@ class Deviation(Document):
 			# Create CAPA from deviation
 			capa = frappe.get_doc({
 				"doctype": "CAPA",
-				"capa_title": f"CAPA for Deviation: {self.deviation_title}",
+				"capa_title": f"CAPA for Deviation: {self.deviation_title
+	}",
 				"capa_type": "Corrective",
 				"capa_category": self.deviation_category,
 				"severity": self.severity,
@@ -114,7 +115,8 @@ class Deviation(Document):
 				"reported_by": self.reported_by,
 				"department": self.department,
 				"problem_description": self.deviation_description,
-				"problem_statement": f"Deviation from expected condition: {self.expected_condition}",
+				"problem_statement": f"Deviation from expected condition: {self.expected_condition
+	}",
 				"impact_assessment": self.impact_assessment,
 				"risk_level": self.risk_level,
 				"root_cause_analysis": self.root_cause_analysis,
@@ -171,7 +173,8 @@ def start_investigation(deviation_name):
 	deviation.deviation_status = "Under Investigation"
 	deviation.save()
 	
-	return {"success": True, "message": "Investigation started"}
+	return {"success": True, "message": "Investigation started"
+	}
 
 @frappe.whitelist()
 def complete_investigation(deviation_name, investigation_findings, root_cause, contributing_factors=""):
@@ -198,7 +201,8 @@ def complete_investigation(deviation_name, investigation_findings, root_cause, c
 	deviation.deviation_status = "Correction In Progress"
 	deviation.save()
 	
-	return {"success": True, "message": "Investigation completed"}
+	return {"success": True, "message": "Investigation completed"
+	}
 
 @frappe.whitelist()
 def complete_correction(deviation_name, immediate_correction, correction_effectiveness):
@@ -229,7 +233,8 @@ def complete_correction(deviation_name, immediate_correction, correction_effecti
 	
 	deviation.save()
 	
-	return {"success": True, "message": "Correction completed"}
+	return {"success": True, "message": "Correction completed"
+	}
 
 @frappe.whitelist()
 def get_deviation_summary(category=None, status=None):
@@ -257,10 +262,14 @@ def get_deviation_summary(category=None, status=None):
 	
 	summary = {
 		"total": len(deviations),
-		"by_status": {},
-		"by_category": {},
-		"by_type": {},
-		"by_severity": {},
+		"by_status": {
+	},
+		"by_category": {
+	},
+		"by_type": {
+	},
+		"by_severity": {
+	},
 		"capa_required": 0,
 		"capa_created": 0
 	}
@@ -279,8 +288,10 @@ def get_deviation_summary(category=None, status=None):
 		summary["by_severity"][deviation.severity] = summary["by_severity"].get(deviation.severity, 0) + 1
 	
 	# Count CAPA requirements
-	capa_required = frappe.db.count("Deviation", {"capa_required": 1})
-	capa_created = frappe.db.count("Deviation", {"capa_created": 1})
+	capa_required = frappe.db.count("Deviation", {"capa_required": 1
+	})
+	capa_created = frappe.db.count("Deviation", {"capa_created": 1
+	})
 	
 	summary["capa_required"] = capa_required
 	summary["capa_created"] = capa_created
@@ -310,10 +321,14 @@ def get_deviation_trend_analysis(months=12):
 	)
 	
 	trend_data = {
-		"by_month": {},
-		"by_category": {},
-		"by_type": {},
-		"by_severity": {},
+		"by_month": {
+	},
+		"by_category": {
+	},
+		"by_type": {
+	},
+		"by_severity": {
+	},
 		"closure_rate": 0
 	}
 	

@@ -36,8 +36,10 @@ def create_pharma_company():
         return frappe.get_doc("Company", company_name)
     
     # Try with different abbr if PTE exists
-    if frappe.db.exists("Company", {"abbr": "PTE"}):
-        company = frappe.get_doc("Company", {"abbr": "PTE"})
+    if frappe.db.exists("Company", {"abbr": "PTE"
+	}):
+        company = frappe.get_doc("Company", {"abbr": "PTE"
+	})
         _log(f"Using existing company with abbr PTE: {company.name}")
         return company
     
@@ -216,7 +218,8 @@ def create_pharma_users(company, branch, roles):
         user.insert()
         
         # Add role to user
-        user.append("roles", {"role": user_data["role"]})
+        user.append("roles", {"role": user_data["role"]
+	})
         user.save()
         
         # Add user branch access
@@ -299,11 +302,13 @@ def seed_pharma_operational_transactions(company):
 	"""Seed import/export/quality transactions for global pharma demo realism."""
 	from frappe.utils import add_days, today
 
-	created = {"batches": 0, "import_licenses": 0, "export_shipments": 0, "quality_inspections": 0}
+	created = {"batches": 0, "import_licenses": 0, "export_shipments": 0, "quality_inspections": 0
+	}
 	if not company:
 		return created
 
-	item_code = frappe.db.get_value("Item", {"is_stock_item": 1}, "name")
+	item_code = frappe.db.get_value("Item", {"is_stock_item": 1
+	}, "name")
 	uom = frappe.db.get_value("Item", item_code, "stock_uom") if item_code else "Nos"
 	if not item_code:
 		item_code = frappe.db.get_value("Item", {}, "name")
@@ -314,7 +319,8 @@ def seed_pharma_operational_transactions(company):
 			try:
 				doc = frappe.get_doc({
 					"doctype": "Pharma Batch",
-					"batch_number": f"PTE-DEMO-{idx:03d}",
+					"batch_number": f"PTE-DEMO-{idx:03d
+	}",
 					"item_code": item_code,
 					"company": company,
 					"manufacturing_date": add_days(today(), -120),
@@ -322,8 +328,8 @@ def seed_pharma_operational_transactions(company):
 					"batch_size": 1000 + idx * 100,
 					"uom": uom or "Nos",
 					"status": "Released",
-					"cold_chain_required": 1 if idx % 2 == 0 else 0,
-				})
+					"cold_chain_required": 1 if idx % 2 == 0 else 0
+	})
 				doc.insert(ignore_permissions=True)
 				created["batches"] += 1
 			except Exception as exc:
@@ -334,14 +340,15 @@ def seed_pharma_operational_transactions(company):
 			try:
 				doc = frappe.get_doc({
 					"doctype": "Pharma Import License",
-					"license_number": f"IMP-PTE-{idx:03d}",
+					"license_number": f"IMP-PTE-{idx:03d
+	}",
 					"license_type": "Drug Import License",
 					"company": company,
 					"issue_date": add_days(today(), -30),
 					"expiry_date": add_days(today(), 335),
 					"status": "Active",
-					"country_of_origin": "Germany",
-				})
+					"country_of_origin": "Germany"
+	})
 				doc.insert(ignore_permissions=True)
 				created["import_licenses"] += 1
 			except Exception as exc:
@@ -355,8 +362,8 @@ def seed_pharma_operational_transactions(company):
 					"company": company,
 					"shipment_date": add_days(today(), -7 * idx),
 					"destination_country": "Saudi Arabia",
-					"status": "In Transit" if idx == 1 else "Delivered",
-				})
+					"status": "In Transit" if idx == 1 else "Delivered"
+	})
 				doc.insert(ignore_permissions=True)
 				created["export_shipments"] += 1
 			except Exception as exc:
@@ -374,8 +381,8 @@ def seed_pharma_operational_transactions(company):
 					"batch_number": batch,
 					"inspection_date": today(),
 					"inspection_type": "Incoming",
-					"status": "Approved",
-				})
+					"status": "Approved"
+	})
 				doc.insert(ignore_permissions=True)
 				created["quality_inspections"] += 1
 			except Exception as exc:

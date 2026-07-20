@@ -35,8 +35,11 @@ def sync_van_sales_to_gl(invoice: str) -> dict:
 		reference=doc.name,
 		remarks=f"Van sales revenue — {doc.name}",
 		lines=[
-			{"account": receivable, "debit": amount, "credit": 0},
-			{"account": revenue_account, "debit": 0, "credit": amount},
+			{"account": receivable, "debit": amount, "credit": 0
+	},
+			{"account": revenue_account, "debit": 0, "credit": amount
+	},
 		],
 	)
-	return {"invoice": invoice, "journal_entry": je, "status": "synced"}
+	return {"invoice": invoice, "journal_entry": je, "status": "synced"
+	}

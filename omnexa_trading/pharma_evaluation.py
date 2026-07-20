@@ -49,8 +49,7 @@ def _role_portal_coverage() -> dict:
 		"missing_keys": missing_keys,
 		"pages_missing": pages_missing,
 		"incomplete_portals": incomplete,
-		"coverage_pct": round(len(pages_ok) / total * 100, 1) if total else 0,
-	}
+		"coverage_pct": round(len(pages_ok) / total * 100, 1) if total else 0}
 
 
 def _portal_component_coverage() -> dict:
@@ -61,12 +60,14 @@ def _portal_component_coverage() -> dict:
 	for key in PRO_MD_REQUIRED_ROLE_KEYS:
 		portal = get_portal_by_key(key)
 		if not portal:
-			details.append({"key": key, "ready": False, "reason": "missing_portal"})
+			details.append({"key": key, "ready": False, "reason": "missing_portal"
+	})
 			continue
 		try:
 			dashboard = get_role_portal_dashboard(key)
 		except Exception as exc:
-			details.append({"key": key, "ready": False, "reason": str(exc)})
+			details.append({"key": key, "ready": False, "reason": str(exc)
+	})
 			continue
 
 		has_all = all(
@@ -81,13 +82,14 @@ def _portal_component_coverage() -> dict:
 		)
 		if has_all:
 			ready += 1
-		details.append({"key": key, "ready": has_all, "components": list(PORTAL_COMPONENTS)})
+		details.append({"key": key, "ready": has_all, "components": list(PORTAL_COMPONENTS)
+	})
 
 	total = len(PRO_MD_REQUIRED_ROLE_KEYS)
 	return {
 		"roles_with_full_dashboard": ready,
 		"component_coverage_pct": round(ready / total * 100, 1) if total else 0,
-		"details": details,
+		"details": details
 	}
 
 
@@ -122,8 +124,8 @@ def get_pharma_evaluation_score() -> dict:
 		"breakdown": {
 			"gap_closure_pct": gap_pct,
 			"role_portal_coverage_pct": role_pct,
-			"portal_component_coverage_pct": component_pct,
-		},
+			"portal_component_coverage_pct": component_pct
+	},
 		"role_coverage": role_cov,
 		"component_coverage": component_cov,
 		"gaps_closed": gap_status["gaps_closed"],
@@ -131,5 +133,4 @@ def get_pharma_evaluation_score() -> dict:
 		"gaps_open": gap_status["gaps_open"],
 		"pro_md_roles_required": len(PRO_MD_REQUIRED_ROLE_KEYS),
 		"pro_md_roles_ready": role_cov["pages_ready"],
-		"standards": ["pro.md Role Portals", "GDP/GMP", "SAP SD Parity"],
-	}
+		"standards": ["pro.md Role Portals", "GDP/GMP", "SAP SD Parity"]}

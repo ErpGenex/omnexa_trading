@@ -118,7 +118,8 @@ class PharmaQualityInspection(Document):
 		if not self.batch_number:
 			return
 
-		updates = {"quality_inspection": self.name}
+		updates = {"quality_inspection": self.name
+	}
 
 		if self.inspection_status == "Passed":
 			updates["quality_status"] = "Approved"
@@ -129,8 +130,8 @@ class PharmaQualityInspection(Document):
 			updates.update({
 				"quality_status": "Quarantined",
 				"quarantine_reason": "Quality Hold",
-				"quarantine_date": nowdate(),
-			})
+				"quarantine_date": nowdate()
+	})
 
 		frappe.db.set_value("Pharma Batch", self.batch_number, updates, update_modified=True)
 
@@ -155,8 +156,8 @@ class PharmaQualityInspection(Document):
 				"quality_certificate": None,
 				"quarantine_reason": None,
 				"quarantine_date": None,
-				"release_date": None,
-			},
+				"release_date": None
+	},
 			update_modified=True,
 		)
 

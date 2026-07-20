@@ -136,7 +136,8 @@ def notify_customers(recall_name):
 	frappe.db.set_value(
 		"Pharma Product Recall",
 		recall_name,
-		{"notification_status": "Partial", "notification_date": nowdate()},
+		{"notification_status": "Partial", "notification_date": nowdate()
+	},
 		update_modified=True,
 	)
 	
@@ -159,11 +160,13 @@ def notify_customers(recall_name):
 	frappe.db.set_value(
 		"Pharma Product Recall",
 		recall_name,
-		{"notification_status": "Complete"},
+		{"notification_status": "Complete"
+	},
 		update_modified=True,
 	)
 	
-	return {"success": True, "message": _("Customer notifications sent")}
+	return {"success": True, "message": _("Customer notifications sent")
+	}
 
 @frappe.whitelist()
 def complete_recall(recall_name, resolution_plan, corrective_actions):
@@ -178,9 +181,10 @@ def complete_recall(recall_name, resolution_plan, corrective_actions):
 			"resolution_plan": resolution_plan,
 			"corrective_actions": corrective_actions,
 			"resolution_date": nowdate(),
-			"resolved_by": frappe.session.user,
-		},
+			"resolved_by": frappe.session.user
+	},
 		update_modified=True,
 	)
 	
-	return {"success": True, "message": _("Recall {0} completed").format(recall.recall_number)}
+	return {"success": True, "message": _("Recall {0} completed").format(recall.recall_number)
+	}

@@ -46,8 +46,8 @@ def execute(filters=None):
 				"sales_representative": r.sales_representative,
 				"planned_distance_km": planned,
 				"actual_distance_km": actual,
-				"route_efficiency_percent": eff,
-			}
+				"route_efficiency_percent": eff
+	}
 		)
 	columns = _columns()
 	chart = auto_chart_for_columns(data, columns)
@@ -56,12 +56,19 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Route Plan"), "fieldname": "route_plan", "fieldtype": "Link", "options": "Trading Route Plan", "width": 150},
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120},
-		{"label": _("Date"), "fieldname": "route_date", "fieldtype": "Date", "width": 100},
-		{"label": _("Sales Rep"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 150},
-		{"label": _("Planned KM"), "fieldname": "planned_distance_km", "fieldtype": "Float", "width": 100},
-		{"label": _("Actual KM"), "fieldname": "actual_distance_km", "fieldtype": "Float", "width": 100},
-		{"label": _("Efficiency %"), "fieldname": "route_efficiency_percent", "fieldtype": "Percent", "width": 110},
+		{"label": _("Route Plan"), "fieldname": "route_plan", "fieldtype": "Link", "options": "Trading Route Plan", "width": 150
+	},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120
+	},
+		{"label": _("Date"), "fieldname": "route_date", "fieldtype": "Date", "width": 100
+	},
+		{"label": _("Sales Rep"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 150
+	},
+		{"label": _("Planned KM"), "fieldname": "planned_distance_km", "fieldtype": "Float", "width": 100
+	},
+		{"label": _("Actual KM"), "fieldname": "actual_distance_km", "fieldtype": "Float", "width": 100
+	},
+		{"label": _("Efficiency %"), "fieldname": "route_efficiency_percent", "fieldtype": "Percent", "width": 110
+	},
 	]
 

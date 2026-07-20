@@ -18,12 +18,16 @@ def _list_route(doctype: str) -> str:
 
 def _redirect_target(doctype: str, *, fallback_doctype: str | None = None, fallback_filters: dict | None = None, fallback_page: str | None = None) -> dict:
 	if _has_doctype(doctype):
-		return {"kind": "list", "doctype": doctype, "filters": {}}
+		return {"kind": "list", "doctype": doctype, "filters": {}
+	}
 	if fallback_doctype and _has_doctype(fallback_doctype):
-		return {"kind": "list", "doctype": fallback_doctype, "filters": fallback_filters or {}}
+		return {"kind": "list", "doctype": fallback_doctype, "filters": fallback_filters or {}
+	}
 	if fallback_page:
-		return {"kind": "page", "page": fallback_page}
-	return {"kind": "page", "page": "retail-pos"}
+		return {"kind": "page", "page": fallback_page
+	}
+	return {"kind": "page", "page": "retail-pos"
+	}
 
 
 def get_pos_invoice_list_route() -> str:
@@ -61,7 +65,8 @@ def get_pos_invoice_redirect() -> dict:
 	return _redirect_target(
 		"POS Invoice",
 		fallback_doctype="Sales Invoice",
-		fallback_filters={"is_pos": 1},
+		fallback_filters={"is_pos": 1
+	},
 		fallback_page="retail-pos",
 	)
 
@@ -78,12 +83,16 @@ def get_pos_opening_entry_redirect() -> dict:
 @frappe.whitelist()
 def get_pos_closing_entry_redirect() -> dict:
 	if _has_doctype("POS Closing Entry"):
-		return {"kind": "list", "doctype": "POS Closing Entry", "filters": {}}
+		return {"kind": "list", "doctype": "POS Closing Entry", "filters": {}
+	}
 	if frappe.db.exists("Report", "POS Z Report Reconciliation"):
-		return {"kind": "report", "report": "POS Z Report Reconciliation"}
+		return {"kind": "report", "report": "POS Z Report Reconciliation"
+	}
 	if _has_doctype("Payment Entry"):
-		return {"kind": "list", "doctype": "Payment Entry", "filters": {}}
-	return {"kind": "page", "page": "retail-pos"}
+		return {"kind": "list", "doctype": "Payment Entry", "filters": {}
+	}
+	return {"kind": "page", "page": "retail-pos"
+	}
 
 
 def count_pos_sales_today() -> int:
@@ -91,10 +100,12 @@ def count_pos_sales_today() -> int:
 
 	posting_date = today()
 	if _has_doctype("POS Invoice"):
-		return frappe.db.count("POS Invoice", {"posting_date": posting_date, "docstatus": 1})
+		return frappe.db.count("POS Invoice", {"posting_date": posting_date, "docstatus": 1
+	})
 	if frappe.db.has_column("Sales Invoice", "is_pos"):
 		return frappe.db.count(
 			"Sales Invoice",
-			{"posting_date": posting_date, "docstatus": 1, "is_pos": 1},
+			{"posting_date": posting_date, "docstatus": 1, "is_pos": 1
+	},
 		)
 	return 0

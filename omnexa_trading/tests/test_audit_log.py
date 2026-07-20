@@ -16,8 +16,8 @@ class TestAuditLog(FrappeTestCase):
 					"company_name": "Test Pharma Company",
 					"abbr": "TPC",
 					"country": "United Arab Emirates",
-					"default_currency": "AED",
-				}
+					"default_currency": "AED"
+	}
 			).insert()
 		else:
 			self.company = frappe.get_doc("Company", "TPC")
@@ -27,7 +27,8 @@ class TestAuditLog(FrappeTestCase):
 		ts = now_datetime().strftime("%Y%m%d%H%M%S")
 		log = frappe.get_doc({
 			"doctype": "Audit Log",
-			"log_id": f"AUDIT-{ts}",
+			"log_id": f"AUDIT-{ts
+	}",
 			"timestamp": frappe.utils.now(),
 			"user": frappe.session.user,
 			"action": "Create",
@@ -77,7 +78,8 @@ class TestAuditLog(FrappeTestCase):
 		ts = now_datetime().strftime("%Y%m%d%H%M%S")
 		log = frappe.get_doc({
 			"doctype": "Audit Log",
-			"log_id": f"AUDIT-FIELD-{ts}",
+			"log_id": f"AUDIT-FIELD-{ts
+	}",
 			"timestamp": frappe.utils.now(),
 			"user": frappe.session.user,
 			"action": "Update",

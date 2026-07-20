@@ -33,7 +33,8 @@ DEMO_CHECKS = (
 def _resolve_demo_company() -> str | None:
 	if frappe.db.exists("Company", DEMO_COMPANY):
 		return DEMO_COMPANY
-	pte = frappe.db.get_value("Company", {"abbr": "PTE"}, "name")
+	pte = frappe.db.get_value("Company", {"abbr": "PTE"
+	}, "name")
 	return pte or frappe.db.get_value("Company", {}, "name")
 
 
@@ -41,31 +42,35 @@ def _sidebar_clean() -> dict:
 	legacy_found = [name for name in LEGACY_SIDEBAR_WORKSPACES if frappe.db.exists("Workspace", name)]
 	return {
 		"clean": not legacy_found,
-		"legacy_workspaces": legacy_found,
+		"legacy_workspaces": legacy_found
 	}
 
 
 def _demo_company_ready() -> dict:
 	company_name = _resolve_demo_company()
 	company_exists = bool(company_name)
-	branch_count = frappe.db.count("Branch", {"company": company_name}) if company_exists else 0
+	branch_count = frappe.db.count("Branch", {"company": company_name
+	}) if company_exists else 0
 	user_count = frappe.db.count("User", {"enabled": 1, "name": ["like", "%pharmatrade-egypt.com%"]})
 	return {
 		"company": company_name or DEMO_COMPANY,
 		"company_exists": company_exists,
 		"branches": branch_count,
-		"demo_users": user_count,
+		"demo_users": user_count
 	}
 
 
 def _operational_data_ready() -> dict:
-	results = {"company": {"doctype": "Company", "count": frappe.db.count("Company"), "ready": frappe.db.count("Company") > 0}}
+	results = {"company": {"doctype": "Company", "count": frappe.db.count("Company"), "ready": frappe.db.count("Company") > 0}
+	}
 	for key, doctype in DEMO_CHECKS:
 		if not frappe.db.exists("DocType", doctype):
-			results[key] = {"doctype": doctype, "count": 0, "ready": False}
+			results[key] = {"doctype": doctype, "count": 0, "ready": False
+	}
 			continue
 		count = frappe.db.count(doctype)
-		results[key] = {"doctype": doctype, "count": count, "ready": count > 0}
+		results[key] = {"doctype": doctype, "count": count, "ready": count > 0
+	}
 	return results
 
 
@@ -81,7 +86,7 @@ def _portal_routes_ready() -> dict:
 	return {
 		"required": len(PRO_MD_REQUIRED_ROLE_KEYS),
 		"ready": len(PRO_MD_REQUIRED_ROLE_KEYS) - len(missing_pages),
-		"missing": missing_pages,
+		"missing": missing_pages
 	}
 
 
@@ -120,8 +125,7 @@ def run_pharma_final_audit() -> dict:
 		"operations_ready_pct": round(ops_ready / ops_total * 100, 1) if ops_total else 0,
 		"portals": portals,
 		"total_portals": len(PHARMA_ROLE_PORTALS),
-		"recommendations": _recommendations(sidebar, demo, operations, portals),
-	}
+		"recommendations": _recommendations(sidebar, demo, operations, portals)}
 
 
 def _recommendations(sidebar, demo, operations, portals) -> list[str]:

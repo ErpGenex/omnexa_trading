@@ -109,4 +109,5 @@ def resolve_excursion(excursion_name, resolution_notes, disposition="Quarantine"
 	excursion.disposition = disposition
 	excursion.save()
 	
-	return {"success": True, "message": _("Excursion {0} resolved").format(excursion.excursion_number)}
+	return {"success": True, "message": _("Excursion {0} resolved").format(excursion.excursion_number)
+	}

@@ -50,7 +50,7 @@ class TradingInstallmentContract(Document):
 					"interest_amount": interest,
 					"penalty_amount": 0,
 					"total_due": total_due,
-					"status": "Pending",
-				},
+					"status": "Pending"
+	},
 			)
 

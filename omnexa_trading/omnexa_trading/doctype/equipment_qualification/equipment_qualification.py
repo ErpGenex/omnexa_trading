@@ -139,7 +139,8 @@ def start_qualification_execution(qualification_name):
 	qualification.actual_start_date = getdate()
 	qualification.save()
 	
-	return {"success": True, "message": "Qualification execution started"}
+	return {"success": True, "message": "Qualification execution started"
+	}
 
 @frappe.whitelist()
 def complete_qualification_execution(qualification_name, execution_summary, deviations="", observations=""):
@@ -166,7 +167,8 @@ def complete_qualification_execution(qualification_name, execution_summary, devi
 	qualification.observations = observations
 	qualification.save()
 	
-	return {"success": True, "message": "Qualification execution completed"}
+	return {"success": True, "message": "Qualification execution completed"
+	}
 
 @frappe.whitelist()
 def get_qualification_summary(equipment_type=None, stage=None):
@@ -194,9 +196,12 @@ def get_qualification_summary(equipment_type=None, stage=None):
 	
 	summary = {
 		"total": len(qualifications),
-		"by_status": {},
-		"by_stage": {},
-		"by_type": {},
+		"by_status": {
+	},
+		"by_stage": {
+	},
+		"by_type": {
+	},
 		"average_progress": 0
 	}
 	
@@ -234,7 +239,8 @@ def create_equipment_qualification_package(equipment_name, equipment_type):
 	# Create DQ Qualification
 	dq_qual = frappe.get_doc({
 		"doctype": "Equipment Qualification",
-		"qualification_title": f"Design Qualification - {equipment_name}",
+		"qualification_title": f"Design Qualification - {equipment_name
+	}",
 		"equipment_name": equipment_name,
 		"equipment_type": equipment_type,
 		"qualification_stage": "Design Qualification",
@@ -248,7 +254,8 @@ def create_equipment_qualification_package(equipment_name, equipment_type):
 	# Create IQ Qualification
 	iq_qual = frappe.get_doc({
 		"doctype": "Equipment Qualification",
-		"qualification_title": f"Installation Qualification - {equipment_name}",
+		"qualification_title": f"Installation Qualification - {equipment_name
+	}",
 		"equipment_name": equipment_name,
 		"equipment_type": equipment_type,
 		"qualification_stage": "Installation Qualification",
@@ -262,7 +269,8 @@ def create_equipment_qualification_package(equipment_name, equipment_type):
 	# Create OQ Qualification
 	oq_qual = frappe.get_doc({
 		"doctype": "Equipment Qualification",
-		"qualification_title": f"Operational Qualification - {equipment_name}",
+		"qualification_title": f"Operational Qualification - {equipment_name
+	}",
 		"equipment_name": equipment_name,
 		"equipment_type": equipment_type,
 		"qualification_stage": "Operational Qualification",
@@ -276,7 +284,8 @@ def create_equipment_qualification_package(equipment_name, equipment_type):
 	# Create PQ Qualification
 	pq_qual = frappe.get_doc({
 		"doctype": "Equipment Qualification",
-		"qualification_title": f"Performance Qualification - {equipment_name}",
+		"qualification_title": f"Performance Qualification - {equipment_name
+	}",
 		"equipment_name": equipment_name,
 		"equipment_type": equipment_type,
 		"qualification_stage": "Performance Qualification",
@@ -287,4 +296,5 @@ def create_equipment_qualification_package(equipment_name, equipment_type):
 	pq_qual.insert()
 	qualifications.append(pq_qual.name)
 	
-	return {"success": True, "qualifications": qualifications}
+	return {"success": True, "qualifications": qualifications
+	}

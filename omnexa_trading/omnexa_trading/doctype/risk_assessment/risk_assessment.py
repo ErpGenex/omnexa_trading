@@ -179,7 +179,8 @@ def start_analysis(risk_name):
 	risk.risk_status = "Under Analysis"
 	risk.save()
 	
-	return {"success": True, "message": "Risk analysis started"}
+	return {"success": True, "message": "Risk analysis started"
+	}
 
 @frappe.whitelist()
 def complete_analysis(risk_name, risk_causes, contributing_factors="", trigger_events=""):
@@ -206,7 +207,8 @@ def complete_analysis(risk_name, risk_causes, contributing_factors="", trigger_e
 	risk.risk_status = "Mitigation In Progress"
 	risk.save()
 	
-	return {"success": True, "message": "Risk analysis completed"}
+	return {"success": True, "message": "Risk analysis completed"
+	}
 
 @frappe.whitelist()
 def initiate_mitigation(risk_name, mitigation_strategy):
@@ -228,7 +230,8 @@ def initiate_mitigation(risk_name, mitigation_strategy):
 	risk.mitigation_strategy = mitigation_strategy
 	risk.save()
 	
-	return {"success": True, "message": "Mitigation initiated"}
+	return {"success": True, "message": "Mitigation initiated"
+	}
 
 @frappe.whitelist()
 def complete_mitigation(risk_name, residual_risk, residual_risk_score):
@@ -258,7 +261,8 @@ def complete_mitigation(risk_name, residual_risk, residual_risk_score):
 	
 	risk.save()
 	
-	return {"success": True, "message": "Mitigation completed"}
+	return {"success": True, "message": "Mitigation completed"
+	}
 
 @frappe.whitelist()
 def get_risk_summary(category=None, status=None):
@@ -286,9 +290,12 @@ def get_risk_summary(category=None, status=None):
 	
 	summary = {
 		"total": len(risks),
-		"by_status": {},
-		"by_category": {},
-		"by_level": {},
+		"by_status": {
+	},
+		"by_category": {
+	},
+		"by_level": {
+	},
 		"average_score": 0,
 		"high_risks": [],
 		"extreme_risks": []
@@ -386,4 +393,5 @@ def schedule_risk_review():
 				reference_name=risk_doc.name
 			)
 	
-	return {"success": True, "risks_reviewed": len(risks_due)}
+	return {"success": True, "risks_reviewed": len(risks_due)
+	}

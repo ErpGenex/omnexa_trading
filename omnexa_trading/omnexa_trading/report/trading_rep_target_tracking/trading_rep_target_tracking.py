@@ -42,8 +42,8 @@ def execute(filters=None):
 				"rep_name": r.rep_name,
 				"branch": r.branch,
 				"sales_target_amount": flt(r.sales_target_amount),
-				"status": r.status,
-			}
+				"status": r.status
+	}
 		)
 	columns = _columns()
 	chart = auto_chart_for_columns(data, columns)
@@ -52,10 +52,15 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Representative"), "fieldname": "representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 160},
-		{"label": _("Name"), "fieldname": "rep_name", "fieldtype": "Data", "width": 170},
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 130},
-		{"label": _("Target Amount"), "fieldname": "sales_target_amount", "fieldtype": "Currency", "width": 140},
-		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100},
+		{"label": _("Representative"), "fieldname": "representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 160
+	},
+		{"label": _("Name"), "fieldname": "rep_name", "fieldtype": "Data", "width": 170
+	},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 130
+	},
+		{"label": _("Target Amount"), "fieldname": "sales_target_amount", "fieldtype": "Currency", "width": 140
+	},
+		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100
+	},
 	]
 

@@ -107,7 +107,8 @@ class ValidationProtocol(Document):
 			"event_type": "Submit",
 			"document_type": "Validation Protocol",
 			"document_name": self.name,
-			"event_details": f"Validation Protocol {self.protocol_number} submitted for {self.system_name}"
+			"event_details": f"Validation Protocol {self.protocol_number} submitted for {self.system_name
+	}"
 		}).insert()
 	
 	def _log_cancellation(self):
@@ -117,7 +118,8 @@ class ValidationProtocol(Document):
 			"event_type": "Cancel",
 			"document_type": "Validation Protocol",
 			"document_name": self.name,
-			"event_details": f"Validation Protocol {self.protocol_number} cancelled"
+			"event_details": f"Validation Protocol {self.protocol_number
+	} cancelled"
 		}).insert()
 
 @frappe.whitelist()
@@ -141,7 +143,8 @@ def start_validation_execution(protocol_name):
 	protocol.actual_start_date = getdate()
 	protocol.save()
 	
-	return {"success": True, "message": "Validation execution started"}
+	return {"success": True, "message": "Validation execution started"
+	}
 
 @frappe.whitelist()
 def complete_validation_execution(protocol_name, execution_summary, deviations="", observations=""):
@@ -170,7 +173,8 @@ def complete_validation_execution(protocol_name, execution_summary, deviations="
 	protocol.observations = observations
 	protocol.save()
 	
-	return {"success": True, "message": "Validation execution completed"}
+	return {"success": True, "message": "Validation execution completed"
+	}
 
 @frappe.whitelist()
 def get_validation_summary(system_name=None, validation_type=None):
@@ -198,9 +202,12 @@ def get_validation_summary(system_name=None, validation_type=None):
 	
 	summary = {
 		"total": len(protocols),
-		"by_status": {},
-		"by_type": {},
-		"by_stage": {},
+		"by_status": {
+	},
+		"by_type": {
+	},
+		"by_stage": {
+	},
 		"average_progress": 0
 	}
 	
@@ -237,7 +244,8 @@ def create_validation_package(system_name):
 	# Create IQ Protocol
 	iq_protocol = frappe.get_doc({
 		"doctype": "Validation Protocol",
-		"protocol_title": f"Installation Qualification - {system_name}",
+		"protocol_title": f"Installation Qualification - {system_name
+	}",
 		"protocol_type": "IQ",
 		"validation_stage": "Installation Qualification",
 		"system_name": system_name,
@@ -252,7 +260,8 @@ def create_validation_package(system_name):
 	# Create OQ Protocol
 	oq_protocol = frappe.get_doc({
 		"doctype": "Validation Protocol",
-		"protocol_title": f"Operational Qualification - {system_name}",
+		"protocol_title": f"Operational Qualification - {system_name
+	}",
 		"protocol_type": "OQ",
 		"validation_stage": "Operational Qualification",
 		"system_name": system_name,
@@ -267,7 +276,8 @@ def create_validation_package(system_name):
 	# Create PQ Protocol
 	pq_protocol = frappe.get_doc({
 		"doctype": "Validation Protocol",
-		"protocol_title": f"Performance Qualification - {system_name}",
+		"protocol_title": f"Performance Qualification - {system_name
+	}",
 		"protocol_type": "PQ",
 		"validation_stage": "Performance Qualification",
 		"system_name": system_name,
@@ -279,4 +289,5 @@ def create_validation_package(system_name):
 	pq_protocol.insert()
 	protocols.append(pq_protocol.name)
 	
-	return {"success": True, "protocols": protocols}
+	return {"success": True, "protocols": protocols
+	}

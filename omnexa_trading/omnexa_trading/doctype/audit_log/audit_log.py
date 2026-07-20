@@ -104,7 +104,8 @@ def get_audit_trail(document_type, document_name):
 @frappe.whitelist()
 def get_user_activity(user, from_date=None, to_date=None):
 	"""Get user activity logs"""
-	filters = {"user": user}
+	filters = {"user": user
+	}
 	
 	if from_date:
 		filters["timestamp"] = [">=", from_date]

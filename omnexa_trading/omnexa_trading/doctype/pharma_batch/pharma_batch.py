@@ -71,8 +71,10 @@ class PharmaBatch(Document):
 		self.item_name = item.item_name
 		
 		# Check if item is linked to Pharma Drug Registration
-		if frappe.db.exists("Pharma Drug Registration", {"item_code": self.item_code}):
-			drug = frappe.get_doc("Pharma Drug Registration", {"item_code": self.item_code})
+		if frappe.db.exists("Pharma Drug Registration", {"item_code": self.item_code
+	}):
+			drug = frappe.get_doc("Pharma Drug Registration", {"item_code": self.item_code
+	})
 			self.drug_code = drug.drug_code
 			self.drug_name = drug.drug_name
 			self.controlled_substance_flag = drug.is_controlled
@@ -246,26 +248,32 @@ def get_batch_stock(batch_no):
 @frappe.whitelist()
 def validate_batch_for_sale(item_code, batch_no):
 	"""Validate if batch can be sold"""
-	batch = frappe.get_doc("Pharma Batch", {"batch_number": batch_no, "item_code": item_code})
+	batch = frappe.get_doc("Pharma Batch", {"batch_number": batch_no, "item_code": item_code
+	})
 	
 	# Check if batch is active
 	if not batch.is_active:
-		return {"valid": False, "message": "Batch is not active"}
+		return {"valid": False, "message": "Batch is not active"
+	}
 	
 	# Check quality status
 	if batch.quality_status != "Approved":
-		return {"valid": False, "message": f"Batch quality status is {batch.quality_status}"}
+		return {"valid": False, "message": f"Batch quality status is {batch.quality_status}"
+	}
 	
 	# Check if expired
 	if batch.days_until_expiry <= 0:
-		return {"valid": False, "message": "Batch has expired"}
+		return {"valid": False, "message": "Batch has expired"
+	}
 	
 	# Check if controlled substance and license valid
 	if batch.controlled_substance_flag:
 		if getdate(batch.license_expiry) < getdate():
-			return {"valid": False, "message": "License has expired"}
+			return {"valid": False, "message": "License has expired"
+	}
 	
-	return {"valid": True, "message": "Batch is valid for sale"}
+	return {"valid": True, "message": "Batch is valid for sale"
+	}
 
 @frappe.whitelist()
 def get_fefo_batches(item_code, warehouse=None, qty=1):
@@ -433,12 +441,13 @@ def release_quarantined_batch(batch_no, release_reason):
 			"quality_status": "Approved",
 			"quarantine_reason": None,
 			"quarantine_date": None,
-			"release_date": getdate(),
-		},
+			"release_date": getdate()
+	},
 		update_modified=True,
 	)
 	
-	return {"success": True, "message": _("Batch {0} released from quarantine").format(batch_no)}
+	return {"success": True, "message": _("Batch {0} released from quarantine").format(batch_no)
+	}
 
 @frappe.whitelist()
 def quarantine_batch(batch_no, quarantine_reason):
@@ -465,19 +474,21 @@ def quarantine_batch(batch_no, quarantine_reason):
 			"quality_status": "Quarantined",
 			"quarantine_reason": quarantine_reason,
 			"quarantine_date": getdate(),
-			"release_date": None,
-		},
+			"release_date": None
+	},
 		update_modified=True,
 	)
 	
-	return {"success": True, "message": _("Batch {0} placed in quarantine").format(batch_no)}
+	return {"success": True, "message": _("Batch {0} placed in quarantine").format(batch_no)
+	}
 
 
 def _resolve_pharma_batch_name(batch_ref, throw=True):
 	if frappe.db.exists("Pharma Batch", batch_ref):
 		return batch_ref
 
-	batch_name = frappe.db.get_value("Pharma Batch", {"batch_number": batch_ref}, "name")
+	batch_name = frappe.db.get_value("Pharma Batch", {"batch_number": batch_ref
+	}, "name")
 	if batch_name:
 		return batch_name
 

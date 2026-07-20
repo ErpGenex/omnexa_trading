@@ -44,7 +44,8 @@ class TestPharmaQualityInspection(FrappeTestCase):
 		day = now_datetime().strftime("%Y%m%d")
 		inspection = frappe.get_doc({
 			"doctype": "Pharma Quality Inspection",
-			"inspection_number": f"QI-{day}-001",
+			"inspection_number": f"QI-{day
+	}-001",
 			"inspection_date": today(),
 			"inspection_type": "Incoming",
 			"inspector": inspector_link(self.inspector),
@@ -75,7 +76,8 @@ class TestPharmaQualityInspection(FrappeTestCase):
 		with self.assertRaises(frappe.ValidationError):
 			inspection = frappe.get_doc({
 				"doctype": "Pharma Quality Inspection",
-				"inspection_number": f"QI-{day}-002",
+				"inspection_number": f"QI-{day
+	}-002",
 				"inspection_date": today(),
 				"inspection_type": "Incoming",
 			"inspector": inspector_link(self.inspector),
@@ -89,7 +91,8 @@ class TestPharmaQualityInspection(FrappeTestCase):
 		day = now_datetime().strftime("%Y%m%d")
 		inspection = frappe.get_doc({
 			"doctype": "Pharma Quality Inspection",
-			"inspection_number": f"QI-{day}-003",
+			"inspection_number": f"QI-{day
+	}-003",
 			"inspection_date": today(),
 			"inspection_type": "Incoming",
 			"inspector": inspector_link(self.inspector),
@@ -123,7 +126,8 @@ class TestPharmaQualityInspection(FrappeTestCase):
 		day = now_datetime().strftime("%Y%m%d")
 		inspection = frappe.get_doc({
 			"doctype": "Pharma Quality Inspection",
-			"inspection_number": f"QI-{day}-004",
+			"inspection_number": f"QI-{day
+	}-004",
 			"inspection_date": today(),
 			"inspection_type": "Incoming",
 			"inspector": inspector_link(self.inspector),

@@ -39,7 +39,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		# Create batch
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-BATCH-WF-{day}",
+			"batch_number": f"TEST-BATCH-WF-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -57,7 +58,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		# Create quality inspection
 		inspection = frappe.get_doc({
 			"doctype": "Pharma Quality Inspection",
-			"inspection_number": f"QI-WF-{day}",
+			"inspection_number": f"QI-WF-{day
+	}",
 			"inspection_date": today(),
 			"inspection_type": "Incoming",
 			"inspector": inspector_link(self.inspector),
@@ -84,7 +86,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		day = now_datetime().strftime("%Y%m%d")
 		expired_batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-EXPIRED-{day}",
+			"batch_number": f"TEST-EXPIRED-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": add_days(today(), -400),
@@ -103,8 +106,7 @@ class TestPharmaIntegration(FrappeTestCase):
 			expired_batch.name,
 			{
 				"expiry_date": add_days(today(), -30),
-				"manufacturing_date": add_days(today(), -400),
-			},
+				"manufacturing_date": add_days(today(), -400)},
 		)
 		expired_batch.reload()
 		
@@ -118,8 +120,8 @@ class TestPharmaIntegration(FrappeTestCase):
 					"item_code": item_link(self.item),
 					"qty": 10,
 					"rate": 100,
-					"batch_no": expired_batch.batch_number,
-				}],
+					"batch_no": expired_batch.batch_number
+	}],
 			)
 			invoice.insert()
 		
@@ -130,7 +132,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		day = now_datetime().strftime("%Y%m%d")
 		controlled_batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-CONTROLLED-{day}",
+			"batch_number": f"TEST-CONTROLLED-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -140,8 +143,8 @@ class TestPharmaIntegration(FrappeTestCase):
 			"warehouse": self.warehouse.name,
 			"company": self.company.name,
 			"quality_status": "Approved",
-			"is_active": 1,
-		})
+			"is_active": 1
+	})
 		controlled_batch.insert()
 		controlled_batch.submit()
 		
@@ -163,8 +166,8 @@ class TestPharmaIntegration(FrappeTestCase):
 				"controlled_substance_flag": 1,
 				"license_number": "TEST-LICENSE-001",
 				"license_expiry": add_days(today(), 365),
-				"regulatory_approval": approval_name,
-			},
+				"regulatory_approval": approval_name
+	},
 		)
 		controlled_batch.reload()
 		
@@ -178,8 +181,8 @@ class TestPharmaIntegration(FrappeTestCase):
 					"item_code": item_link(self.item),
 					"qty": 10,
 					"rate": 100,
-					"batch_no": controlled_batch.batch_number,
-				}],
+					"batch_no": controlled_batch.batch_number
+	}],
 			)
 			invoice.insert()
 		
@@ -192,7 +195,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		# Create batch
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-TEMP-{day}",
+			"batch_number": f"TEST-TEMP-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -212,7 +216,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		# Create temperature log with excursion
 		temp_log = frappe.get_doc({
 			"doctype": "Temperature Log",
-			"log_number": f"TEMP-{day}",
+			"log_number": f"TEMP-{day
+	}",
 			"log_date": today(),
 			"batch_number": batch.name,
 			"item_code": item_link(self.item),
@@ -240,7 +245,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		# Create batch
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-RECALL-{day}",
+			"batch_number": f"TEST-RECALL-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -281,7 +287,8 @@ class TestPharmaIntegration(FrappeTestCase):
 		# Create batch
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-AUDIT-{day}",
+			"batch_number": f"TEST-AUDIT-{day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),

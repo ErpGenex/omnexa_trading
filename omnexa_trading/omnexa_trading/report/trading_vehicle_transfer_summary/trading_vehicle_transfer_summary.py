@@ -50,12 +50,20 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Transfer"), "fieldname": "transfer", "fieldtype": "Link", "options": "Trading Vehicle Stock Transfer", "width": 150},
-		{"label": _("Posting Date"), "fieldname": "posting_date", "fieldtype": "Date", "width": 110},
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120},
-		{"label": _("Transfer Type"), "fieldname": "transfer_type", "fieldtype": "Data", "width": 130},
-		{"label": _("Vehicle"), "fieldname": "vehicle", "fieldtype": "Link", "options": "Trading Vehicle", "width": 140},
-		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170},
-		{"label": _("From Warehouse"), "fieldname": "from_warehouse", "fieldtype": "Link", "options": "Warehouse", "width": 160},
-		{"label": _("To Warehouse"), "fieldname": "to_warehouse", "fieldtype": "Link", "options": "Warehouse", "width": 160},
+		{"label": _("Transfer"), "fieldname": "transfer", "fieldtype": "Link", "options": "Trading Vehicle Stock Transfer", "width": 150
+	},
+		{"label": _("Posting Date"), "fieldname": "posting_date", "fieldtype": "Date", "width": 110
+	},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120
+	},
+		{"label": _("Transfer Type"), "fieldname": "transfer_type", "fieldtype": "Data", "width": 130
+	},
+		{"label": _("Vehicle"), "fieldname": "vehicle", "fieldtype": "Link", "options": "Trading Vehicle", "width": 140
+	},
+		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170
+	},
+		{"label": _("From Warehouse"), "fieldname": "from_warehouse", "fieldtype": "Link", "options": "Warehouse", "width": 160
+	},
+		{"label": _("To Warehouse"), "fieldname": "to_warehouse", "fieldtype": "Link", "options": "Warehouse", "width": 160
+	},
 	]

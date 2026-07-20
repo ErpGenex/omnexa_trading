@@ -18,20 +18,21 @@ def optimize_route_stops(route_plan: str) -> dict:
 		frappe.throw(_("Route Plan is required"))
 	stops = frappe.get_all(
 		"Trading Route Plan Stop",
-		filters={"parent": route_plan},
+		filters={"parent": route_plan
+	},
 		fields=["name", "stop_sequence", "zone", "stop_reference"],
 		order_by="stop_sequence asc",
 	)
 	if len(stops) < 2:
-		return {"route_plan": route_plan, "stops": len(stops), "optimized_sequence": [s.name for s in stops]}
+		return {"route_plan": route_plan, "stops": len(stops), "optimized_sequence": [s.name for s in stops]
+	}
 
 	ordered = sorted(stops, key=lambda s: (flt(s.stop_sequence), s.name))
 	return {
 		"route_plan": route_plan,
 		"stops": len(stops),
 		"optimized_sequence": [s.name for s in ordered],
-		"savings_estimate_pct": min(25, max(5, len(stops) * 2)),
-	}
+		"savings_estimate_pct": min(25, max(5, len(stops) * 2))}
 
 
 @frappe.whitelist()
@@ -40,7 +41,8 @@ def compute_commission_forecast(
 	company: str | None = None,
 	months: int = 3,
 ) -> dict:
-	filters: dict[str, Any] = {"docstatus": 1}
+	filters: dict[str, Any] = {"docstatus": 1
+	}
 	if sales_representative:
 		filters["sales_representative"] = sales_representative
 	if company:
@@ -55,7 +57,8 @@ def compute_commission_forecast(
 	avg_monthly = total / max(1, months)
 	rules = frappe.get_all(
 		"Trading Commission Rule",
-		filters={"docstatus": ["<", 2], **({"company": company} if company else {})},
+		filters={"docstatus": ["<", 2], **({"company": company} if company else {})
+	},
 		fields=["name"],
 		limit_page_length=50,
 	)
@@ -63,7 +66,8 @@ def compute_commission_forecast(
 	if rules:
 		tiers = frappe.get_all(
 			"Trading Commission Tier",
-			filters={"parent": rules[0].name},
+			filters={"parent": rules[0].name
+	},
 			fields=["rate_percent"],
 			order_by="from_amount asc",
 			limit_page_length=1,
@@ -76,8 +80,7 @@ def compute_commission_forecast(
 		"historical_revenue": round(total, 2),
 		"forecast_monthly_revenue": round(avg_monthly, 2),
 		"forecast_commission": round(avg_monthly * rate, 2),
-		"commission_rate_pct": round(rate * 100, 2),
-	}
+		"commission_rate_pct": round(rate * 100, 2)}
 
 
 @frappe.whitelist()
@@ -109,7 +112,7 @@ def check_customer_credit_limit(customer_profile: str) -> dict:
 		"credit_limit": limit,
 		"outstanding": round(outstanding, 2),
 		"available_credit": round(available, 2),
-		"within_limit": outstanding <= limit if limit else True,
+		"within_limit": outstanding <= limit if limit else True
 	}
 
 
@@ -130,14 +133,16 @@ def get_van_stock_iot_levels(vehicle: str | None = None, company: str | None = N
 	for v in vehicles:
 		transfers = frappe.get_all(
 			"Trading Vehicle Stock Transfer",
-			filters={"vehicle": v.name, "docstatus": 1},
+			filters={"vehicle": v.name, "docstatus": 1
+	},
 			fields=["name", "modified"],
 			order_by="modified desc",
 			limit_page_length=1,
 		)
 		items = frappe.get_all(
 			"Trading Vehicle Stock Transfer Item",
-			filters={"parent": transfers[0].name} if transfers else {"parent": ""},
+			filters={"parent": transfers[0].name} if transfers else {"parent": ""
+	},
 			fields=["item_code", "qty"],
 			limit_page_length=100,
 		) if transfers else []
@@ -148,10 +153,11 @@ def get_van_stock_iot_levels(vehicle: str | None = None, company: str | None = N
 				"last_sync": str(transfers[0].modified) if transfers else None,
 				"sku_count": len(items),
 				"total_qty": round(sum(flt(i.qty) for i in items), 2),
-				"iot_status": "online" if transfers else "unknown",
-			}
+				"iot_status": "online" if transfers else "unknown"
+	}
 		)
-	return {"vehicles": len(rows), "rows": rows}
+	return {"vehicles": len(rows), "rows": rows
+	}
 
 
 @frappe.whitelist()
@@ -161,7 +167,8 @@ def analyze_tender_win_probability(tender: str) -> dict:
 	doc = frappe.get_doc("Trading Tender", tender)
 	competitors = frappe.get_all(
 		"Trading Tender Competitor",
-		filters={"parent": tender},
+		filters={"parent": tender
+	},
 		fields=["competitor_name", "quoted_amount"],
 	)
 	base = 50.0
@@ -181,5 +188,5 @@ def analyze_tender_win_probability(tender: str) -> dict:
 		"status": doc.status,
 		"competitors": len(competitors),
 		"win_probability_pct": round(max(0, min(100, base)), 1),
-		"estimated_value": flt(doc.expected_selling_value),
+		"estimated_value": flt(doc.expected_selling_value)
 	}

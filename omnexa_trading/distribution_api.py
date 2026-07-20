@@ -61,5 +61,4 @@ def get_distribution_dashboard(company: str | None = None, branch: str | None = 
 		"routes_total": len(routes),
 		"routes_by_status": _count_by_status(routes),
 		"tenders_total": len(tenders),
-		"tender_pipeline_value": round(sum(flt(r.get("expected_selling_value")) for r in tenders), 2),
-	}
+		"tender_pipeline_value": round(sum(flt(r.get("expected_selling_value")) for r in tenders), 2)}

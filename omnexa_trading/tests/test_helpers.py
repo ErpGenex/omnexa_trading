@@ -19,8 +19,8 @@ def ensure_test_company():
 				"company_name": TEST_COMPANY_NAME,
 				"abbr": TEST_COMPANY_ABBR,
 				"country": "United Arab Emirates",
-				"default_currency": "AED",
-			}
+				"default_currency": "AED"
+	}
 		).insert()
 	return frappe.get_doc("Company", TEST_COMPANY_ABBR)
 
@@ -28,7 +28,8 @@ def ensure_test_company():
 def ensure_test_warehouse(company: str):
 	warehouse_name = frappe.db.get_value(
 		"Warehouse",
-		{"warehouse_name": "Test Warehouse", "company": company},
+		{"warehouse_name": "Test Warehouse", "company": company
+	},
 		"name",
 	)
 	if warehouse_name:
@@ -39,8 +40,8 @@ def ensure_test_warehouse(company: str):
 			"warehouse_name": "Test Warehouse",
 			"warehouse_code": "TW",
 			"is_group": 0,
-			"company": company,
-		}
+			"company": company
+	}
 	).insert()
 
 
@@ -50,12 +51,13 @@ def create_test_item(company: str):
 		{
 			"doctype": "Item",
 			"item_code": item_code,
-			"item_name": f"Test Pharma Item {item_code}",
+			"item_name": f"Test Pharma Item {item_code
+	}",
 			"item_group": "All Item Groups",
 			"stock_uom": "Nos",
 			"is_stock_item": 1,
-			"company": company,
-		}
+			"company": company
+	}
 	).insert()
 
 
@@ -69,18 +71,20 @@ def create_test_customer(company: str):
 	return frappe.get_doc(
 		{
 			"doctype": "Customer",
-			"customer_name": f"Test Customer {customer_code}",
+			"customer_name": f"Test Customer {customer_code
+	}",
 			"customer_code": customer_code,
 			"customer_group": "All Customer Groups",
-			"company": company,
-		}
+			"company": company
+	}
 	).insert()
 
 
 def ensure_test_branch(company: str):
 	branch_name = frappe.db.get_value(
 		"Branch",
-		{"company": company, "branch_code": "HO"},
+		{"company": company, "branch_code": "HO"
+	},
 		"name",
 	)
 	if branch_name:
@@ -92,8 +96,8 @@ def ensure_test_branch(company: str):
 			"branch_code": "HO",
 			"company": company,
 			"status": "Active",
-			"is_head_office": 1,
-		}
+			"is_head_office": 1
+	}
 	).insert()
 
 
@@ -103,11 +107,12 @@ def ensure_test_sales_representative(company: str, branch: str):
 		{
 			"doctype": "Trading Sales Representative",
 			"rep_code": rep_code,
-			"rep_name": f"Test Rep {rep_code}",
+			"rep_name": f"Test Rep {rep_code
+	}",
 			"company": company,
 			"branch": branch,
-			"status": "Active",
-		}
+			"status": "Active"
+	}
 	).insert()
 
 
@@ -117,13 +122,14 @@ def ensure_test_customer_profile(company: str, branch: str, customer=None):
 		{
 			"doctype": "Customer Profile",
 			"customer_code": customer_code,
-			"customer_name": f"Test Profile {customer_code}",
+			"customer_name": f"Test Profile {customer_code
+	}",
 			"customer_type": "Individual",
 			"company": company,
 			"branch": branch,
 			"linked_customer": customer.name if customer else None,
-			"status": "Active",
-		}
+			"status": "Active"
+	}
 	).insert()
 
 
@@ -143,7 +149,7 @@ def build_test_van_sales_invoice(
 		"branch": branch,
 		"sales_representative": sales_rep.name,
 		"payment_type": "Cash",
-		"items": items,
+		"items": items
 	}
 	if prescription_number:
 		doc["prescription_number"] = prescription_number
@@ -165,10 +171,11 @@ def ensure_test_employee(company: str):
 		{
 			"doctype": "Employee",
 			"employee_code": employee_code,
-			"employee_name": f"Test Inspector {employee_code}",
+			"employee_name": f"Test Inspector {employee_code
+	}",
 			"company": company,
-			"status": "Active",
-		}
+			"status": "Active"
+	}
 	).insert()
 
 

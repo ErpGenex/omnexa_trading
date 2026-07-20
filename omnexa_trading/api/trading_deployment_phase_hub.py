@@ -30,7 +30,7 @@ PHASE_DEFINITIONS: list[dict] = [
 			"cold-chain-manager",
 		],
 		"company_abbr": "PTE",
-		"branch_code": "HO",
+		"branch_code": "HO"
 	},
 	{
 		"id": "import_export",
@@ -47,7 +47,7 @@ PHASE_DEFINITIONS: list[dict] = [
 			"quality-manager",
 		],
 		"company_abbr": "PTE",
-		"branch_code": "HO",
+		"branch_code": "HO"
 	},
 	{
 		"id": "pos_retail",
@@ -64,20 +64,23 @@ PHASE_DEFINITIONS: list[dict] = [
 			"finance-director",
 		],
 		"company_abbr": "PTE",
-		"branch_code": "HO",
+		"branch_code": "HO"
 	},
 ]
 
 
 def _resolve_company_branch(phase: dict) -> tuple[str, str]:
-	company = frappe.db.get_value("Company", {"abbr": phase.get("company_abbr")}, "name")
+	company = frappe.db.get_value("Company", {"abbr": phase.get("company_abbr")
+	}, "name")
 	if not company:
 		company = frappe.db.get_value("Company", {}, "name")
 	branch = ""
 	if company:
 		branch = (
-			frappe.db.get_value("Branch", {"company": company, "branch_code": phase.get("branch_code")}, "name")
-			or frappe.db.get_value("Branch", {"company": company}, "name")
+			frappe.db.get_value("Branch", {"company": company, "branch_code": phase.get("branch_code")
+	}, "name")
+			or frappe.db.get_value("Branch", {"company": company
+	}, "name")
 			or ""
 		)
 	return company or "", branch or ""
@@ -88,12 +91,13 @@ def _branch_stats(company: str, branch: str) -> dict:
 		"customers": 0,
 		"orders": 0,
 		"batches": 0,
-		"pos_sales": 0,
+		"pos_sales": 0
 	}
 	if frappe.db.exists("DocType", "Customer"):
 		stats["customers"] = frappe.db.count("Customer")
 	if frappe.db.exists("DocType", "Sales Order"):
-		stats["orders"] = frappe.db.count("Sales Order", {"docstatus": 1})
+		stats["orders"] = frappe.db.count("Sales Order", {"docstatus": 1
+	})
 	if frappe.db.exists("DocType", "Pharma Batch"):
 		stats["batches"] = frappe.db.count("Pharma Batch")
 	if frappe.db.exists("DocType", "POS Invoice") or frappe.db.has_column("Sales Invoice", "is_pos"):
@@ -121,7 +125,8 @@ def get_deployment_phases_dashboard() -> dict:
 	phases = []
 	for phase in PHASE_DEFINITIONS:
 		company, branch = _resolve_company_branch(phase)
-		ready = bool(company and (branch or frappe.db.count("Branch", {"company": company}) >= 0))
+		ready = bool(company and (branch or frappe.db.count("Branch", {"company": company
+	}) >= 0))
 		stats = _branch_stats(company, branch) if company else {}
 		portal_ids = set(phase.get("portal_ids") or [])
 		portals = _portal_rows(portal_ids)
@@ -134,15 +139,15 @@ def get_deployment_phases_dashboard() -> dict:
 			"stats": stats,
 			"portals": portals,
 			"portal_count": len(portals),
-			"pos_url": "/app/retail-pos",
-		})
+			"pos_url": "/app/retail-pos"
+	})
 
 	return {
 		"ok": True,
 		"active_phase": active_phase,
 		"default_company": default_company,
 		"default_branch": default_branch,
-		"phases": phases,
+		"phases": phases
 	}
 
 
@@ -159,7 +164,8 @@ def set_deployment_phase_context(phase_id: str) -> dict:
 	if branch:
 		frappe.defaults.set_user_default("Branch", branch)
 	frappe.cache().set_value(PHASE_CACHE_KEY, phase_id)
-	return {"ok": True, "phase_id": phase_id, "company": company, "branch": branch}
+	return {"ok": True, "phase_id": phase_id, "company": company, "branch": branch
+	}
 
 
 @frappe.whitelist()
@@ -174,6 +180,7 @@ def activate_deployment_phase(phase_id: str, force: int = 1) -> dict:
 	return {
 		"ok": True,
 		"phase_id": phase_id,
-		"message": f"Trading phase {phase_id} activated",
-		"result": result,
+		"message": f"Trading phase {phase_id
+	} activated",
+		"result": result
 	}

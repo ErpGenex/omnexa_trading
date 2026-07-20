@@ -25,7 +25,8 @@ class TestPharmaBatch(FrappeTestCase):
 		batch_day = now_datetime().strftime("%Y%m%d")
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-BATCH-{batch_day}",
+			"batch_number": f"TEST-BATCH-{batch_day
+	}",
 			"item_code": item_link(self.item),
 			"item_name": self.item.item_name,
 			"manufacturing_date": today(),
@@ -53,7 +54,8 @@ class TestPharmaBatch(FrappeTestCase):
 		with self.assertRaises((frappe.ValidationError, frappe.DuplicateEntryError)):
 			batch = frappe.get_doc({
 				"doctype": "Pharma Batch",
-				"batch_number": f"TEST-BATCH-INVALID-{batch_day}",
+				"batch_number": f"TEST-BATCH-INVALID-{batch_day
+	}",
 				"item_code": item_link(self.item),
 				"manufacturing_date": add_days(today(), 10),
 				"expiry_date": today(),
@@ -105,7 +107,8 @@ class TestPharmaBatch(FrappeTestCase):
 		
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-BATCH-EXPIRY-{now_datetime().strftime('%Y%m%d%H%M%S')}",
+			"batch_number": f"TEST-BATCH-EXPIRY-{now_datetime().strftime('%Y%m%d%H%M%S')
+	}",
 			"item_code": item_link(self.item),
 			"manufacturing_date": today(),
 			"expiry_date": expiry_date,
@@ -124,7 +127,8 @@ class TestPharmaBatch(FrappeTestCase):
 		"""Test batch quality status"""
 		batch = frappe.get_doc({
 			"doctype": "Pharma Batch",
-			"batch_number": f"TEST-BATCH-QUALITY-{now_datetime().strftime('%Y%m%d%H%M%S')}",
+			"batch_number": f"TEST-BATCH-QUALITY-{now_datetime().strftime('%Y%m%d%H%M%S')
+	}",
 			"item_code": item_link(self.item),
 			"manufacturing_date": today(),
 			"expiry_date": add_days(today(), 365),

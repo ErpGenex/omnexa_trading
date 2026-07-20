@@ -16,7 +16,7 @@ add_to_apps_screen = [
 		"name": "omnexa_trading",
 		"logo": "/assets/omnexa_trading/logo.png",
 		"title": "Trading",
-		"route": "/app/trading-workcenter",
+		"route": "/app/trading-workcenter"
 	}
 ]
 
@@ -51,8 +51,8 @@ page_js = {
 	"trading-regulatory-officer": "public/js/trading-journey-kit.js",
 	"trading-inventory-controller": "public/js/trading-journey-kit.js",
 	"trading-sales-director": "public/js/trading-journey-kit.js",
-	"trading-auditor": "public/js/trading-journey-kit.js",
-}
+	"trading-auditor": "public/js/trading-journey-kit.js"
+	}
 
 # include js, css files in header of web template
 # web_include_css = "/assets/omnexa_trading/css/omnexa_trading.css"
@@ -155,8 +155,8 @@ permission_query_conditions = {
 	"Trading Van Sales Invoice": "omnexa_trading.permissions.trading_van_sales_invoice_query_conditions",
 	"Trading Commission Settlement": "omnexa_trading.permissions.trading_commission_settlement_query_conditions",
 	"Trading Tender": "omnexa_trading.permissions.trading_tender_query_conditions",
-	"Trading Installment Contract": "omnexa_trading.permissions.trading_installment_contract_query_conditions",
-}
+	"Trading Installment Contract": "omnexa_trading.permissions.trading_installment_contract_query_conditions"
+	}
 
 # DocType Class
 # ---------------
@@ -178,7 +178,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Vehicle": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -187,7 +187,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Distribution Zone": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -196,7 +196,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Route Plan": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -205,7 +205,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Commission Rule": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -214,7 +214,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Distribution Order": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -223,7 +223,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Vehicle Stock Transfer": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -232,7 +232,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Van Sales Invoice": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -241,7 +241,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Commission Settlement": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -250,7 +250,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Tender": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -259,7 +259,7 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Trading Installment Contract": {
 		"before_validate": "omnexa_trading.permissions.populate_company_branch_from_user_context",
@@ -268,23 +268,22 @@ doc_events = {
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Pharma Batch": {
 		"after_insert": "omnexa_trading.audit_events.log_document_create",
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"
 	},
 	"Pharma Quality Inspection": {
 		"after_insert": "omnexa_trading.audit_events.log_document_create",
 		"on_update": "omnexa_trading.audit_events.log_document_update",
 		"on_trash": "omnexa_trading.audit_events.log_document_delete",
 		"on_submit": "omnexa_trading.audit_events.log_document_submit",
-		"on_cancel": "omnexa_trading.audit_events.log_document_cancel",
-	},
-}
+		"on_cancel": "omnexa_trading.audit_events.log_document_cancel"}
+	}
 
 # Scheduled Tasks
 # ---------------
@@ -356,22 +355,22 @@ before_request = ["omnexa_trading.license_gate.before_request"]
 
 # user_data_fields = [
 # 	{
-# 		"doctype": "{doctype_1}",
-# 		"filter_by": "{filter_by}",
-# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"doctype": "{}",
+# 		"filter_by": "{}",
+# 		"redact_fields": ["{}", "{}"],
 # 		"partial": 1,
 # 	},
 # 	{
-# 		"doctype": "{doctype_2}",
-# 		"filter_by": "{filter_by}",
+# 		"doctype": "{}",
+# 		"filter_by": "{}",
 # 		"partial": 1,
 # 	},
 # 	{
-# 		"doctype": "{doctype_3}",
+# 		"doctype": "{}",
 # 		"strict": False,
 # 	},
 # 	{
-# 		"doctype": "{doctype_4}"
+# 		"doctype": "{}"
 # 	}
 # ]
 

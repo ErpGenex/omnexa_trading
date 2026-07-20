@@ -161,7 +161,8 @@ def start_investigation(capa_name):
 	capa.capa_status = "Under Investigation"
 	capa.save()
 	
-	return {"success": True, "message": "Investigation started"}
+	return {"success": True, "message": "Investigation started"
+	}
 
 @frappe.whitelist()
 def complete_investigation(capa_name, investigation_findings, root_cause, contributing_factors=""):
@@ -188,7 +189,8 @@ def complete_investigation(capa_name, investigation_findings, root_cause, contri
 	capa.capa_status = "Actions In Progress"
 	capa.save()
 	
-	return {"success": True, "message": "Investigation completed"}
+	return {"success": True, "message": "Investigation completed"
+	}
 
 @frappe.whitelist()
 def initiate_verification(capa_name):
@@ -209,7 +211,8 @@ def initiate_verification(capa_name):
 	capa.capa_status = "Verification Pending"
 	capa.save()
 	
-	return {"success": True, "message": "Verification initiated"}
+	return {"success": True, "message": "Verification initiated"
+	}
 
 @frappe.whitelist()
 def complete_verification(capa_name, verification_results, verification_status, effectiveness_score=None):
@@ -246,7 +249,8 @@ def complete_verification(capa_name, verification_results, verification_status, 
 	
 	capa.save()
 	
-	return {"success": True, "message": "Verification completed"}
+	return {"success": True, "message": "Verification completed"
+	}
 
 @frappe.whitelist()
 def get_capa_summary(category=None, status=None):
@@ -274,10 +278,14 @@ def get_capa_summary(category=None, status=None):
 	
 	summary = {
 		"total": len(capas),
-		"by_status": {},
-		"by_category": {},
-		"by_type": {},
-		"by_severity": {},
+		"by_status": {
+	},
+		"by_category": {
+	},
+		"by_type": {
+	},
+		"by_severity": {
+	},
 		"overdue": [],
 		"upcoming_deadlines": []
 	}
@@ -341,10 +349,14 @@ def get_capa_trend_analysis(months=12):
 	)
 	
 	trend_data = {
-		"by_month": {},
-		"by_category": {},
-		"by_type": {},
-		"by_severity": {},
+		"by_month": {
+	},
+		"by_category": {
+	},
+		"by_type": {
+	},
+		"by_severity": {
+	},
 		"closure_rate": 0
 	}
 	
@@ -412,4 +424,5 @@ def schedule_capa_reminders():
 				reference_name=capa_doc.name
 			)
 	
-	return {"success": True, "reminders_sent": len(upcoming_capas)}
+	return {"success": True, "reminders_sent": len(upcoming_capas)
+	}

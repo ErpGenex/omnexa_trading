@@ -71,8 +71,10 @@ class TradingCommissionSettlement(Document):
 			reference=self.name,
 			remarks=f"Commission settlement {self.name}",
 			lines=[
-				{"account": self.commission_expense_account, "debit": self.commission_amount, "credit": 0},
-				{"account": self.commission_payable_account, "debit": 0, "credit": self.commission_amount},
+				{"account": self.commission_expense_account, "debit": self.commission_amount, "credit": 0
+	},
+				{"account": self.commission_payable_account, "debit": 0, "credit": self.commission_amount
+	},
 			],
 		)
 		self.db_set("journal_entry", je, update_modified=False)

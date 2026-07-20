@@ -154,7 +154,8 @@ def start_assessment(qualification_name):
 	qualification.assessment_date = getdate()
 	qualification.save()
 	
-	return {"success": True, "message": "Assessment started"}
+	return {"success": True, "message": "Assessment started"
+	}
 
 @frappe.whitelist()
 def complete_assessment(qualification_name, assessment_findings, assessment_score, assessment_result):
@@ -188,7 +189,8 @@ def complete_assessment(qualification_name, assessment_findings, assessment_scor
 	
 	qualification.save()
 	
-	return {"success": True, "message": "Assessment completed"}
+	return {"success": True, "message": "Assessment completed"
+	}
 
 @frappe.whitelist()
 def get_vendor_qualification_summary(supplier_type=None, status=None):
@@ -216,9 +218,12 @@ def get_vendor_qualification_summary(supplier_type=None, status=None):
 	
 	summary = {
 		"total": len(qualifications),
-		"by_status": {},
-		"by_type": {},
-		"by_level": {},
+		"by_status": {
+	},
+		"by_type": {
+	},
+		"by_level": {
+	},
 		"average_score": 0
 	}
 	
@@ -266,7 +271,8 @@ def check_qualification_expiry():
 	)
 	
 	# Notify QA Manager for expiring qualifications
-	qa_managers = frappe.get_all("User", filters={"role": "Pharma Quality Manager"})
+	qa_managers = frappe.get_all("User", filters={"role": "Pharma Quality Manager"
+	})
 	
 	if qa_managers and expiring_qualifications:
 		for qualification in expiring_qualifications:

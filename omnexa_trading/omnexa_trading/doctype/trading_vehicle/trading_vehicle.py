@@ -27,7 +27,8 @@ class TradingVehicle(Document):
 	def _validate_unique_code(self):
 		existing = frappe.db.get_value(
 			"Trading Vehicle",
-			{"company": self.company, "vehicle_code": self.vehicle_code},
+			{"company": self.company, "vehicle_code": self.vehicle_code
+	},
 			"name",
 		)
 		if existing and existing != self.name:

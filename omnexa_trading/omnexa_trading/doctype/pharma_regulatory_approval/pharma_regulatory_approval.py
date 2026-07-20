@@ -26,8 +26,8 @@ class PharmaRegulatoryApproval(Document):
 				"status": "Approved",
 				"approval_status": "Approved",
 				"approved_by": self.approved_by,
-				"approval_date_2": self.approval_date_2,
-			}
+				"approval_date_2": self.approval_date_2
+	}
 		)
 
 	def on_cancel(self):
@@ -84,7 +84,8 @@ class PharmaRegulatoryApproval(Document):
 			frappe.db.set_value(
 				"Pharma Batch",
 				self.batch_number,
-				{"regulatory_approval": self.name},
+				{"regulatory_approval": self.name
+	},
 				update_modified=True,
 			)
 
@@ -94,7 +95,8 @@ class PharmaRegulatoryApproval(Document):
 			frappe.db.set_value(
 				"Pharma Batch",
 				self.batch_number,
-				{"regulatory_approval": None},
+				{"regulatory_approval": None
+	},
 				update_modified=True,
 			)
 
@@ -148,30 +150,37 @@ def validate_controlled_substance_sale(batch_no, quantity):
 	
 	# Check if controlled substance
 	if not batch.controlled_substance_flag:
-		return {"valid": True, "message": "Not a controlled substance"}
+		return {"valid": True, "message": "Not a controlled substance"
+	}
 	
 	# Check regulatory approval
 	if not batch.regulatory_approval:
-		return {"valid": False, "message": "No regulatory approval for controlled substance"}
+		return {"valid": False, "message": "No regulatory approval for controlled substance"
+	}
 	
 	approval = frappe.get_doc("Pharma Regulatory Approval", batch.regulatory_approval)
 	
 	# Check approval status
 	if approval.approval_status != "Approved":
-		return {"valid": False, "message": f"Regulatory status is {approval.approval_status}"}
+		return {"valid": False, "message": f"Regulatory status is {approval.approval_status}"
+	}
 	
 	# Check license expiry
 	if getdate(approval.license_expiry) < getdate():
-		return {"valid": False, "message": "License has expired"}
+		return {"valid": False, "message": "License has expired"
+	}
 	
 	# Check validity period
 	if approval.valid_from and approval.valid_until:
 		today = getdate()
 		if today < getdate(approval.valid_from) or today > getdate(approval.valid_until):
-			return {"valid": False, "message": "Approval is not valid for current date"}
+			return {"valid": False, "message": "Approval is not valid for current date"
+	}
 	
 	# Check quantity approved
 	if approval.quantity_approved and quantity > approval.quantity_approved:
-		return {"valid": False, "message": f"Quantity exceeds approved limit of {approval.quantity_approved}"}
+		return {"valid": False, "message": f"Quantity exceeds approved limit of {approval.quantity_approved}"
+	}
 	
-	return {"valid": True, "message": "Controlled substance sale is valid"}
+	return {"valid": True, "message": "Controlled substance sale is valid"
+	}

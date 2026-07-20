@@ -201,7 +201,8 @@ def create_sop_revision(sop_name, change_reason, change_description):
 	sop.sop_status = "Superseded"
 	sop.save()
 	
-	return {"success": True, "new_sop": new_sop.name}
+	return {"success": True, "new_sop": new_sop.name
+	}
 
 @frappe.whitelist()
 def acknowledge_sop(sop_name):
@@ -232,7 +233,8 @@ def acknowledge_sop(sop_name):
 	
 	sop.save()
 	
-	return {"success": True, "message": "SOP acknowledged successfully"}
+	return {"success": True, "message": "SOP acknowledged successfully"
+	}
 
 @frappe.whitelist()
 def get_sop_summary(category=None, status=None):
@@ -260,8 +262,10 @@ def get_sop_summary(category=None, status=None):
 	
 	summary = {
 		"total": len(sops),
-		"by_status": {},
-		"by_category": {},
+		"by_status": {
+	},
+		"by_category": {
+	},
 		"expiring_soon": [],
 		"overdue_review": []
 	}
@@ -312,7 +316,8 @@ def schedule_sop_review():
 	
 	for sop in sops_due:
 		# Send notification to QA Manager
-		qa_managers = frappe.get_all("User", filters={"role": "Pharma Quality Manager"})
+		qa_managers = frappe.get_all("User", filters={"role": "Pharma Quality Manager"
+	})
 		
 		if qa_managers:
 			frappe.sendmail(
@@ -336,4 +341,5 @@ def schedule_sop_review():
 				reference_name=sop.name
 			)
 	
-	return {"success": True, "sops_reviewed": len(sops_due)}
+	return {"success": True, "sops_reviewed": len(sops_due)
+	}

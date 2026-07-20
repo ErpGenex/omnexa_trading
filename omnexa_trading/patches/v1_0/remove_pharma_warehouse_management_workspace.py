@@ -23,7 +23,8 @@ def execute() -> None:
 	# Also remove any public workspace whose title matches legacy label
 	for row in frappe.get_all(
 		"Workspace",
-		filters={"title": "Pharma Warehouse Management", "module": "Omnexa Trading"},
+		filters={"title": "Pharma Warehouse Management", "module": "Omnexa Trading"
+	},
 		pluck="name",
 	):
 		if row not in removed and frappe.db.exists("Workspace", row):

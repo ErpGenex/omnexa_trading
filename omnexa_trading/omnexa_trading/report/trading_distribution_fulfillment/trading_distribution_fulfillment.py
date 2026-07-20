@@ -69,8 +69,8 @@ def execute(filters=None):
 				"total_qty": row.total_qty,
 				"total_amount": row.total_amount,
 				"status": row.status,
-				"fulfillment_status": fulfillment_status,
-			}
+				"fulfillment_status": fulfillment_status
+	}
 		)
 	columns = _columns()
 	chart = auto_chart_for_columns(data, columns)
@@ -79,14 +79,24 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Distribution Order"), "fieldname": "distribution_order", "fieldtype": "Link", "options": "Trading Distribution Order", "width": 160},
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120},
-		{"label": _("Planned Date"), "fieldname": "planned_delivery_date", "fieldtype": "Date", "width": 110},
-		{"label": _("Actual Datetime"), "fieldname": "actual_delivery_datetime", "fieldtype": "Datetime", "width": 160},
-		{"label": _("Customer"), "fieldname": "customer_profile", "fieldtype": "Link", "options": "Customer Profile", "width": 150},
-		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170},
-		{"label": _("Total Qty"), "fieldname": "total_qty", "fieldtype": "Float", "width": 100},
-		{"label": _("Total Amount"), "fieldname": "total_amount", "fieldtype": "Currency", "width": 120},
-		{"label": _("Order Status"), "fieldname": "status", "fieldtype": "Data", "width": 120},
-		{"label": _("Fulfillment"), "fieldname": "fulfillment_status", "fieldtype": "Data", "width": 110},
+		{"label": _("Distribution Order"), "fieldname": "distribution_order", "fieldtype": "Link", "options": "Trading Distribution Order", "width": 160
+	},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120
+	},
+		{"label": _("Planned Date"), "fieldname": "planned_delivery_date", "fieldtype": "Date", "width": 110
+	},
+		{"label": _("Actual Datetime"), "fieldname": "actual_delivery_datetime", "fieldtype": "Datetime", "width": 160
+	},
+		{"label": _("Customer"), "fieldname": "customer_profile", "fieldtype": "Link", "options": "Customer Profile", "width": 150
+	},
+		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170
+	},
+		{"label": _("Total Qty"), "fieldname": "total_qty", "fieldtype": "Float", "width": 100
+	},
+		{"label": _("Total Amount"), "fieldname": "total_amount", "fieldtype": "Currency", "width": 120
+	},
+		{"label": _("Order Status"), "fieldname": "status", "fieldtype": "Data", "width": 120
+	},
+		{"label": _("Fulfillment"), "fieldname": "fulfillment_status", "fieldtype": "Data", "width": 110
+	},
 	]

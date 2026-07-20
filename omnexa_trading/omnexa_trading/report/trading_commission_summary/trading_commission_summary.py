@@ -53,15 +53,26 @@ def execute(filters=None):
 
 def _columns():
 	return [
-		{"label": _("Settlement"), "fieldname": "settlement", "fieldtype": "Link", "options": "Trading Commission Settlement", "width": 160},
-		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120},
-		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170},
-		{"label": _("Commission Rule"), "fieldname": "commission_rule", "fieldtype": "Link", "options": "Trading Commission Rule", "width": 160},
-		{"label": _("Period From"), "fieldname": "period_from", "fieldtype": "Date", "width": 110},
-		{"label": _("Period To"), "fieldname": "period_to", "fieldtype": "Date", "width": 110},
-		{"label": _("Gross Sales"), "fieldname": "gross_sales", "fieldtype": "Currency", "width": 130},
-		{"label": _("Returns"), "fieldname": "returns_amount", "fieldtype": "Currency", "width": 110},
-		{"label": _("Net Sales"), "fieldname": "net_sales", "fieldtype": "Currency", "width": 130},
-		{"label": _("Commission"), "fieldname": "commission_amount", "fieldtype": "Currency", "width": 130},
-		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100},
+		{"label": _("Settlement"), "fieldname": "settlement", "fieldtype": "Link", "options": "Trading Commission Settlement", "width": 160
+	},
+		{"label": _("Branch"), "fieldname": "branch", "fieldtype": "Link", "options": "Branch", "width": 120
+	},
+		{"label": _("Sales Representative"), "fieldname": "sales_representative", "fieldtype": "Link", "options": "Trading Sales Representative", "width": 170
+	},
+		{"label": _("Commission Rule"), "fieldname": "commission_rule", "fieldtype": "Link", "options": "Trading Commission Rule", "width": 160
+	},
+		{"label": _("Period From"), "fieldname": "period_from", "fieldtype": "Date", "width": 110
+	},
+		{"label": _("Period To"), "fieldname": "period_to", "fieldtype": "Date", "width": 110
+	},
+		{"label": _("Gross Sales"), "fieldname": "gross_sales", "fieldtype": "Currency", "width": 130
+	},
+		{"label": _("Returns"), "fieldname": "returns_amount", "fieldtype": "Currency", "width": 110
+	},
+		{"label": _("Net Sales"), "fieldname": "net_sales", "fieldtype": "Currency", "width": 130
+	},
+		{"label": _("Commission"), "fieldname": "commission_amount", "fieldtype": "Currency", "width": 130
+	},
+		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100
+	},
 	]
