@@ -101,21 +101,8 @@
 			return this.lang === "ar" ? `${base}_ar` : `${base}_en`;
 		},
 
-		async loadConfig() {
-			try {
-				if (typeof frappe !== "undefined" && frappe.call) {
-					const r = await frappe.call({
-						method: "omnexa_trading.api.get_site_config",
-					});
-					this.config = Object.assign(this.defaultConfig(), r.message || {});
-				} else {
-					const res = await fetch("/api/method/omnexa_trading.api.get_site_config");
-					const data = await res.json();
-					this.config = Object.assign(this.defaultConfig(), data.message || {});
-				}
-			} catch (e) {
-				this.config = this.config || this.defaultConfig();
-			}
+		loadConfig() {
+			this.config = this.defaultConfig();
 			if (this.config.primary_color) {
 				document.documentElement.style.setProperty("--trading-primary", this.config.primary_color);
 			}
@@ -128,6 +115,7 @@
 			if (this.config.gold_color) {
 				document.documentElement.style.setProperty("--trading-gold", this.config.gold_color);
 			}
+			return Promise.resolve();
 		},
 
 		applyTheme() {

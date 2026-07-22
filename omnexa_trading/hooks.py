@@ -55,8 +55,13 @@ page_js = {
 	}
 
 # include js, css files in header of web template
-# web_include_css = "/assets/omnexa_trading/css/omnexa_trading.css"
-# web_include_js = "/assets/omnexa_trading/js/omnexa_trading.js"
+web_include_css = "/assets/omnexa_trading/css/trading_website.css"
+web_include_js = "/assets/omnexa_trading/js/trading_website.js"
+
+# Public website routes
+website_route_rules = [
+	{"from_route": "/trading", "to_route": "trading/index"}
+]
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "omnexa_trading/public/scss/website"
